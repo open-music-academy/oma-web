@@ -32,9 +32,9 @@ jobs:
     if: github.ref == 'refs/heads/mainoma'
     env:
       DOCKER_IMAGE: openmusicacademy/website
-      OCTO_PROJECT_NAME: TODO
-      OCTO_ENVIRONMENT_NAME: TODO
-      OCTO_SERVER: https://TODO.octopus.app
+      OCTO_PROJECT_NAME: website
+      OCTO_ENVIRONMENT_NAME: Integration
+      OCTO_SERVER: https://open-music-academy.octopus.app
     steps:
       - uses: actions/checkout@v2
       - uses: actions/download-artifact@v2
