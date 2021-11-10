@@ -1,0 +1,69 @@
+name: Build Commit
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+    env:
+      NODE_ENV: development
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: "16.11.0"
+          cache: "yarn"
+      - name: Install node modules
+        run: yarn install --non-interactive --check-files --frozen-lockfile
+      - name: Build
+        run: ./node_modules/.bin/gulp ci
+      - name: Get current time
+        uses: 1466587594/get-current-time@v2
+        id: current-time
+      - name: Create release info
+        run: |
+          echo "${{ steps.current-time.outputs.year }}.${{ steps.current-time.outputs.month }}.${{ steps.current-time.outputs.day }}.$GITHUB_RUN_NUMBER" > ./dist/release.txt
+      - name: Upload workspace
+        uses: actions/upload-artifact@v2
+        with:
+          name: dist
+          path: dist
+  deploy:
+    runs-on: ubuntu-20.04
+    needs: [build]
+    if: github.ref == 'refs/heads/mainoma'
+    env:
+      DOCKER_IMAGE: openmusicacademy/website
+      OCTO_PROJECT_NAME: TODO
+      OCTO_ENVIRONMENT_NAME: TODO
+      OCTO_SERVER: https://TODO.octopus.app
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/download-artifact@v2
+      - name: Set RELEASE_NUMBER
+        run: echo "RELEASE_NUMBER="$(cat ./dist/release.txt | tr -d '\n')"" >> $GITHUB_ENV
+      - name: Create release notes
+        run: echo "RELEASE_NOTES=$(echo $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/commit/$GITHUB_SHA)" >> $GITHUB_ENV
+      - name: Login to DockerHub
+        uses: docker/login-action@v1
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+      - name: Build and push
+        id: docker_build
+        uses: docker/build-push-action@v2
+        with:
+          push: true
+          context: .
+          tags: ${{ env.DOCKER_IMAGE }}:${{ env.RELEASE_NUMBER }}
+      - name: Install Octopus CLI
+        uses: OctopusDeploy/install-octopus-cli-action@v1.1.1
+        with:
+          version: latest
+      - name: Create a release in Octopus Deploy 🐙
+        uses: OctopusDeploy/create-release-action@v1.1.1
+        with:
+          api_key: ${{ secrets.OCTO_API_KEY }}
+          project: ${{ env.OCTO_PROJECT_NAME }}
+          server: ${{ env.OCTO_SERVER }}
+          release_notes: ${{ env.RELEASE_NOTES }}
+          release_number: ${{ env.RELEASE_NUMBER }}
+          deploy_to: ${{ env.OCTO_ENVIRONMENT_NAME }}

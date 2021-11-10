@@ -1,0 +1,51 @@
+{
+  "name": "website",
+  "version": "0.0.0",
+  "description": "The openmusic.academy website",
+  "type": "module",
+  "main": "src/index.js",
+  "engines": {
+    "node": "16.x.x"
+  },
+  "scripts": {
+    "start": "gulp",
+    "test": "gulp test"
+  },
+  "keywords": [],
+  "license": "MIT",
+  "author": "Open Music Academy Team <oma@educandu.dev>",
+  "homepage": "https://github.com/open-music-academy/website",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/open-music-academy/website"
+  },
+  "private": true,
+  "dependencies": {
+    "@educandu/educandu": "~0.0.0-pre.50ab2e524a22979247b669dcf3cf8e0aa0c31e87",
+    "@educandu/node-jsx-loader": "~2.1.0",
+    "parseboolean": "~1.0.0"
+  },
+  "devDependencies": {
+    "del": "~6.0.0",
+    "docker-cli-js": "~2.8.0",
+    "easy-table": "~1.2.0",
+    "esbuild": "~0.13.12",
+    "eslint-plugin-import": "~2.25.2",
+    "eslint-plugin-react": "~7.26.1",
+    "eslint-plugin-react-hooks": "~4.2.0",
+    "fs-extra": "~10.0.0",
+    "glob": "~7.2.0",
+    "gulp": "~4.0.2",
+    "gulp-csso": "~4.0.1",
+    "gulp-eslint": "~6.0.0",
+    "gulp-if": "~3.0.0",
+    "gulp-less": "~5.0.0",
+    "gulp-plumber": "~1.2.1",
+    "gulp-real-favicon": "~0.3.2",
+    "gulp-sourcemaps": "~3.0.0",
+    "less-plugin-autoprefix": "~2.0.0",
+    "minio": "~7.0.19",
+    "node-graceful": "~3.1.0",
+    "pretty-bytes": "~5.6.0"
+  }
+}
