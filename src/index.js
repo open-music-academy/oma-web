@@ -7,21 +7,21 @@ import Logger from '@educandu/educandu/common/logger.js';
 const logger = new Logger(import.meta.url);
 
 // eslint-disable-next-line no-process-env
-const precessEnv = process.env;
+const processEnv = process.env;
 
 const thisDir = path.dirname(url.fileURLToPath(import.meta.url));
 
-const env = precessEnv.OMA_ENV || 'dev';
+const env = processEnv.OMA_ENV || 'dev';
 
 logger.info('Environment is set to %s', env);
 
 const config = {
   env,
-  port: Number(precessEnv.OMA_PORT) || 3000,
+  port: Number(processEnv.OMA_PORT) || 3000,
   publicFolders: ['../dist', '../static'].map(x => path.resolve(thisDir, x)),
-  sessionDurationInMinutes: Number(precessEnv.OMA_SESSION_DURATION_IN_MINUTES) || 60,
-  skipMongoMigrations: parseBool(precessEnv.OMA_SKIP_DB_MIGRATIONS || false.toString()),
-  skipMongoChecks: parseBool(precessEnv.OMA_SKIP_DB_CHECKS || false.toString())
+  sessionDurationInMinutes: Number(processEnv.OMA_SESSION_DURATION_IN_MINUTES) || 60,
+  skipMongoMigrations: parseBool(processEnv.OMA_SKIP_DB_MIGRATIONS || false.toString()),
+  skipMongoChecks: parseBool(processEnv.OMA_SKIP_DB_CHECKS || false.toString())
 };
 
 if (env === 'dev') {
@@ -45,15 +45,15 @@ if (env === 'dev') {
   };
   config.exposeErrorDetails = true;
 } else {
-  config.mongoConnectionString = precessEnv.OMA_WEB_CONNECTION_STRING;
-  config.cdnEndpoint = precessEnv.OMA_CDN_ENDPOINT;
-  config.cdnRegion = precessEnv.OMA_CDN_REGION;
-  config.cdnAccessKey = precessEnv.OMA_CDN_ACCESS_KEY;
-  config.cdnSecretKey = precessEnv.OMA_CDN_SECRET_KEY;
-  config.cdnBucketName = precessEnv.OMA_CDN_BUCKET_NAME;
-  config.cdnRootUrl = precessEnv.OMA_CDN_ROOT_URL;
-  config.sessionSecret = precessEnv.OMA_SESSION_SECRET;
-  config.smtpOptions = JSON.parse(precessEnv.OMA_SMTP_OPTIONS);
+  config.mongoConnectionString = processEnv.OMA_WEB_CONNECTION_STRING;
+  config.cdnEndpoint = processEnv.OMA_CDN_ENDPOINT;
+  config.cdnRegion = processEnv.OMA_CDN_REGION;
+  config.cdnAccessKey = processEnv.OMA_CDN_ACCESS_KEY;
+  config.cdnSecretKey = processEnv.OMA_CDN_SECRET_KEY;
+  config.cdnBucketName = processEnv.OMA_CDN_BUCKET_NAME;
+  config.cdnRootUrl = processEnv.OMA_CDN_ROOT_URL;
+  config.sessionSecret = processEnv.OMA_SESSION_SECRET;
+  config.smtpOptions = JSON.parse(processEnv.OMA_SMTP_OPTIONS);
   config.initialUser = null;
   config.exposeErrorDetails = false;
 }
