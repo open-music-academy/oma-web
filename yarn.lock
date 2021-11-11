@@ -58,9 +58,9 @@
     js-tokens "^4.0.0"
 
 "@babel/runtime@^7.10.1", "@babel/runtime@^7.10.2", "@babel/runtime@^7.10.4", "@babel/runtime@^7.11.1", "@babel/runtime@^7.11.2", "@babel/runtime@^7.12.0", "@babel/runtime@^7.12.5", "@babel/runtime@^7.14.5", "@babel/runtime@^7.15.4", "@babel/runtime@^7.8.4", "@babel/runtime@^7.9.2":
-  version "7.16.0"
-  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.16.0.tgz#e27b977f2e2088ba24748bf99b5e1dece64e4f0b"
-  integrity sha512-Nht8L0O8YCktmsDV6FqFue7vQLRx3Hb0B37lS5y0jDRqRxlBG4wIJHnf9/bgSE2UyipKFA01YtS+npRdTWBUyw==
+  version "7.16.3"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.16.3.tgz#b86f0db02a04187a3c17caa77de69840165d42d5"
+  integrity sha512-WBwekcqacdY2e9AF/Q7WLFUWmdJGJTkbjqTjoMDgXkVZ3ZRUvOPsLb5KdwISoQVsbP+DQzVZW4Zhci0DvpbNTQ==
   dependencies:
     regenerator-runtime "^0.13.4"
 
@@ -69,10 +69,10 @@
   resolved "https://registry.yarnpkg.com/@ctrl/tinycolor/-/tinycolor-3.4.0.tgz#c3c5ae543c897caa9c2a68630bed355be5f9990f"
   integrity sha512-JZButFdZ1+/xAfpguQHoabIXkcqRRKpMrWKBkpEZZyxfY9C1DpADFB8PEqGSTeFr135SaTRfKqGKx5xSCLI7ZQ==
 
-"@educandu/educandu@~0.0.0-pre.50ab2e524a22979247b669dcf3cf8e0aa0c31e87":
-  version "0.0.0-pre.50ab2e524a22979247b669dcf3cf8e0aa0c31e87"
-  resolved "https://registry.yarnpkg.com/@educandu/educandu/-/educandu-0.0.0-pre.50ab2e524a22979247b669dcf3cf8e0aa0c31e87.tgz#eb42d2ffb9f5eabdb2c76621b53cb844d6d26d98"
-  integrity sha512-80JgkSANOE01OO7gkQRprcbxL6IzlqZT33Puey11eSZrtQi8AvLmhzGH7KF+ehWiEhlJixWtmC1hbS6JMfm+GQ==
+"@educandu/educandu@0.0.0-pre.ae7c63acf254ac0a4e31a9e7094127b9db2832b4":
+  version "0.0.0-pre.ae7c63acf254ac0a4e31a9e7094127b9db2832b4"
+  resolved "https://registry.yarnpkg.com/@educandu/educandu/-/educandu-0.0.0-pre.ae7c63acf254ac0a4e31a9e7094127b9db2832b4.tgz#a9e6d8b0fe2cca56e6c93c5d3f2619a628e1df59"
+  integrity sha512-+wfkLJOs+B1ahqwJE4nzzGk3jLCH3/M884gfB5exXuPocoHRHSHGxXQkKYlaPdRr01YCNpCTFw0qAogHhsxtJw==
   dependencies:
     "@ant-design/icons" "~4.7.0"
     "@educandu/node-jsx-loader" "~2.1.0"
@@ -3919,9 +3919,9 @@ interpret@^1.4.0:
   integrity sha512-agE4QfB2Lkp9uICn7BAqoscw4SZP9kTE2hxiFI3jBPmXJfdqiahTbUuKGsMoN2GtqL9AxhYioAcVvgsb1HvRbA==
 
 intl-messageformat@~9.9.2:
-  version "9.9.4"
-  resolved "https://registry.yarnpkg.com/intl-messageformat/-/intl-messageformat-9.9.4.tgz#e4a9c06a2036efcc2c6a20f30d13bcc77da6c6f0"
-  integrity sha512-+Mz5LMTV+JCybFBym69z+XnE47wnIjHC31Jz7We6SE0yKyjf/neaWAFz8teuT6OUw/AW3Orr5LO4SHVNXl5keg==
+  version "9.9.5"
+  resolved "https://registry.yarnpkg.com/intl-messageformat/-/intl-messageformat-9.9.5.tgz#3a00b93a6830aa09649b37d5ef2d995393b358f5"
+  integrity sha512-pdKpqhiD0P8yqblu1qetOOL8SnJ62SGdvxwYPvSmuYMN3BawEV5UnJuRcsIwwXYJAGYoICiOJl3gexuuH+RLXw==
   dependencies:
     "@formatjs/fast-memoize" "1.2.0"
     "@formatjs/icu-messageformat-parser" "2.0.14"
@@ -4858,9 +4858,9 @@ micromatch@^4.0.4:
     braces "^3.0.1"
     picomatch "^2.2.3"
 
-"midi@https://github.com/paulrosen/MIDI.js.git#abcjs":
+"midi@git+https://github.com/paulrosen/MIDI.js.git#abcjs":
   version "0.4.2"
-  resolved "https://github.com/paulrosen/MIDI.js.git#e593ffef81a0350f99448e3ab8111957145ff6b2"
+  resolved "git+https://github.com/paulrosen/MIDI.js.git#e593ffef81a0350f99448e3ab8111957145ff6b2"
 
 midimessage@^1.0.5:
   version "1.0.5"
@@ -6138,9 +6138,9 @@ rc-table@~7.15.1:
     shallowequal "^1.1.0"
 
 rc-tabs@~11.10.0:
-  version "11.10.2"
-  resolved "https://registry.yarnpkg.com/rc-tabs/-/rc-tabs-11.10.2.tgz#478135f0e6a0c1ff49905638b27b9a5e8cd232a2"
-  integrity sha512-qJCDXvDarn0MxeY14/tAeTRTdjlSDD4ZwraCa9gbSrnalTIxJiJ3NOFUGICvYT4t7lnhL2dmryAG3H6RdaD00Q==
+  version "11.10.3"
+  resolved "https://registry.yarnpkg.com/rc-tabs/-/rc-tabs-11.10.3.tgz#171c33b340b5a83ababe53034c569b0422046781"
+  integrity sha512-rPxsci+76/nnJowNOBO3LTi4eL6trG49cR9yPc4XbuyHXhCHUujN5F4+jFl7trISy+yVN6gCZ/wiTtVnkcR/UA==
   dependencies:
     "@babel/runtime" "^7.11.2"
     classnames "2.x"
@@ -6210,9 +6210,9 @@ rc-upload@~4.3.0:
     rc-util "^5.2.0"
 
 rc-util@^5.0.0, rc-util@^5.0.1, rc-util@^5.0.5, rc-util@^5.0.6, rc-util@^5.0.7, rc-util@^5.12.0, rc-util@^5.13.0, rc-util@^5.13.1, rc-util@^5.2.0, rc-util@^5.2.1, rc-util@^5.3.0, rc-util@^5.4.0, rc-util@^5.5.0, rc-util@^5.5.1, rc-util@^5.6.1, rc-util@^5.7.0, rc-util@^5.8.0, rc-util@^5.9.4, rc-util@^5.9.8:
-  version "5.14.0"
-  resolved "https://registry.yarnpkg.com/rc-util/-/rc-util-5.14.0.tgz#52c650e27570c2c47f7936c7d32eaec5212492a8"
-  integrity sha512-2vy6/Z1BJUcwLjm/UEJb/htjUTQPigITUIemCcFEo1fQevAumc9sA32x2z5qyWoa9uhrXbiAjSDpPIUqyg65sA==
+  version "5.15.0"
+  resolved "https://registry.yarnpkg.com/rc-util/-/rc-util-5.15.0.tgz#3527bd6c5806cf04476e17a0c7bf094fc8ea4666"
+  integrity sha512-8RI8sjOCXD3FhD3dzQNBQetpGol6BBd3sHQ/8jSGk9NPT0CH3JGtBfPODnASyE7AdDpCFQMOmgcp9CBs3S/1hg==
   dependencies:
     "@babel/runtime" "^7.12.5"
     react-is "^16.12.0"

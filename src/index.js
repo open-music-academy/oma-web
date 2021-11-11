@@ -33,11 +33,8 @@ if (env === 'dev') {
   config.cdnBucketName = 'dev-educandu-cdn';
   config.cdnRootUrl = 'http://localhost:9000/dev-educandu-cdn';
   config.sessionSecret = 'd4340515fa834498b3ab1aba1e4d9013';
-  config.smtpOptions = {
-    host: 'localhost',
-    port: 8025,
-    ignoreTLS: true
-  };
+  config.emailSenderAddress = 'educandu-test-app@test.com';
+  config.smtpOptions = 'smtp://localhost:8025/?ignoreTLS=true';
   config.initialUser = {
     username: 'test',
     password: 'test',
@@ -53,7 +50,8 @@ if (env === 'dev') {
   config.cdnBucketName = processEnv.OMA_CDN_BUCKET_NAME;
   config.cdnRootUrl = processEnv.OMA_CDN_ROOT_URL;
   config.sessionSecret = processEnv.OMA_SESSION_SECRET;
-  config.smtpOptions = JSON.parse(processEnv.OMA_SMTP_OPTIONS);
+  config.emailSenderAddress = processEnv.OMA_EMAIL_SENDER_ADDRESS;
+  config.smtpOptions = processEnv.OMA_SMTP_OPTIONS;
   config.initialUser = null;
   config.exposeErrorDetails = false;
 }
