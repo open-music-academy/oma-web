@@ -416,12 +416,6 @@ export const down = gulp.parallel(mongoDown, minioDown, maildevDown);
 
 export const serve = gulp.series(gulp.parallel(up, build), startServer);
 
-export async function websiteTunnelUp() {
-}
-
-export async function websiteCdnTunnelUp() {
-}
-
 export const ci = gulp.series(clean, lint, build);
 
 export function setupWatchers(done) {
