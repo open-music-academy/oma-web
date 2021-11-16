@@ -11,49 +11,27 @@ const processEnv = process.env;
 
 const thisDir = path.dirname(url.fileURLToPath(import.meta.url));
 
-const env = processEnv.OMA_ENV || 'dev';
-
-logger.info('Environment is set to %s', env);
-
 const config = {
-  env,
+  env: processEnv.OMA_ENV || 'dev',
   port: Number(processEnv.OMA_PORT) || 3000,
   publicFolders: ['../dist', '../static'].map(x => path.resolve(thisDir, x)),
   sessionDurationInMinutes: Number(processEnv.OMA_SESSION_DURATION_IN_MINUTES) || 60,
   skipMongoMigrations: parseBool(processEnv.OMA_SKIP_DB_MIGRATIONS || false.toString()),
-  skipMongoChecks: parseBool(processEnv.OMA_SKIP_DB_CHECKS || false.toString())
+  skipMongoChecks: parseBool(processEnv.OMA_SKIP_DB_CHECKS || false.toString()),
+  mongoConnectionString: processEnv.OMA_WEB_CONNECTION_STRING,
+  cdnEndpoint: processEnv.OMA_CDN_ENDPOINT,
+  cdnRegion: processEnv.OMA_CDN_REGION,
+  cdnAccessKey: processEnv.OMA_CDN_ACCESS_KEY,
+  cdnSecretKey: processEnv.OMA_CDN_SECRET_KEY,
+  cdnBucketName: processEnv.OMA_CDN_BUCKET_NAME,
+  cdnRootUrl: processEnv.OMA_CDN_ROOT_URL,
+  sessionSecret: processEnv.OMA_SESSION_SECRET,
+  emailSenderAddress: processEnv.OMA_EMAIL_SENDER_ADDRESS,
+  smtpOptions: processEnv.OMA_SMTP_OPTIONS,
+  initialUser: processEnv.OMA_INITIAL_USER ? JSON.parse(processEnv.OMA_INITIAL_USER) : null,
+  exposeErrorDetails: parseBool(processEnv.OMA_EXPOSE_ERROR_DETAILS || false.toString())
 };
 
-if (env === 'dev') {
-  config.mongoConnectionString = 'mongodb://root:rootpw@localhost:27017/dev-educandu-db?replicaSet=educandurs&authSource=admin';
-  config.cdnEndpoint = 'http://localhost:9000';
-  config.cdnRegion = 'eu-central-1';
-  config.cdnAccessKey = 'UVDXF41PYEAX0PXD8826';
-  config.cdnSecretKey = 'SXtajmM3uahrQ1ALECh3Z3iKT76s2s5GBJlbQMZx';
-  config.cdnBucketName = 'dev-educandu-cdn';
-  config.cdnRootUrl = 'http://localhost:9000/dev-educandu-cdn';
-  config.sessionSecret = 'd4340515fa834498b3ab1aba1e4d9013';
-  config.emailSenderAddress = 'educandu-test-app@test.com';
-  config.smtpOptions = 'smtp://localhost:8025/?ignoreTLS=true';
-  config.initialUser = {
-    username: 'test',
-    password: 'test',
-    email: 'test@test.com'
-  };
-  config.exposeErrorDetails = true;
-} else {
-  config.mongoConnectionString = processEnv.OMA_WEB_CONNECTION_STRING;
-  config.cdnEndpoint = processEnv.OMA_CDN_ENDPOINT;
-  config.cdnRegion = processEnv.OMA_CDN_REGION;
-  config.cdnAccessKey = processEnv.OMA_CDN_ACCESS_KEY;
-  config.cdnSecretKey = processEnv.OMA_CDN_SECRET_KEY;
-  config.cdnBucketName = processEnv.OMA_CDN_BUCKET_NAME;
-  config.cdnRootUrl = processEnv.OMA_CDN_ROOT_URL;
-  config.sessionSecret = processEnv.OMA_SESSION_SECRET;
-  config.emailSenderAddress = processEnv.OMA_EMAIL_SENDER_ADDRESS;
-  config.smtpOptions = processEnv.OMA_SMTP_OPTIONS;
-  config.initialUser = null;
-  config.exposeErrorDetails = false;
-}
+logger.info('Environment is set to %s', config.env);
 
 educandu(config);

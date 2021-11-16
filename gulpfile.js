@@ -35,6 +35,12 @@ const TEST_MONGO_CONTAINER_NAME = 'mongo';
 const TEST_MINIO_IMAGE = 'bitnami/minio:2020.12.18';
 const TEST_MINIO_CONTAINER_NAME = 'minio';
 
+const TEST_WEBSITE_TUNNEL_IMAGE = 'dezsh/inlets:latest';
+const TEST_WEBSITE_TUNNEL_CONTAINER_NAME = 'website-tunnel';
+
+const TEST_WEBSITE_CDN_TUNNEL_IMAGE = 'dezsh/inlets:latest';
+const TEST_WEBSITE_CDN_TUNNEL_CONTAINER_NAME = 'website-cdn-tunnel';
+
 const MINIO_ACCESS_KEY = 'UVDXF41PYEAX0PXD8826';
 const MINIO_SECRET_KEY = 'SXtajmM3uahrQ1ALECh3Z3iKT76s2s5GBJlbQMZx';
 
@@ -45,6 +51,21 @@ const verbose = (process.argv[2] || '').startsWith('ci') || process.argv.include
 
 const bundleTargets = ['esnext', 'chrome95', 'firefox93', 'safari15', 'edge95'];
 const autoprefixOptions = { browsers: ['last 2 versions'] };
+
+const localEnv = {
+  OMA_WEB_CONNECTION_STRING: 'mongodb://root:rootpw@localhost:27017/dev-educandu-db?replicaSet=educandurs&authSource=admin',
+  OMA_CDN_ENDPOINT: 'http://localhost:9000',
+  OMA_CDN_REGION: 'eu-central-1',
+  OMA_CDN_ACCESS_KEY: 'UVDXF41PYEAX0PXD8826',
+  OMA_CDN_SECRET_KEY: 'SXtajmM3uahrQ1ALECh3Z3iKT76s2s5GBJlbQMZx',
+  OMA_CDN_BUCKET_NAME: 'dev-educandu-cdn',
+  OMA_CDN_ROOT_URL: 'http://localhost:9000/dev-educandu-cdn',
+  OMA_SESSION_SECRET: 'd4340515fa834498b3ab1aba1e4d9013',
+  OMA_EMAIL_SENDER_ADDRESS: 'educandu-test-app@test.com',
+  OMA_SMTP_OPTIONS: 'smtp://localhost:8025/?ignoreTLS=true',
+  OMA_INITIAL_USER: JSON.stringify({ username: 'test', password: 'test', email: 'test@test.com' }),
+  OMA_EXPOSE_ERROR_DETAILS: true.toString()
+};
 
 let server = null;
 let buildResult = null;
@@ -82,6 +103,15 @@ const ensureContainerRemoved = async ({ containerName }) => {
       throw err;
     }
   }
+};
+
+const ensureEnvVar = name => {
+  const value = process.env[name];
+  if (!value) {
+    throw new Error(`Missing environment variable '${name}'`);
+  }
+
+  return value;
 };
 
 export async function clean() {
@@ -348,8 +378,9 @@ function spawnServer({ skipDbChecks }) {
     ],
     {
       env: {
-        ...process.env,
         NODE_ENV: 'development',
+        ...localEnv,
+        ...process.env,
         OMA_SKIP_DB_MIGRATIONS: (!!skipDbChecks).toString(),
         OMA_SKIP_DB_CHECKS: (!!skipDbChecks).toString()
       },
@@ -394,5 +425,48 @@ export function setupWatchers(done) {
 }
 
 export const startWatch = gulp.series(serve, setupWatchers);
+
+export async function prepareTunnel() {
+  const tunnelToken = ensureEnvVar('TUNNEL_TOKEN');
+  const tunnelWebsiteDomain = ensureEnvVar('TUNNEL_WEBSITE_DOMAIN');
+  const tunnelWebsiteCdnDomain = ensureEnvVar('TUNNEL_WEBSITE_CDN_DOMAIN');
+
+  localEnv.OMA_CDN_ROOT_URL = `https://${tunnelWebsiteCdnDomain}/dev-educandu-cdn`;
+
+  console.log('Opening tunnel connections');
+  await ensureContainerRunning({
+    containerName: TEST_WEBSITE_TUNNEL_CONTAINER_NAME,
+    runArgs: [
+      '-d',
+      '--net host',
+      TEST_WEBSITE_TUNNEL_IMAGE,
+      'client',
+      `--token ${tunnelToken}`,
+      `--url=wss://${tunnelWebsiteDomain}`,
+      '--upstream=http://localhost:3000'
+    ].join(' ')
+  });
+  await ensureContainerRunning({
+    containerName: TEST_WEBSITE_CDN_TUNNEL_CONTAINER_NAME,
+    runArgs: [
+      '-d',
+      '--net host',
+      TEST_WEBSITE_CDN_TUNNEL_IMAGE,
+      'client',
+      `--token ${tunnelToken}`,
+      `--url=wss://${tunnelWebsiteCdnDomain}`,
+      '--upstream=http://localhost:9000'
+    ].join(' ')
+  });
+  Graceful.on('exit', async () => {
+    console.log('Closing tunnel connections');
+    await Promise.all([
+      ensureContainerRemoved({ containerName: TEST_WEBSITE_TUNNEL_CONTAINER_NAME }),
+      ensureContainerRemoved({ containerName: TEST_WEBSITE_CDN_TUNNEL_CONTAINER_NAME })
+    ]);
+  });
+}
+
+export const tunnel = gulp.series(prepareTunnel, startWatch);
 
 export default startWatch;
