@@ -35,10 +35,10 @@ const TEST_MONGO_CONTAINER_NAME = 'mongo';
 const TEST_MINIO_IMAGE = 'bitnami/minio:2020.12.18';
 const TEST_MINIO_CONTAINER_NAME = 'minio';
 
-const TEST_WEBSITE_TUNNEL_IMAGE = 'dezsh/inlets:latest';
+const TEST_WEBSITE_TUNNEL_IMAGE = 'educandu/inlets:1.0.0';
 const TEST_WEBSITE_TUNNEL_CONTAINER_NAME = 'website-tunnel';
 
-const TEST_WEBSITE_CDN_TUNNEL_IMAGE = 'dezsh/inlets:latest';
+const TEST_WEBSITE_CDN_TUNNEL_IMAGE = 'educandu/inlets:1.0.0';
 const TEST_WEBSITE_CDN_TUNNEL_CONTAINER_NAME = 'website-cdn-tunnel';
 
 const MINIO_ACCESS_KEY = 'UVDXF41PYEAX0PXD8826';
@@ -433,31 +433,32 @@ export async function prepareTunnel() {
 
   localEnv.OMA_CDN_ROOT_URL = `https://${tunnelWebsiteCdnDomain}/dev-educandu-cdn`;
 
+  const getRunArgs = ({ image, websiteDomain, port }) => {
+    const runArgs = [
+      '-d',
+      image,
+      'client',
+      `--token ${tunnelToken}`,
+      `--url=wss://${websiteDomain}`
+    ];
+    if (process.platform === 'darwin') {
+      runArgs.push(`--upstream=http://host.docker.internal:${port}`);
+    } else {
+      runArgs.push('--net host', `--upstream=http://localhost:${port}`);
+    }
+    return runArgs.join(' ');
+  };
+
   console.log('Opening tunnel connections');
   await ensureContainerRunning({
     containerName: TEST_WEBSITE_TUNNEL_CONTAINER_NAME,
-    runArgs: [
-      '-d',
-      '--net host',
-      TEST_WEBSITE_TUNNEL_IMAGE,
-      'client',
-      `--token ${tunnelToken}`,
-      `--url=wss://${tunnelWebsiteDomain}`,
-      '--upstream=http://localhost:3000'
-    ].join(' ')
+    runArgs: getRunArgs({ image: TEST_WEBSITE_TUNNEL_IMAGE, websiteDomain: tunnelWebsiteDomain, port: 3000 })
   });
   await ensureContainerRunning({
     containerName: TEST_WEBSITE_CDN_TUNNEL_CONTAINER_NAME,
-    runArgs: [
-      '-d',
-      '--net host',
-      TEST_WEBSITE_CDN_TUNNEL_IMAGE,
-      'client',
-      `--token ${tunnelToken}`,
-      `--url=wss://${tunnelWebsiteCdnDomain}`,
-      '--upstream=http://localhost:9000'
-    ].join(' ')
+    runArgs: getRunArgs({ image: TEST_WEBSITE_CDN_TUNNEL_IMAGE, websiteDomain: tunnelWebsiteCdnDomain, port: 9000 })
   });
+
   Graceful.on('exit', async () => {
     console.log('Closing tunnel connections');
     await Promise.all([
