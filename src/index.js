@@ -24,7 +24,8 @@ const config = {
   sessionSecret: processEnv.OMA_SESSION_SECRET,
   emailSenderAddress: processEnv.OMA_EMAIL_SENDER_ADDRESS,
   smtpOptions: processEnv.OMA_SMTP_OPTIONS,
-  initialUser: processEnv.OMA_INITIAL_USER ? JSON.parse(processEnv.OMA_INITIAL_USER) : null,
+  // eslint-disable-next-line no-undefined
+  initialUser: processEnv.OMA_INITIAL_USER ? JSON.parse(processEnv.OMA_INITIAL_USER) : undefined,
   exposeErrorDetails: parseBool(processEnv.OMA_EXPOSE_ERROR_DETAILS || false.toString()),
   exportApiKey: processEnv.OMA_EXPORT_API_KEY,
   importSources: JSON.parse(processEnv.OMA_IMPORT_SOURCES || '[]')
