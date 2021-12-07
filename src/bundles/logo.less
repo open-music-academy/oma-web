@@ -1,0 +1,25 @@
+@logo-color: white;
+
+.Logo {
+  font-family: 'Times New Roman';
+  font-size: 32px;
+  line-height: 32px;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+  color: @logo-color;
+
+  &:link, &:visited, &:active, &:hover {
+    text-decoration: none;
+    color: @logo-color;
+  }
+
+  &.Logo--readonly {
+    cursor: inherit;
+  }
+
+  &.Logo--big {
+    font-size: 72px;
+    line-height: 72px;
+  }
+}

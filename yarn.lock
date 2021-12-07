@@ -69,10 +69,10 @@
   resolved "https://registry.yarnpkg.com/@ctrl/tinycolor/-/tinycolor-3.4.0.tgz#c3c5ae543c897caa9c2a68630bed355be5f9990f"
   integrity sha512-JZButFdZ1+/xAfpguQHoabIXkcqRRKpMrWKBkpEZZyxfY9C1DpADFB8PEqGSTeFr135SaTRfKqGKx5xSCLI7ZQ==
 
-"@educandu/educandu@~0.0.0-pre.088faa72a80749a378920b29107700edd8eb7e5c":
-  version "0.0.0-pre.088faa72a80749a378920b29107700edd8eb7e5c"
-  resolved "https://registry.yarnpkg.com/@educandu/educandu/-/educandu-0.0.0-pre.088faa72a80749a378920b29107700edd8eb7e5c.tgz#b1fd437d4240c8b971db16417fa92a10381404f9"
-  integrity sha512-KE+aJTszCjrARWR2raMZhyGWyK3HBfGKmnTQ3Shy/5PKDrQDhCtJVGIoh+utd6cnpNLR4mjS4w89kW9o4N5LYg==
+"@educandu/educandu@~0.0.0-pre.594aae0523ae5a1fe27095dc498ad19519ae8567":
+  version "0.0.0-pre.594aae0523ae5a1fe27095dc498ad19519ae8567"
+  resolved "https://registry.yarnpkg.com/@educandu/educandu/-/educandu-0.0.0-pre.594aae0523ae5a1fe27095dc498ad19519ae8567.tgz#7cf0d1b6f20360d983c9f43e159074d9802beae3"
+  integrity sha512-xH2rzcmsXosasYBbEHNUTRhxK+CV5PdO9mubEtb6gZD6r7ycTmd99/dtlKfrZEJpSK6QiEEMommwRmKz6juIpA==
   dependencies:
     "@ant-design/icons" "^4.7.0"
     "@educandu/node-jsx-loader" "^2.2.0"
@@ -153,7 +153,6 @@
     thenby "^1.3.4"
     toposort "^2.0.2"
     umzug "^v3.0.0-beta.16"
-    urlencode "^1.1.0"
     uuid "^8.3.2"
 
 "@educandu/node-jsx-loader@^2.2.0":
@@ -3330,7 +3329,7 @@ glob-watcher@^5.0.3:
     normalize-path "^3.0.0"
     object.defaults "^1.1.0"
 
-glob@^7.1.1, glob@^7.1.3, glob@^7.1.6, glob@^7.2.0, glob@~7.2.0:
+glob@^7.1.1, glob@^7.1.3, glob@^7.1.6, glob@^7.2.0:
   version "7.2.0"
   resolved "https://registry.yarnpkg.com/glob/-/glob-7.2.0.tgz#d15535af7732e02e948f4c41628bd910293f6023"
   integrity sha512-lmLf6gtyrPq8tTjSmrO94wBeQbFR3HbLHbuyD69wuyQkImp2hWqMGB47OX65FBkPffO641IP9jWa1z4ivqG26Q==
@@ -3719,7 +3718,7 @@ i18next@^21.3.0:
   dependencies:
     "@babel/runtime" "^7.12.0"
 
-iconv-lite@0.4.24, iconv-lite@^0.4.24, iconv-lite@^0.4.4, iconv-lite@~0.4.11:
+iconv-lite@0.4.24, iconv-lite@^0.4.24, iconv-lite@^0.4.4:
   version "0.4.24"
   resolved "https://registry.yarnpkg.com/iconv-lite/-/iconv-lite-0.4.24.tgz#2022b4b25fbddc21d2f524974a474aafe733908b"
   integrity sha512-v3MXnZAcvnywkTUEZomIActle7RXXeedOR31wwl7VlyoXO4Qi9arvSenNQWne1TcRwhCL1HwLI21bEqdpj8/rA==
@@ -7561,13 +7560,6 @@ url@0.10.3:
   dependencies:
     punycode "1.3.2"
     querystring "0.2.0"
-
-urlencode@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/urlencode/-/urlencode-1.1.0.tgz#1f2ba26f013c85f0133f7a3ad6ff2730adf7cbb7"
-  integrity sha1-HyuibwE8hfATP3o61v8nMK33y7c=
-  dependencies:
-    iconv-lite "~0.4.11"
 
 use-memo-one@^1.1.1:
   version "1.1.2"

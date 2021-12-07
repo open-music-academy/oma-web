@@ -1,7 +1,6 @@
 /* eslint-disable no-console, no-process-env, require-atomic-updates */
 import del from 'del';
 import gulp from 'gulp';
-import glob from 'glob';
 import { EOL } from 'os';
 import fse from 'fs-extra';
 import less from 'gulp-less';
@@ -9,7 +8,6 @@ import csso from 'gulp-csso';
 import gulpif from 'gulp-if';
 import esbuild from 'esbuild';
 import eslint from 'gulp-eslint';
-import { promisify } from 'util';
 import plumber from 'gulp-plumber';
 import EasyTable from 'easy-table';
 import { promises as fs } from 'fs';
@@ -155,7 +153,7 @@ export async function bundleJs() {
     await buildResult.rebuild();
   } else {
     buildResult = await esbuild.build({
-      entryPoints: await promisify(glob)('./src/bundles/*.js'),
+      entryPoints: ['./src/bundles/main.js'],
       target: bundleTargets,
       format: 'esm',
       bundle: true,
