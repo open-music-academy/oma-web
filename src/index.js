@@ -29,7 +29,12 @@ const config = {
   initialUser: processEnv.OMA_INITIAL_USER ? JSON.parse(processEnv.OMA_INITIAL_USER) : null,
   exposeErrorDetails: parseBool(processEnv.OMA_EXPOSE_ERROR_DETAILS || false.toString()),
   exportApiKey: processEnv.OMA_EXPORT_API_KEY,
-  importSources: JSON.parse(processEnv.OMA_IMPORT_SOURCES || '[]')
+  importSources: JSON.parse(processEnv.OMA_IMPORT_SOURCES || '[]'),
+  taskProcessing: {
+    isEnabled: true,
+    idlePollIntervalInMs: 10000,
+    maxAttempts: 3
+  }
 };
 
 educandu(config);
