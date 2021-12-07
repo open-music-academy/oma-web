@@ -21,7 +21,7 @@
   },
   "private": true,
   "dependencies": {
-    "@educandu/educandu": "~0.0.0-pre.088faa72a80749a378920b29107700edd8eb7e5c",
+    "@educandu/educandu": "~0.0.0-pre.594aae0523ae5a1fe27095dc498ad19519ae8567",
     "@educandu/node-jsx-loader": "~2.1.0",
     "parseboolean": "~1.0.0"
   },
@@ -34,7 +34,6 @@
     "eslint-plugin-react": "~7.26.1",
     "eslint-plugin-react-hooks": "~4.2.0",
     "fs-extra": "~10.0.0",
-    "glob": "~7.2.0",
     "gulp": "~4.0.2",
     "gulp-csso": "~4.0.1",
     "gulp-eslint": "~6.0.0",
