@@ -155,19 +155,12 @@
     umzug "^v3.0.0-beta.16"
     uuid "^8.3.2"
 
-"@educandu/node-jsx-loader@^2.2.0":
+"@educandu/node-jsx-loader@^2.2.0", "@educandu/node-jsx-loader@~2.2.0":
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/@educandu/node-jsx-loader/-/node-jsx-loader-2.2.0.tgz#da64d91f75d828c48f168a3ebb30e803bc336ac8"
   integrity sha512-qAafYuXavOE5y2167WNA8hyFjKiPR+RRNHHUkNGxmWGzyG7SEyTCtDFXgdo98yKweEv0WiYXnVKRxmIBOHWv4g==
   dependencies:
     esbuild "^0.13.13"
-
-"@educandu/node-jsx-loader@~2.1.0":
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/@educandu/node-jsx-loader/-/node-jsx-loader-2.1.0.tgz#5bfc45f66694969a89be379fe678b883e9c6f331"
-  integrity sha512-r9VsMj8uLCmIe+lP+qyfRwDbNnzpaXpKEVeDVyAt9/b4VlRazF37Z5vObXGNxMoLm8V6sxodzfQuNIWnY2clfg==
-  dependencies:
-    esbuild "^0.13.9"
 
 "@formatjs/ecma402-abstract@1.10.0":
   version "1.10.0"
