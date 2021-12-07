@@ -136,7 +136,7 @@ function PageTemplate({ children, fullScreen, headerActions, alerts }) {
   });
 
   return (
-    <div>
+    <div className="PageTemplate">
       <header className={pageHeaderAreaClasses}>
         <div className="PageTemplate-header">
           <div className="PageTemplate-headerContent PageTemplate-headerContent--left">
