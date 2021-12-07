@@ -3,11 +3,11 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import urls from '@educandu/educandu/utils/urls.js';
 
-function Logo({ readonly, size }) {
+function SiteLogo({ readonly, size }) {
   const classes = classNames({
-    'Logo': true,
-    'Logo--readonly': readonly,
-    'Logo--big': size === 'big'
+    'SiteLogo': true,
+    'SiteLogo--readonly': readonly,
+    'SiteLogo--normal': size === 'normal'
   });
 
   return readonly
@@ -15,14 +15,14 @@ function Logo({ readonly, size }) {
     : <a className={classes} href={urls.getHomeUrl()}>Open Music Academy</a>;
 }
 
-Logo.propTypes = {
+SiteLogo.propTypes = {
   readonly: PropTypes.bool,
-  size: PropTypes.oneOf(['default', 'big'])
+  size: PropTypes.oneOf(['small', 'normal'])
 };
 
-Logo.defaultProps = {
+SiteLogo.defaultProps = {
   readonly: false,
-  size: 'default'
+  size: 'normal'
 };
 
-export default Logo;
+export default SiteLogo;

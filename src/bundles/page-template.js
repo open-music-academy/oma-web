@@ -1,7 +1,7 @@
-import Logo from './logo.js';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { Alert, Button } from 'antd';
+import SiteLogo from './site-logo.js';
 import { useTranslation } from 'react-i18next';
 import React, { useState, useEffect } from 'react';
 import urls from '@educandu/educandu/utils/urls.js';
@@ -140,7 +140,7 @@ function PageTemplate({ children, fullScreen, headerActions, alerts }) {
       <header className={pageHeaderAreaClasses}>
         <div className="PageTemplate-header">
           <div className="PageTemplate-headerContent PageTemplate-headerContent--left">
-            {!fullScreen && <Logo />}
+            <SiteLogo size="small" />
           </div>
           <div className="PageTemplate-headerContent PageTemplate-headerContent--center">
             {headerActionComponents}

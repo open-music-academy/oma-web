@@ -1,24 +1,22 @@
-@logo-color: white;
-
-.Logo {
-  font-family: 'Times New Roman';
+.SiteLogo {
+  font-family: 'Dancing Script';
   font-size: 32px;
   line-height: 32px;
   display: inline-block;
   text-decoration: none;
   cursor: pointer;
-  color: @logo-color;
+  color: @global-primary-color;
 
   &:link, &:visited, &:active, &:hover {
     text-decoration: none;
-    color: @logo-color;
+    color: @global-primary-color;
   }
 
-  &.Logo--readonly {
+  &.SiteLogo--readonly {
     cursor: inherit;
   }
 
-  &.Logo--big {
+  &.SiteLogo--normal {
     font-size: 72px;
     line-height: 72px;
   }
