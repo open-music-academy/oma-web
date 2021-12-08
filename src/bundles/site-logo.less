@@ -1,0 +1,34 @@
+.SiteLogo {
+  font-family: 'Dancing Script';
+  color: @global-primary-color;
+
+  &:link, &:visited, &:active, &:hover {
+    text-decoration: none;
+    color: @global-primary-color;
+  }
+}
+
+.SiteLogo-text {
+  &.SiteLogo-text--small {
+    font-size: 32px;
+    line-height: 32px;
+  }
+
+  &.SiteLogo-text--normal {
+    font-size: 72px;
+    line-height: 72px;
+  }
+}
+
+.SiteLogo-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+
+  &.SiteLogo-link--readonly {
+    cursor: inherit;
+  }
+}
