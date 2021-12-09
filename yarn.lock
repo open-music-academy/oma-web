@@ -69,10 +69,10 @@
   resolved "https://registry.yarnpkg.com/@ctrl/tinycolor/-/tinycolor-3.4.0.tgz#c3c5ae543c897caa9c2a68630bed355be5f9990f"
   integrity sha512-JZButFdZ1+/xAfpguQHoabIXkcqRRKpMrWKBkpEZZyxfY9C1DpADFB8PEqGSTeFr135SaTRfKqGKx5xSCLI7ZQ==
 
-"@educandu/educandu@~0.0.0-pre.f67285c302bc2e3d29a1e77bef4a319cd6d1f7d6":
-  version "0.0.0-pre.f67285c302bc2e3d29a1e77bef4a319cd6d1f7d6"
-  resolved "https://registry.yarnpkg.com/@educandu/educandu/-/educandu-0.0.0-pre.f67285c302bc2e3d29a1e77bef4a319cd6d1f7d6.tgz#bdf5d7f0b2a8df1c3d35c60070e31a7ffe6b946c"
-  integrity sha512-78OSMQGpvzysIAVnmEwVqpYELgYlAFzZntUHCPKGOGuYMJlQpW9t3ebikokDgHSo/khCQtGuvYd/9DT3385qIQ==
+"@educandu/educandu@~0.0.0-pre.e263a02479e33c8f430276dcc803fd97c07f1cf7":
+  version "0.0.0-pre.e263a02479e33c8f430276dcc803fd97c07f1cf7"
+  resolved "https://registry.yarnpkg.com/@educandu/educandu/-/educandu-0.0.0-pre.e263a02479e33c8f430276dcc803fd97c07f1cf7.tgz#cb9cb062cc1d2d16e836fd5a4fc45c8b32332c39"
+  integrity sha512-OIVq1GBeNGF+hX598ZDc6c/BQQqpIpSWYz8Iysre5YyeZx32CiA61mrxw2+NqHXgBz+jxgryiGyeTbZPvWdp2g==
   dependencies:
     "@ant-design/icons" "^4.7.0"
     "@educandu/node-jsx-loader" "^2.2.0"
@@ -85,6 +85,7 @@
     async "^3.2.1"
     auto-bind "^5.0.1"
     aws-sdk "^2.1006.0"
+    axios "^0.24.0"
     bcrypt "^5.0.1"
     classnames "^2.3.1"
     clipboard-copy "^4.0.1"
@@ -145,6 +146,7 @@
     react-vis "^1.11.7"
     read-all-stream "^3.1.0"
     recursive-readdir "^2.2.2"
+    serialize-error "^9.0.0"
     shallow-equal "^1.2.1"
     soundfont-player "^0.12.0"
     split-array "^1.0.1"
@@ -929,6 +931,13 @@ axios@^0.21.1:
   integrity sha512-ut5vewkiu8jjGBdqpM44XxjuCjq9LAKeHVmoVfHVzy8eHgxxq8SbAVQNovDA8mVi05kP0Ea/n/UzcSHcTJQfNg==
   dependencies:
     follow-redirects "^1.14.0"
+
+axios@^0.24.0:
+  version "0.24.0"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-0.24.0.tgz#804e6fa1e4b9c5288501dd9dff56a7a0940d20d6"
+  integrity sha512-Q6cWsys88HoPgAaFAVUb0WpPk0O8iTeisR9IMqy9G8AbO4NlpVknrnQS03zzF9PGAWgO3cgletO3VjV/P7VztA==
+  dependencies:
+    follow-redirects "^1.14.4"
 
 bach@^1.0.0:
   version "1.2.0"
@@ -3099,6 +3108,11 @@ follow-redirects@^1.14.0:
   version "1.14.5"
   resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.14.5.tgz#f09a5848981d3c772b5392309778523f8d85c381"
   integrity sha512-wtphSXy7d4/OR+MvIFbCVBDzZ5520qV8XfPklSN5QtxuMUJZ+b0Wnst1e1lCDocfzuCkHqj8k0FpZqO+UIaKNA==
+
+follow-redirects@^1.14.4:
+  version "1.14.6"
+  resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.14.6.tgz#8cfb281bbc035b3c067d6cd975b0f6ade6e855cd"
+  integrity sha512-fhUl5EwSJbbl8AR+uYL2KQDxLkdSjZGR36xy46AO7cOMTrCMON6Sa28FmAnC2tRTDbd/Uuzz3aJBv7EBN7JH8A==
 
 for-in@^1.0.1, for-in@^1.0.2:
   version "1.0.2"
@@ -6667,6 +6681,13 @@ send@0.17.1:
     range-parser "~1.2.1"
     statuses "~1.5.0"
 
+serialize-error@^9.0.0:
+  version "9.0.0"
+  resolved "https://registry.yarnpkg.com/serialize-error/-/serialize-error-9.0.0.tgz#9b8a83dcbb2a61fa50d016b155f1b2884587825e"
+  integrity sha512-g2bg8Axwii7KlEkLAKXbLuGXS8rkvEdOY7VAlh8OpvG7lZH6Fcj3cyWVPU7HhiJMIe/1udV+Te3ON0Ch3TFlWQ==
+  dependencies:
+    type-fest "^2.5.3"
+
 serve-static@1.14.1:
   version "1.14.1"
   resolved "https://registry.yarnpkg.com/serve-static/-/serve-static-1.14.1.tgz#666e636dc4f010f7ef29970a88a674320898b2f9"
@@ -7395,6 +7416,11 @@ type-fest@^1.0.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/type-fest/-/type-fest-1.4.0.tgz#e9fb813fe3bf1744ec359d55d1affefa76f14be1"
   integrity sha512-yGSza74xk0UG8k+pLh5oeoYirvIiWo5t0/o3zHHAO2tRDiZcxWP7fywNlXhqb6/r6sWvwi+RsyQMWhVLe4BVuA==
+
+type-fest@^2.5.3:
+  version "2.8.0"
+  resolved "https://registry.yarnpkg.com/type-fest/-/type-fest-2.8.0.tgz#39d7c9f9c508df8d6ce1cf5a966b0e6568dcc50d"
+  integrity sha512-O+V9pAshf9C6loGaH0idwsmugI2LxVNR7DtS40gVo2EXZVYFgz9OuNtOhgHLdHdapOEWNdvz9Ob/eeuaWwwlxA==
 
 type-is@^1.6.4, type-is@~1.6.17, type-is@~1.6.18:
   version "1.6.18"
