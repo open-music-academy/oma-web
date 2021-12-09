@@ -112,7 +112,7 @@ function PageTemplate({ children, fullScreen, headerActions, alerts }) {
   if (settings?.helpPage?.[language]) {
     pageMenuItems.push({
       key: 'help',
-      href: urls.getArticleUrl(settings.helpPage[language].documentSlug),
+      href: urls.getDocUrl(settings.helpPage[language].documentKey, settings.helpPage[language].documentSlug),
       text: settings.helpPage[language].linkTitle,
       icon: QuestionOutlined,
       permission: permissions.EDIT_SETTINGS
@@ -167,7 +167,7 @@ function PageTemplate({ children, fullScreen, headerActions, alerts }) {
         <div className="PageTemplate-footerContent">
           {(settings?.footerLinks?.[language] || []).map((fl, index) => (
             <span key={index.toString()} className="PageTemplate-footerLink">
-              <a href={urls.getArticleUrl(fl.documentSlug)}>{fl.linkTitle}</a>
+              <a href={urls.getDocUrl(fl.documentKey, fl.documentSlug)}>{fl.linkTitle}</a>
             </span>
           ))}
         </div>
