@@ -69,10 +69,10 @@
   resolved "https://registry.yarnpkg.com/@ctrl/tinycolor/-/tinycolor-3.4.0.tgz#c3c5ae543c897caa9c2a68630bed355be5f9990f"
   integrity sha512-JZButFdZ1+/xAfpguQHoabIXkcqRRKpMrWKBkpEZZyxfY9C1DpADFB8PEqGSTeFr135SaTRfKqGKx5xSCLI7ZQ==
 
-"@educandu/educandu@0.0.0-pre.a1c0cd392db85dda904081ad73b408455b51eeac":
-  version "0.0.0-pre.a1c0cd392db85dda904081ad73b408455b51eeac"
-  resolved "https://registry.yarnpkg.com/@educandu/educandu/-/educandu-0.0.0-pre.a1c0cd392db85dda904081ad73b408455b51eeac.tgz#2e670f45a510fd269cb42b528d45c64484968c4e"
-  integrity sha512-3xVsB+cgkYGmVkd7SvsM5zZFjlpvmWTSDBbhCnz+LOj+XfGX3dvRfy0MEaeD9YTjfpm9ID4McoBHHRjhbOC1Nw==
+"@educandu/educandu@~0.0.0-pre.c5ca302820ef5ea72745f90e552e898a8f822436":
+  version "0.0.0-pre.c5ca302820ef5ea72745f90e552e898a8f822436"
+  resolved "https://registry.yarnpkg.com/@educandu/educandu/-/educandu-0.0.0-pre.c5ca302820ef5ea72745f90e552e898a8f822436.tgz#3545afeb0d13b544d06ff9a57d6cd44b558fd83d"
+  integrity sha512-u7kAEnV7D1ponBp2ecBTzYjtjfSYgs179QrBvTbkLafSt8vHvQron7U1RmCdDTyFNeAQWx9zvFljvcdAK0LkcQ==
   dependencies:
     "@ant-design/icons" "^4.7.0"
     "@educandu/node-jsx-loader" "^2.2.0"
@@ -4912,9 +4912,9 @@ micromatch@^4.0.4:
     braces "^3.0.1"
     picomatch "^2.2.3"
 
-"midi@git+https://github.com/paulrosen/MIDI.js.git#abcjs":
+"midi@https://github.com/paulrosen/MIDI.js.git#abcjs":
   version "0.4.2"
-  resolved "git+https://github.com/paulrosen/MIDI.js.git#e593ffef81a0350f99448e3ab8111957145ff6b2"
+  resolved "https://github.com/paulrosen/MIDI.js.git#e593ffef81a0350f99448e3ab8111957145ff6b2"
 
 midimessage@^1.0.5:
   version "1.0.5"
