@@ -3,6 +3,7 @@ import path from 'path';
 import parseBool from 'parseboolean';
 import educandu from '@educandu/educandu';
 import bundleConfig from './bundles/bundle-config.js';
+import ArticlesController from './articles-controller.js';
 
 // eslint-disable-next-line no-process-env
 const processEnv = process.env;
@@ -34,7 +35,8 @@ const config = {
     isEnabled: true,
     idlePollIntervalInMs: 10000,
     maxAttempts: 3
-  }
+  },
+  additionalControllers: [ArticlesController]
 };
 
 educandu(config);
