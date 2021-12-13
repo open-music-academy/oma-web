@@ -34,7 +34,7 @@ jobs:
       DOCKER_IMAGE: openmusicacademy/website
       OCTO_PROJECT_NAME: website
       OCTO_ENVIRONMENT_NAME: Integration
-      OCTO_SERVER: https://open-music-academy.octopus.app
+      OCTO_SERVER: https://elmu.octopus.app
     steps:
       - uses: actions/checkout@v2
       - uses: actions/download-artifact@v2
