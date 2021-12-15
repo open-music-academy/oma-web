@@ -15,6 +15,7 @@ import { useService } from '@educandu/educandu/components/container-context.js';
 import { useLanguage } from '@educandu/educandu/components/language-context.js';
 import { useSettings } from '@educandu/educandu/components/settings-context.js';
 import LanguageNameProvider from '@educandu/educandu/data/language-name-provider.js';
+import CookieConsentDrawer from '@educandu/educandu/components/cookie-consent-drawer.js';
 import CountryFlagAndName from '@educandu/educandu/components/localization/country-flag-and-name.js';
 import { default as iconsNs, QuestionOutlined, MenuOutlined, HomeOutlined, FileOutlined, UserOutlined, SettingOutlined, ImportOutlined } from '@ant-design/icons';
 
@@ -172,6 +173,7 @@ function PageTemplate({ children, fullScreen, headerActions, alerts }) {
           ))}
         </div>
       </footer>
+      <CookieConsentDrawer />
     </div>
   );
 }
