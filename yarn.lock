@@ -69,10 +69,10 @@
   resolved "https://registry.yarnpkg.com/@ctrl/tinycolor/-/tinycolor-3.4.0.tgz#c3c5ae543c897caa9c2a68630bed355be5f9990f"
   integrity sha512-JZButFdZ1+/xAfpguQHoabIXkcqRRKpMrWKBkpEZZyxfY9C1DpADFB8PEqGSTeFr135SaTRfKqGKx5xSCLI7ZQ==
 
-"@educandu/educandu@0.7.2":
-  version "0.7.2"
-  resolved "https://registry.yarnpkg.com/@educandu/educandu/-/educandu-0.7.2.tgz#67e41757df52869032df5313c69ee812eb3c1d17"
-  integrity sha512-hbCuCBJsZtUBGaqpTSYJ6LuZJbEyERJisozSFKrKvNgW6ZbESB6DMGzf4Prix36UqGmmGZJ4RNXI5jGIkixt9Q==
+"@educandu/educandu@0.7.3":
+  version "0.7.3"
+  resolved "https://registry.yarnpkg.com/@educandu/educandu/-/educandu-0.7.3.tgz#c6b2c4d463760ef0b40fb612504ab4df0955ce0b"
+  integrity sha512-dkrzjDL+HBVbHMvtgYFKYrpNNrQ8PvhPty3qEqHzOcB+hgq9WywfX6L//ktmFwLiBhGEVVhfk9kI2Vp6CWSNJQ==
   dependencies:
     "@ant-design/icons" "^4.7.0"
     "@educandu/node-jsx-loader" "^2.2.0"
@@ -4897,9 +4897,9 @@ micromatch@^4.0.4:
     braces "^3.0.1"
     picomatch "^2.2.3"
 
-"midi@git+https://github.com/paulrosen/MIDI.js.git#abcjs":
+"midi@https://github.com/paulrosen/MIDI.js.git#abcjs":
   version "0.4.2"
-  resolved "git+https://github.com/paulrosen/MIDI.js.git#e593ffef81a0350f99448e3ab8111957145ff6b2"
+  resolved "https://github.com/paulrosen/MIDI.js.git#e593ffef81a0350f99448e3ab8111957145ff6b2"
 
 midimessage@^1.0.5:
   version "1.0.5"
