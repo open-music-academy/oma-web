@@ -204,7 +204,7 @@ export function faviconGenerate(done) {
           precomposedIcons: false,
           declareOnlyDefaultIcon: true
         },
-        appName: 'elmu'
+        appName: 'Open Music Academy'
       },
       desktopBrowser: {},
       windows: {
@@ -220,7 +220,7 @@ export function faviconGenerate(done) {
             rectangle: false
           }
         },
-        appName: 'elmu'
+        appName: 'Open Music Academy'
       },
       androidChrome: {
         pictureAspect: 'backgroundAndMargin',
@@ -228,7 +228,7 @@ export function faviconGenerate(done) {
         backgroundColor: '#ffffff',
         themeColor: '#ffffff',
         manifest: {
-          name: 'elmu',
+          name: 'Open Music Academy',
           display: 'standalone',
           orientation: 'notSet',
           onConflict: 'override',

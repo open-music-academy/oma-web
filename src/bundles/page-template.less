@@ -3,7 +3,7 @@
 @page-template-content-z-index: 0;
 @page-template-footer-z-index: 0;
 @page-template-header-min-height: @page-template-header-content-min-height + (2* @global-content-padding);
-@page-template-header-color: @green-10;
+@page-template-header-color: darken(@lime-9, 5%);
 
 .PageTemplate {
   margin: 0;
@@ -25,6 +25,7 @@
   z-index: @page-template-header-z-index;
   box-shadow: 0 2px 8px @grey-4;
   margin-bottom: @global-content-padding;
+  color: white;
 
   &.PageTemplate-headerArea--fullScreen {
     box-shadow: none;
@@ -36,6 +37,11 @@
   align-items: center;
   background-color: @page-template-header-color;
   min-height: @page-template-header-min-height;
+  color: white;
+
+  a {
+    color: white;
+  }
 }
 
 .PageTemplate-headerContent {
