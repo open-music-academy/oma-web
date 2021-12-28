@@ -69,14 +69,15 @@
   resolved "https://registry.yarnpkg.com/@ctrl/tinycolor/-/tinycolor-3.4.0.tgz#c3c5ae543c897caa9c2a68630bed355be5f9990f"
   integrity sha512-JZButFdZ1+/xAfpguQHoabIXkcqRRKpMrWKBkpEZZyxfY9C1DpADFB8PEqGSTeFr135SaTRfKqGKx5xSCLI7ZQ==
 
-"@educandu/educandu@0.7.4":
-  version "0.7.4"
-  resolved "https://registry.yarnpkg.com/@educandu/educandu/-/educandu-0.7.4.tgz#dc873b03eb796590140eeee8209b36307c3cdf43"
-  integrity sha512-1UDiHN2rJHX1T2M1ng5qXnPX9xU622XsR+jU0DwS42ybXxVWvX3d9mYIZmJriEKaZNpyMHHrfcJ1mDXDB3hjkQ==
+"@educandu/educandu@0.8.0":
+  version "0.8.0"
+  resolved "https://registry.yarnpkg.com/@educandu/educandu/-/educandu-0.8.0.tgz#3f74f84403f3e1d0f4ffa60974e825cca51b026f"
+  integrity sha512-Oz4B5PI5XF4ZsL+aQNOkpQo4mhAyppR6Lu9es9JQkOWN08/iQuyMA+FJSJXoratHHcv46Dwopdlhiq/ZP+xfpw==
   dependencies:
     "@ant-design/icons" "^4.7.0"
     "@educandu/node-jsx-loader" "^2.2.0"
     "@fortawesome/fontawesome-free" "^5.15.4"
+    "@sindresorhus/slugify" "^2.1.0"
     "@unly/iso3166-1" "^1.0.2"
     abcjs "^5.12.0"
     accept-language-parser "^1.5.0"
@@ -307,6 +308,22 @@
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/@sideway/pinpoint/-/pinpoint-2.0.0.tgz#cff8ffadc372ad29fd3f78277aeb29e632cc70df"
   integrity sha512-RNiOoTPkptFtSVzQevY/yWtZwf/RxyVnPy/OcA9HBM3MlGDnBEYL5B41H0MTn0Uec8Hi+2qUtTfG2WWZBmMejQ==
+
+"@sindresorhus/slugify@^2.1.0":
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/@sindresorhus/slugify/-/slugify-2.1.0.tgz#1e252117008cd1121e4cdea9fc67767dd1653d25"
+  integrity sha512-gU3Gdm/V167BmUwIn8APHZ3SeeRVRUSOdXxnt7Q/JkUHLXaaTA/prYmoRumwsSitJZWUDYMzDWdWgrOdvE8IRQ==
+  dependencies:
+    "@sindresorhus/transliterate" "^1.0.0"
+    escape-string-regexp "^5.0.0"
+
+"@sindresorhus/transliterate@^1.0.0":
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/@sindresorhus/transliterate/-/transliterate-1.5.0.tgz#841109db51fe3158787c42a91c45c3ffea7589be"
+  integrity sha512-/sfSkoNelLq5riqNRp5uBjHIKBi1MWZk9ubRT1WiBQuTfmDf7BeQkph2DJzRB83QagMPHk2VDjuvpy0VuwyzdA==
+  dependencies:
+    escape-string-regexp "^5.0.0"
+    lodash.deburr "^4.1.0"
 
 "@types/argparse@1.0.38":
   version "1.0.38"
@@ -4606,6 +4623,11 @@ lodash.bind@^4.1.4:
   version "4.2.1"
   resolved "https://registry.yarnpkg.com/lodash.bind/-/lodash.bind-4.2.1.tgz#7ae3017e939622ac31b7d7d7dcb1b34db1690d35"
   integrity sha1-euMBfpOWIqwxt9fX3LGzTbFpDTU=
+
+lodash.deburr@^4.1.0:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/lodash.deburr/-/lodash.deburr-4.1.0.tgz#ddb1bbb3ef07458c0177ba07de14422cb033ff9b"
+  integrity sha1-3bG7s+8HRYwBd7oH3hRCLLAz/5s=
 
 lodash.defaults@^4.0.1:
   version "4.2.0"

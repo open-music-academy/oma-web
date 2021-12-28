@@ -25,6 +25,7 @@ const config = {
   cdnBucketName: processEnv.OMA_CDN_BUCKET_NAME,
   cdnRootUrl: processEnv.OMA_CDN_ROOT_URL,
   sessionSecret: processEnv.OMA_SESSION_SECRET,
+  sessionCookieDomain: processEnv.OMA_SESSION_COOKIE_DOMAIN,
   emailSenderAddress: processEnv.OMA_EMAIL_SENDER_ADDRESS,
   smtpOptions: processEnv.OMA_SMTP_OPTIONS,
   initialUser: processEnv.OMA_INITIAL_USER ? JSON.parse(processEnv.OMA_INITIAL_USER) : null,
