@@ -5,26 +5,29 @@ import SiteLogo from './site-logo.js';
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import urls from '@educandu/educandu/utils/urls.js';
+import Login from '@educandu/educandu/components/login.js';
 import permissions from '@educandu/educandu/domain/permissions.js';
 import Restricted from '@educandu/educandu/components/restricted.js';
-import LoginLogout from '@educandu/educandu/components/login-logout.js';
+import { useUser } from '@educandu/educandu/components/user-context.js';
 import LinkPopover from '@educandu/educandu/components/link-popover.js';
 import ClientConfig from '@educandu/educandu/bootstrap/client-config.js';
-import { FEATURE_TOGGLES } from '@educandu/educandu/common/constants.js';
+import { FEATURE_TOGGLES } from '@educandu/educandu/domain/constants.js';
 import { useService } from '@educandu/educandu/components/container-context.js';
 import { useLanguage } from '@educandu/educandu/components/language-context.js';
 import { useSettings } from '@educandu/educandu/components/settings-context.js';
 import UiLanguageDialog from '@educandu/educandu/components/ui-language-dialog.js';
 import CookieConsentDrawer from '@educandu/educandu/components/cookie-consent-drawer.js';
-import { default as iconsNs, QuestionOutlined, MenuOutlined, HomeOutlined, FileOutlined, UserOutlined, SettingOutlined, ImportOutlined, GlobalOutlined } from '@ant-design/icons';
+import { default as iconsNs, QuestionOutlined, MenuOutlined, LogoutOutlined, HomeOutlined, IdcardOutlined, FileOutlined, UserOutlined, SettingOutlined, ImportOutlined, GlobalOutlined } from '@ant-design/icons';
 
 const Icon = iconsNs.default || iconsNs;
 
 function PageTemplate({ children, fullScreen, headerActions, alerts }) {
+  const user = useUser();
   const settings = useSettings();
-  const clientConfig = useService(ClientConfig);
-  const { t } = useTranslation('page');
   const { language } = useLanguage();
+  const { t } = useTranslation('page');
+  const clientConfig = useService(ClientConfig);
+  const helpPage = settings?.helpPage?.[language];
   const [isUiLanguageDialogVisible, setIsUiLanguageDialogVisible] = useState(false);
 
   const handleUiLanguageDialogClose = () => {
@@ -68,58 +71,74 @@ function PageTemplate({ children, fullScreen, headerActions, alerts }) {
       href: urls.getHomeUrl(),
       text: t('pageNames:home'),
       icon: HomeOutlined,
-      permission: null
+      permission: null,
+      show: true
+    },
+    {
+      key: 'my-space',
+      href: urls.getMySpaceUrl(),
+      text: t('pageNames:mySpace'),
+      icon: IdcardOutlined,
+      permission: null,
+      showWhen: !!user
     },
     {
       key: 'docs',
       href: urls.getDocsUrl(),
       text: t('pageNames:docs'),
       icon: FileOutlined,
-      permission: permissions.VIEW_DOCS
+      permission: permissions.VIEW_DOCS,
+      showWhen: true
     },
     {
       key: 'users',
       href: urls.getUsersUrl(),
       text: t('pageNames:users'),
       icon: UserOutlined,
-      permission: permissions.EDIT_USERS
+      permission: permissions.EDIT_USERS,
+      showWhen: true
     },
     {
       key: 'settings',
       href: urls.getSettingsUrl(),
       text: t('pageNames:settings'),
       icon: SettingOutlined,
-      permission: permissions.EDIT_SETTINGS
-    }
-  ];
-
-  if (!clientConfig.disabledFeatures.includes(FEATURE_TOGGLES.import)) {
-    pageMenuItems.push({
+      permission: permissions.EDIT_SETTINGS,
+      showWhen: true
+    },
+    {
       key: 'import',
       href: urls.getImportsUrl(),
       text: t('pageNames:importBatches'),
       icon: ImportOutlined,
-      permission: permissions.MANAGE_IMPORT
-    });
-  }
-
-  if (settings?.helpPage?.[language]) {
-    pageMenuItems.push({
+      permission: permissions.MANAGE_IMPORT,
+      showWhen: !clientConfig.disabledFeatures.includes(FEATURE_TOGGLES.import)
+    },
+    {
       key: 'help',
-      href: urls.getDocUrl(settings.helpPage[language].documentKey, settings.helpPage[language].documentSlug),
-      text: settings.helpPage[language].linkTitle,
+      href: helpPage ? urls.getDocUrl(helpPage.documentKey, helpPage.documentSlug) : '',
+      text: helpPage?.linkTitle,
       icon: QuestionOutlined,
-      permission: permissions.EDIT_SETTINGS
-    });
-  }
-
-  pageMenuItems.push({
-    key: 'language',
-    onClick: () => setIsUiLanguageDialogVisible(true),
-    text: t('common:language'),
-    icon: GlobalOutlined,
-    permission: null
-  });
+      permission: permissions.EDIT_SETTINGS,
+      showWhen: !!helpPage
+    },
+    {
+      key: 'language',
+      onClick: () => setIsUiLanguageDialogVisible(true),
+      text: t('common:language'),
+      icon: GlobalOutlined,
+      permission: null,
+      showWhen: true
+    },
+    {
+      key: 'logout',
+      href: urls.getLogoutUrl(),
+      text: t('common:logoff'),
+      icon: LogoutOutlined,
+      permission: null,
+      showWhen: !!user
+    }
+  ].filter(item => item.showWhen);
 
   return (
     <div className="PageTemplate">
@@ -132,8 +151,8 @@ function PageTemplate({ children, fullScreen, headerActions, alerts }) {
             {headerActionComponents}
           </div>
           <div className="PageTemplate-headerContent PageTemplate-headerContent--right">
-            <div className="PageTemplate-loginLogoutButton">
-              <LoginLogout />
+            <div className="PageTemplate-loginButton">
+              <Login />
             </div>
             <LinkPopover items={pageMenuItems} trigger="hover" placement="bottomRight">
               <Button className="PageTemplate-headerButton" icon={<MenuOutlined />} />
