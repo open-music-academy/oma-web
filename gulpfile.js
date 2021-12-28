@@ -65,9 +65,11 @@ const localEnv = {
   OMA_EXPOSE_ERROR_DETAILS: true.toString()
 };
 
+const isMac = () => process.platform === 'darwin';
+
 let server = null;
 let buildResult = null;
-const containerCommandTimeoutMs = 2000;
+const containerCommandTimeoutMs = isMac() ? 2500 : 1000;
 
 Graceful.on('exit', () => {
   buildResult?.rebuild?.dispose();
@@ -445,7 +447,8 @@ export async function prepareTunnel() {
       `--token ${tunnelToken}`,
       `--url=wss://${websiteDomain}`
     ];
-    if (process.platform === 'darwin') {
+
+    if (isMac()) {
       runArgs.push(`--upstream=http://host.docker.internal:${port}`);
     } else {
       runArgs.push('--net host', `--upstream=http://localhost:${port}`);
