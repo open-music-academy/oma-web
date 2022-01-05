@@ -38,7 +38,7 @@ const config = {
     maxAttempts: 3
   },
   additionalControllers: [ArticlesController],
-  areRoomsEnabled: processEnv.OMA_ARE_ROOMS_ENABLED
+  areRoomsEnabled: parseBool(processEnv.OMA_ARE_ROOMS_ENABLED || false.toString())
 };
 
 educandu(config);
