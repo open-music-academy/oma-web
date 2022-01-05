@@ -62,7 +62,8 @@ const localEnv = {
   OMA_EMAIL_SENDER_ADDRESS: 'educandu-test-app@test.com',
   OMA_SMTP_OPTIONS: 'smtp://localhost:8025/?ignoreTLS=true',
   OMA_INITIAL_USER: JSON.stringify({ username: 'test', password: 'test', email: 'test@test.com' }),
-  OMA_EXPOSE_ERROR_DETAILS: true.toString()
+  OMA_EXPOSE_ERROR_DETAILS: true.toString(),
+  OMA_ARE_ROOMS_ENABLED: true.toString()
 };
 
 const isMac = () => process.platform === 'darwin';
