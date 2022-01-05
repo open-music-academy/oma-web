@@ -37,7 +37,8 @@ const config = {
     idlePollIntervalInMs: 10000,
     maxAttempts: 3
   },
-  additionalControllers: [ArticlesController]
+  additionalControllers: [ArticlesController],
+  areRoomsEnabled: processEnv.OMA_ARE_ROOMS_ENABLED
 };
 
 educandu(config);
