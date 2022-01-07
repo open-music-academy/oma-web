@@ -69,10 +69,10 @@
   resolved "https://registry.yarnpkg.com/@ctrl/tinycolor/-/tinycolor-3.4.0.tgz#c3c5ae543c897caa9c2a68630bed355be5f9990f"
   integrity sha512-JZButFdZ1+/xAfpguQHoabIXkcqRRKpMrWKBkpEZZyxfY9C1DpADFB8PEqGSTeFr135SaTRfKqGKx5xSCLI7ZQ==
 
-"@educandu/educandu@0.12.0":
-  version "0.12.0"
-  resolved "https://registry.yarnpkg.com/@educandu/educandu/-/educandu-0.12.0.tgz#84b5fe25ff80d9dd89e344d4e7aca865baf92932"
-  integrity sha512-BbW+/z4Zm67iMt6vZ2NfEUFluPnovonNUZGX8opeouI9kF/9BwrEuU+H2rZD/bHXoOQ1Gx9Sn3mwTBjw59+CKg==
+"@educandu/educandu@0.13.0":
+  version "0.13.0"
+  resolved "https://registry.yarnpkg.com/@educandu/educandu/-/educandu-0.13.0.tgz#a7709bbe2124b7272d7636a8fa49dfc31c594f9e"
+  integrity sha512-6lzwHNmG96dnx8n5iJLNqzvK7bVXzcQ9hMwQKjMwAwocwp3/x8laLdIXlRqnWPreSQ6KB50eLNyXe4Dac1jMRg==
   dependencies:
     "@ant-design/icons" "^4.7.0"
     "@educandu/node-jsx-loader" "^2.2.0"
