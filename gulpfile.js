@@ -59,11 +59,21 @@ const localEnv = {
   OMA_CDN_BUCKET_NAME: 'dev-educandu-cdn',
   OMA_CDN_ROOT_URL: 'http://localhost:9000/dev-educandu-cdn',
   OMA_SESSION_SECRET: 'd4340515fa834498b3ab1aba1e4d9013',
+  OMA_SESSION_COOKIE_DOMAIN: 'localhost',
+  OMA_SESSION_COOKIE_NAME: 'SESSION_ID_OMA_LOCAL',
   OMA_EMAIL_SENDER_ADDRESS: 'educandu-test-app@test.com',
   OMA_SMTP_OPTIONS: 'smtp://localhost:8025/?ignoreTLS=true',
   OMA_INITIAL_USER: JSON.stringify({ username: 'test', password: 'test', email: 'test@test.com' }),
   OMA_EXPOSE_ERROR_DETAILS: true.toString(),
-  OMA_ARE_ROOMS_ENABLED: true.toString()
+  OMA_ARE_ROOMS_ENABLED: true.toString(),
+  OMA_IMPORT_SOURCES: JSON.stringify([
+    {
+      name: 'ELMU - integration',
+      hostName: 'integration.elmu.online',
+      apiKey: '03a026b939154f41bb1dabf578a33e11'
+    }
+  ]),
+  OMA_SKIP_MAINTENANCE: false.toString()
 };
 
 const isMac = () => process.platform === 'darwin';
