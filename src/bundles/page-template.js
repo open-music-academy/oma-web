@@ -72,7 +72,7 @@ function PageTemplate({ children, fullScreen, headerActions, alerts }) {
       text: t('pageNames:home'),
       icon: HomeOutlined,
       permission: null,
-      show: true
+      showWhen: true
     },
     {
       key: 'my-space',
