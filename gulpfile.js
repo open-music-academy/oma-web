@@ -62,7 +62,7 @@ const localEnv = {
   OMA_SESSION_COOKIE_DOMAIN: 'localhost',
   OMA_SESSION_COOKIE_NAME: 'SESSION_ID_OMA_LOCAL',
   OMA_EMAIL_SENDER_ADDRESS: 'educandu-test-app@test.com',
-  OMA_SMTP_OPTIONS: 'smtp://localhost:8025/?ignoreTLS=true',
+  OMA_SMTP_OPTIONS: 'smtp://127.0.0.1:8025/?ignoreTLS=true',
   OMA_INITIAL_USER: JSON.stringify({ username: 'test', password: 'test', email: 'test@test.com' }),
   OMA_EXPOSE_ERROR_DETAILS: true.toString(),
   OMA_ARE_ROOMS_ENABLED: true.toString(),
