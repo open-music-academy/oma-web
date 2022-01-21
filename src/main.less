@@ -1,27 +1,17 @@
-@import url('./styles/roboto-font.less');
-@import url('./styles/dancing-script-font.less');
 @import url('@educandu/educandu/styles/main.less');
+@import url('./bundles/lato-font.less');
 
-@global-font-family: 'Roboto', sans-serif;
+@global-font-family: 'Lato', sans-serif;
 
-@primary-color: @lime-9;
-@success-color: #35b906;
-@info-color: #8860c5;
+@oma-blue: #002F65;
+@global-primary-color: @oma-blue;
+@global-heading-color: @oma-blue;
+@success-color: #369911;
+@info-color: lighten(@oma-blue, 12%);
 @warning-color: #fa8c16;
-@error-color: #b91806;
+@error-color: #b11200;
 @processing-color: @green-9;
-@font-family: Roboto;
-@border-radius-base: 16px;
-@border-radius-sm: 5px;
-@select-item-selected-bg: fade(@primary-color, 33%);
-
-@global-primary-color: @primary-color;
 
 // Styles for the page templates:
 @import url('./bundles/site-logo.less');
 @import url('./bundles/page-template.less');
-
-.IndexPage-searchButton {
-  margin-left: 25px;
-  padding: 0 50px;
-}
