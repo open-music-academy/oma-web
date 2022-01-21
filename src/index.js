@@ -2,6 +2,7 @@ import url from 'url';
 import path from 'path';
 import parseBool from 'parseboolean';
 import educandu from '@educandu/educandu';
+import faviconData from '../favicon-data.json';
 import bundleConfig from './bundles/bundle-config.js';
 import ArticlesController from './articles-controller.js';
 
@@ -11,9 +12,11 @@ const processEnv = process.env;
 const thisDir = path.dirname(url.fileURLToPath(import.meta.url));
 
 const config = {
+  appName: 'Open Music Academy',
   bundleConfig,
   port: Number(processEnv.OMA_PORT) || 3000,
   publicFolders: ['../dist', '../static'].map(x => path.resolve(thisDir, x)),
+  resources: ['./src/resource-overrides.json'].map(x => path.resolve(x)),
   sessionDurationInMinutes: Number(processEnv.OMA_SESSION_DURATION_IN_MINUTES) || 60,
   skipMaintenance: parseBool(processEnv.OMA_SKIP_MAINTENANCE || false.toString()),
   mongoConnectionString: processEnv.OMA_WEB_CONNECTION_STRING,
@@ -38,6 +41,7 @@ const config = {
     maxAttempts: 3
   },
   additionalControllers: [ArticlesController],
+  additionalHeadHtml: faviconData.favicon.html_code,
   areRoomsEnabled: parseBool(processEnv.OMA_ARE_ROOMS_ENABLED || false.toString())
 };
 
