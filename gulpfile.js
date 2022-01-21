@@ -267,7 +267,7 @@ export function faviconGenerate(done) {
     },
     versioning: {
       paramName: 'v',
-      paramValue: 'cakfaagb'
+      paramValue: 'cakfaagbe'
     },
     markupFile: FAVICON_DATA_FILE
   }, async () => {

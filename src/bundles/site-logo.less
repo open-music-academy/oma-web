@@ -1,5 +1,4 @@
 .SiteLogo {
-  font-family: 'Dancing Script';
   color: @global-primary-color;
 
   &:link, &:visited, &:active, &:hover {
@@ -8,15 +7,27 @@
   }
 }
 
+.SiteLogo-image {
+  &.SiteLogo-image--small {
+    height: 32px;
+    width: 32px;
+  }
+  &.SiteLogo-image--normal {
+    height: 64px;
+    width: 64px;
+  }
+}
+
 .SiteLogo-text {
   &.SiteLogo-text--small {
-    font-size: 32px;
+    font-size: 24px;
     line-height: 32px;
+    margin-left: 12px;
   }
 
   &.SiteLogo-text--normal {
-    font-size: 72px;
-    line-height: 72px;
+    font-size: 58px;
+    margin-left: 22px;
   }
 }
 
