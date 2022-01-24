@@ -1,45 +1,54 @@
-.SiteLogo {
-  color: @global-primary-color;
+@site-logo-size-normal: 64px;
+@site-logo-size-small: 32px;
+@site-logo-font-size: 24px;
 
-  &:link, &:visited, &:active, &:hover {
-    text-decoration: none;
-    color: @global-primary-color;
+.SiteLogo {
+  display: block;
+  text-align: center;
+
+  &.SiteLogo--readonly {
+    color: @edu-primary-color;
+  }
+}
+
+.SiteLogo-content {
+  display: flex;
+  align-items: center;
+
+  &.SiteLogo-content--normal {
+    flex-direction: column;
+  }
+
+  &.SiteLogo-content--small {
+    flex-direction: row;
   }
 }
 
 .SiteLogo-image {
-  &.SiteLogo-image--small {
-    height: 32px;
-    width: 32px;
-  }
   &.SiteLogo-image--normal {
-    height: 64px;
-    width: 64px;
+    height: @site-logo-size-normal;
+    width: @site-logo-size-normal;
+  }
+
+  &.SiteLogo-image--small {
+    height: @site-logo-size-small;
+    width: @site-logo-size-small;
   }
 }
 
 .SiteLogo-text {
-  &.SiteLogo-text--small {
-    font-size: 24px;
-    line-height: 32px;
-    margin-left: 12px;
-  }
+  font-size: @site-logo-font-size;
+  line-height: 1.25 * @site-logo-font-size;
 
   &.SiteLogo-text--normal {
-    font-size: 58px;
-    margin-left: 22px;
+    margin: 12px 0;
   }
-}
 
-.SiteLogo-link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: inherit;
-  text-decoration: none;
-  cursor: pointer;
+  &.SiteLogo-text--small {
+    margin-left: 0.75 * @site-logo-font-size;
 
-  &.SiteLogo-link--readonly {
-    cursor: inherit;
+    @media @edu-media-phone {
+      display: none;
+    }
   }
 }
