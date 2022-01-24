@@ -1,17 +1,17 @@
 @import url('@educandu/educandu/styles/main.less');
-@import url('./bundles/lato-font.less');
 
-@global-font-family: 'Lato', sans-serif;
+// Styles for OMA:
+@import url('./bundles/site-logo.less');
+@import url('./bundles/lato-font.less');
+@import url('./bundles/page-template.less');
 
 @oma-blue: #002F65;
-@global-primary-color: @oma-blue;
-@global-heading-color: @oma-blue;
-@success-color: #369911;
-@info-color: lighten(@oma-blue, 12%);
-@warning-color: #fa8c16;
-@error-color: #b11200;
-@processing-color: @green-9;
 
-// Styles for the page templates:
-@import url('./bundles/site-logo.less');
-@import url('./bundles/page-template.less');
+// Override educandu styles:
+@edu-font-family: 'Lato', sans-serif;
+@edu-primary-color: @oma-blue;
+@edu-processing-color: @oma-blue;
+@edu-info-color: lighten(@oma-blue, 12%);
+@edu-success-color: #369911;
+@edu-error-color: #b11200;
+@edu-warning-color: #fa8c16;

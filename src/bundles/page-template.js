@@ -58,6 +58,7 @@ function PageTemplate({ children, fullScreen, headerActions, alerts }) {
           disabled={!!action.disabled}
           icon={<Icon component={action.icon} />}
           onClick={action.handleClick}
+          ghost
           >
           {action.text}
         </Button>
@@ -173,7 +174,7 @@ function PageTemplate({ children, fullScreen, headerActions, alerts }) {
               <Login />
             </div>
             <LinkPopover items={pageMenuItems} trigger="hover" placement="bottomRight">
-              <Button className="PageTemplate-headerButton" icon={<MenuOutlined />} />
+              <Button className="PageTemplate-headerButton" icon={<MenuOutlined />} ghost />
             </LinkPopover>
           </div>
         </div>

@@ -2,8 +2,11 @@
 @page-template-header-z-index: 1;
 @page-template-content-z-index: 0;
 @page-template-footer-z-index: 0;
-@page-template-header-min-height: @page-template-header-content-min-height + (2* @global-content-padding);
-@page-template-header-color: @global-primary-color;
+@page-template-header-min-height: @page-template-header-content-min-height + (2* @edu-content-padding);
+@page-template-header-background-color: @edu-primary-color;
+@page-template-header-color: @edu-white;
+@page-template-header-hover-color: lighten(@page-template-header-background-color, 66%);
+@page-template-header-active-color: lighten(@page-template-header-background-color, 50%);
 
 .PageTemplate {
   margin: 0;
@@ -12,20 +15,19 @@
   min-height: 100vh;
   position: relative;
   flex-direction: column;
-  min-width: @global-min-page-width;
+  min-width: @edu-min-page-width;
   max-width: 100vw;
 }
 
 .PageTemplate-headerArea {
   top: 0;
-  flex: none;
+  left: 0;
   width: 100%;
   z-index: 1000;
   position: sticky;
   z-index: @page-template-header-z-index;
   box-shadow: 0 2px 8px @grey-4;
-  margin-bottom: @global-content-padding;
-  color: white;
+  margin-bottom: @edu-content-padding;
 
   &.PageTemplate-headerArea--fullScreen {
     box-shadow: none;
@@ -35,24 +37,49 @@
 .PageTemplate-header {
   display: flex;
   align-items: center;
-  background-color: @page-template-header-color;
+  justify-content: stretch;
+  background-color: @page-template-header-background-color;
   min-height: @page-template-header-min-height;
-  color: white;
+  color: @page-template-header-color;
 
-  a {
-    color: white;
+  @media @edu-media-phone {
+    justify-content: space-between;
+  }
+
+  a, .ant-btn.ant-btn-background-ghost {
+    color: @page-template-header-color;
+    border-color: @page-template-header-color;
+
+    &:hover, &:focus {
+      color: @page-template-header-hover-color;
+      border-color: @page-template-header-hover-color;
+    }
+
+    &:active {
+      color: @page-template-header-active-color;
+      border-color: @page-template-header-active-color;
+    }
+
+    &:visited {
+      color: @page-template-header-color;
+      border-color: @page-template-header-color;
+    }
   }
 }
 
 .PageTemplate-headerContent {
   display: block;
-  padding: @global-content-padding;
+  padding: @edu-content-padding;
 
   &.PageTemplate-headerContent--left {
     flex: 1 0 0%;
     display: flex;
     align-items: center;
     justify-content: flex-start;
+
+    @media @edu-media-phone {
+      flex: none;
+    }
   }
 
   &.PageTemplate-headerContent--center {
@@ -67,6 +94,10 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
+
+    @media @edu-media-phone {
+      flex: none;
+    }
   }
 }
 
@@ -81,7 +112,7 @@
 
 .PageTemplate-loginButton {
   cursor: pointer;
-  margin-right: (2.5 * @global-button-spacing);
+  margin-right: (2.5 * @edu-button-spacing);
 }
 
 .PageTemplate-contentArea {
@@ -99,11 +130,11 @@
 .PageTemplate-content {
   margin: 0 auto;
   width: 100%;
-  min-width: @global-min-page-width;
-  max-width: @global-content-width-wide;
+  min-width: @edu-min-page-width;
+  max-width: @edu-content-width-wide;
 
   &.PageTemplate-content--fullScreen {
-    max-width: @global-content-width-narrow;
+    max-width: @edu-content-width-narrow;
   }
 }
 
@@ -113,7 +144,7 @@
   z-index: 1000;
   align-items: center;
   justify-content: center;
-  padding: @global-content-padding;
+  padding: @edu-content-padding;
   position: relative;
   z-index: @page-template-footer-z-index;
 }

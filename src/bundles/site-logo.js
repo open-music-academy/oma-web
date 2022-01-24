@@ -4,7 +4,7 @@ import classNames from 'classnames';
 import urls from '@educandu/educandu/utils/urls.js';
 
 function SiteLogo({ readonly, size }) {
-  const renderImage = () => (
+  const image = (
     <svg
       xmlns:svg="http://www.w3.org/2000/svg"
       xmlns="http://www.w3.org/2000/svg"
@@ -32,19 +32,17 @@ function SiteLogo({ readonly, size }) {
     </svg>
   );
 
-  const linkClasses = classNames({
-    'SiteLogo-link': true,
-    'SiteLogo-link--readonly': readonly
-  });
+  const text = (
+    <span className={`SiteLogo-text SiteLogo-text--${size}`}>Open Music Academy</span>
+  );
 
-  const homeUrl = readonly ? null : urls.getHomeUrl();
+  const content = readonly
+    ? (<span className={`SiteLogo-content SiteLogo-content--${size}`}>{image}{text}</span>)
+    : (<a className={`SiteLogo-content SiteLogo-content--${size}`} href={urls.getHomeUrl()}>{image}{text}</a>);
 
   return (
-    <div className="SiteLogo">
-      <a href={homeUrl} className={linkClasses}>
-        {renderImage()}
-        <span className={`SiteLogo-text SiteLogo-text--${size}`}>Open Music Academy</span>
-      </a>
+    <div className={classNames('SiteLogo', { 'SiteLogo--readonly': readonly })}>
+      {content}
     </div>
   );
 }
