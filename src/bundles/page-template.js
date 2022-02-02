@@ -106,7 +106,7 @@ function PageTemplate({ children, fullScreen, alerts }) {
     },
     {
       key: 'help',
-      href: helpPage ? urls.getDocUrl(helpPage.documentKey, helpPage.documentSlug) : '',
+      href: helpPage ? urls.getDocUrl({ key: helpPage.documentKey, slug: helpPage.documentSlug }) : '',
       text: helpPage?.linkTitle,
       icon: QuestionOutlined,
       permission: null,
@@ -175,7 +175,7 @@ function PageTemplate({ children, fullScreen, alerts }) {
         <div className="PageTemplate-footerContent">
           {(settings?.footerLinks?.[language] || []).map((fl, index) => (
             <span key={index.toString()} className="PageTemplate-footerLink">
-              <a href={urls.getDocUrl(fl.documentKey, fl.documentSlug)}>{fl.linkTitle}</a>
+              <a href={urls.getDocUrl({ key: fl.documentKey, slug: fl.documentSlug })}>{fl.linkTitle}</a>
             </span>
           ))}
         </div>
