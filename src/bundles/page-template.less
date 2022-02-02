@@ -37,14 +37,10 @@
 .PageTemplate-header {
   display: flex;
   align-items: center;
-  justify-content: stretch;
+  justify-content: space-between;
   background-color: @page-template-header-background-color;
   min-height: @page-template-header-min-height;
   color: @page-template-header-color;
-
-  @media @edu-media-phone {
-    justify-content: space-between;
-  }
 
   a, .ant-btn.ant-btn-background-ghost {
     color: @page-template-header-color;
@@ -72,32 +68,15 @@
   padding: @edu-content-padding;
 
   &.PageTemplate-headerContent--left {
-    flex: 1 0 0%;
     display: flex;
     align-items: center;
     justify-content: flex-start;
-
-    @media @edu-media-phone {
-      flex: none;
-    }
-  }
-
-  &.PageTemplate-headerContent--center {
-    flex: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
 
   &.PageTemplate-headerContent--right {
-    flex: 1 0 0%;
     display: flex;
     align-items: center;
     justify-content: flex-end;
-
-    @media @edu-media-phone {
-      flex: none;
-    }
   }
 }
 
