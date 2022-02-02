@@ -7,7 +7,6 @@ import { useTranslation } from 'react-i18next';
 import urls from '@educandu/educandu/utils/urls.js';
 import Login from '@educandu/educandu/components/login.js';
 import permissions from '@educandu/educandu/domain/permissions.js';
-import Restricted from '@educandu/educandu/components/restricted.js';
 import { useUser } from '@educandu/educandu/components/user-context.js';
 import LinkPopover from '@educandu/educandu/components/link-popover.js';
 import ClientConfig from '@educandu/educandu/bootstrap/client-config.js';
@@ -17,11 +16,20 @@ import { useLanguage } from '@educandu/educandu/components/language-context.js';
 import { useSettings } from '@educandu/educandu/components/settings-context.js';
 import UiLanguageDialog from '@educandu/educandu/components/ui-language-dialog.js';
 import CookieConsentDrawer from '@educandu/educandu/components/cookie-consent-drawer.js';
-import { default as iconsNs, QuestionOutlined, MenuOutlined, LogoutOutlined, HomeOutlined, IdcardOutlined, FileOutlined, UserOutlined, SettingOutlined, ImportOutlined, GlobalOutlined } from '@ant-design/icons';
+import {
+  QuestionOutlined,
+  MenuOutlined,
+  LogoutOutlined,
+  HomeOutlined,
+  IdcardOutlined,
+  FileOutlined,
+  UserOutlined,
+  SettingOutlined,
+  ImportOutlined,
+  GlobalOutlined
+} from '@ant-design/icons';
 
-const Icon = iconsNs.default || iconsNs;
-
-function PageTemplate({ children, fullScreen, headerActions, alerts }) {
+function PageTemplate({ children, fullScreen, alerts }) {
   const user = useUser();
   const settings = useSettings();
   const { language } = useLanguage();
@@ -46,25 +54,6 @@ function PageTemplate({ children, fullScreen, headerActions, alerts }) {
     'PageTemplate-content': true,
     'PageTemplate-content--fullScreen': fullScreen
   });
-
-  let headerActionComponents = null;
-  if (headerActions && headerActions.length) {
-    headerActionComponents = headerActions.map(action => (
-      <Restricted to={action.permission} key={action.key}>
-        <Button
-          className="PageTemplate-headerButton"
-          type={action.type || 'default'}
-          loading={!!action.loading}
-          disabled={!!action.disabled}
-          icon={<Icon component={action.icon} />}
-          onClick={action.handleClick}
-          ghost
-          >
-          {action.text}
-        </Button>
-      </Restricted>
-    ));
-  }
 
   const pageMenuItems = [
     {
@@ -166,9 +155,6 @@ function PageTemplate({ children, fullScreen, headerActions, alerts }) {
           <div className="PageTemplate-headerContent PageTemplate-headerContent--left">
             <SiteLogo size="small" />
           </div>
-          <div className="PageTemplate-headerContent PageTemplate-headerContent--center">
-            {headerActionComponents}
-          </div>
           <div className="PageTemplate-headerContent PageTemplate-headerContent--right">
             <div className="PageTemplate-loginButton">
               <Login />
@@ -206,23 +192,13 @@ PageTemplate.propTypes = {
     type: PropTypes.oneOf(['success', 'info', 'warning', 'error'])
   })),
   children: PropTypes.node,
-  fullScreen: PropTypes.bool,
-  headerActions: PropTypes.arrayOf(PropTypes.shape({
-    handleClick: PropTypes.func.isRequired,
-    icon: PropTypes.elementType.isRequired,
-    key: PropTypes.string.isRequired,
-    permission: PropTypes.string,
-    text: PropTypes.string.isRequired,
-    type: PropTypes.string,
-    loading: PropTypes.bool
-  }))
+  fullScreen: PropTypes.bool
 };
 
 PageTemplate.defaultProps = {
   alerts: [],
   children: null,
-  fullScreen: false,
-  headerActions: []
+  fullScreen: false
 };
 
 export default PageTemplate;
