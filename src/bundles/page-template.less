@@ -21,7 +21,7 @@
   left: 0;
   width: 100%;
   position: sticky;
-  z-index: @z-index-cover-layer;
+  z-index: @edu-z-index-cover-layer;
   box-shadow: 0 2px 8px @grey-4;
   margin-bottom: @edu-content-padding;
 
@@ -31,32 +31,13 @@
 }
 
 .PageTemplate-header {
+  .m-inverted-button;
   display: flex;
   align-items: center;
   justify-content: space-between;
   background-color: @page-template-header-background-color;
   min-height: @page-template-header-min-height;
   color: @page-template-header-color;
-
-  a, .ant-btn.ant-btn-background-ghost {
-    color: @page-template-header-color;
-    border-color: @page-template-header-color;
-
-    &:hover, &:focus {
-      color: @page-template-header-hover-color;
-      border-color: @page-template-header-hover-color;
-    }
-
-    &:active {
-      color: @page-template-header-active-color;
-      border-color: @page-template-header-active-color;
-    }
-
-    &:visited {
-      color: @page-template-header-color;
-      border-color: @page-template-header-color;
-    }
-  }
 }
 
 .PageTemplate-headerContent {
@@ -95,7 +76,7 @@
   display: flex;
   align-items: flex-start;
   position: relative;
-  z-index: @z-index-base-layer;
+  z-index: @edu-z-index-base-layer;
 
   &.PageTemplate-contentArea--fullScreen {
     align-items: center;
@@ -120,7 +101,7 @@
   justify-content: center;
   padding: @edu-content-padding;
   position: relative;
-  z-index: @z-index-base-layer;
+  z-index: @edu-z-index-base-layer;
 }
 
 .PageTemplate-footerLink {

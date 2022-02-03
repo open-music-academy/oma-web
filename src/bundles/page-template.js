@@ -159,7 +159,7 @@ function PageTemplate({ children, fullScreen, alerts }) {
             <div className="PageTemplate-loginButton">
               <Login />
             </div>
-            <LinkPopover items={pageMenuItems} trigger="hover" placement="bottomRight">
+            <LinkPopover items={pageMenuItems} trigger="click" placement="bottomRight">
               <Button className="PageTemplate-headerButton" icon={<MenuOutlined />} ghost />
             </LinkPopover>
           </div>
