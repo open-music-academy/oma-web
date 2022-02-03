@@ -1,7 +1,4 @@
 @page-template-header-content-min-height: 32px;
-@page-template-header-z-index: 1;
-@page-template-content-z-index: 0;
-@page-template-footer-z-index: 0;
 @page-template-header-min-height: @page-template-header-content-min-height + (2* @edu-content-padding);
 @page-template-header-background-color: @edu-primary-color;
 @page-template-header-color: @edu-white;
@@ -23,9 +20,8 @@
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000;
   position: sticky;
-  z-index: @page-template-header-z-index;
+  z-index: @z-index-cover-layer;
   box-shadow: 0 2px 8px @grey-4;
   margin-bottom: @edu-content-padding;
 
@@ -99,7 +95,7 @@
   display: flex;
   align-items: flex-start;
   position: relative;
-  z-index: @page-template-content-z-index;
+  z-index: @z-index-base-layer;
 
   &.PageTemplate-contentArea--fullScreen {
     align-items: center;
@@ -120,12 +116,11 @@
 .PageTemplate-footer {
   flex: none;
   display: flex;
-  z-index: 1000;
   align-items: center;
   justify-content: center;
   padding: @edu-content-padding;
   position: relative;
-  z-index: @page-template-footer-z-index;
+  z-index: @z-index-base-layer;
 }
 
 .PageTemplate-footerLink {
