@@ -12,7 +12,7 @@ import LinkPopover from '@educandu/educandu/components/link-popover.js';
 import ClientConfig from '@educandu/educandu/bootstrap/client-config.js';
 import { FEATURE_TOGGLES } from '@educandu/educandu/domain/constants.js';
 import { useService } from '@educandu/educandu/components/container-context.js';
-import { useLanguage } from '@educandu/educandu/components/language-context.js';
+import { useLocale } from '@educandu/educandu/components/locale-context.js';
 import { useSettings } from '@educandu/educandu/components/settings-context.js';
 import UiLanguageDialog from '@educandu/educandu/components/ui-language-dialog.js';
 import CookieConsentDrawer from '@educandu/educandu/components/cookie-consent-drawer.js';
@@ -32,10 +32,10 @@ import {
 function PageTemplate({ children, fullScreen, alerts }) {
   const user = useUser();
   const settings = useSettings();
-  const { language } = useLanguage();
+  const { uiLanguage } = useLocale();
   const { t } = useTranslation('page');
   const clientConfig = useService(ClientConfig);
-  const helpPage = settings?.helpPage?.[language];
+  const helpPage = settings?.helpPage?.[uiLanguage];
   const [isUiLanguageDialogVisible, setIsUiLanguageDialogVisible] = useState(false);
 
   const handleUiLanguageDialogClose = () => {
@@ -113,7 +113,7 @@ function PageTemplate({ children, fullScreen, alerts }) {
       showWhen: !!helpPage
     },
     {
-      key: 'language',
+      key: 'ui-language',
       onClick: () => setIsUiLanguageDialogVisible(true),
       text: t('common:language'),
       icon: GlobalOutlined,
@@ -173,7 +173,7 @@ function PageTemplate({ children, fullScreen, alerts }) {
       </main>
       <footer className="PageTemplate-footer">
         <div className="PageTemplate-footerContent">
-          {(settings?.footerLinks?.[language] || []).map((fl, index) => (
+          {(settings?.footerLinks?.[uiLanguage] || []).map((fl, index) => (
             <span key={index.toString()} className="PageTemplate-footerLink">
               <a href={urls.getDocUrl({ key: fl.documentKey, slug: fl.documentSlug })}>{fl.linkTitle}</a>
             </span>
