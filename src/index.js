@@ -4,7 +4,6 @@ import parseBool from 'parseboolean';
 import educandu from '@educandu/educandu';
 import faviconData from '../favicon-data.json';
 import bundleConfig from './bundles/bundle-config.js';
-import ArticlesController from './articles-controller.js';
 
 // eslint-disable-next-line no-process-env
 const processEnv = process.env;
@@ -40,7 +39,7 @@ const config = {
     idlePollIntervalInMs: 10000,
     maxAttempts: 3
   },
-  additionalControllers: [ArticlesController],
+  additionalControllers: [],
   additionalHeadHtml: faviconData.favicon.html_code,
   areRoomsEnabled: parseBool(processEnv.OMA_ARE_ROOMS_ENABLED || false.toString())
 };
