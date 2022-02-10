@@ -26,25 +26,13 @@
     "parseboolean": "~1.0.0"
   },
   "devDependencies": {
-    "del": "~6.0.0",
-    "docker-cli-js": "~2.8.0",
-    "easy-table": "~1.2.0",
-    "esbuild": "~0.14.17",
-    "eslint-plugin-import": "~2.25.2",
-    "eslint-plugin-react": "~7.26.1",
-    "eslint-plugin-react-hooks": "~4.2.0",
-    "fs-extra": "~10.0.0",
+    "@educandu/dev-tools": "~1.0.0",
+    "@educandu/rooms-auth-lambda": "~1.0.1",
+    "eslint": "~8.8.0",
+    "eslint-plugin-import": "~2.25.4",
+    "eslint-plugin-react": "~7.28.0",
+    "eslint-plugin-react-hooks": "~4.3.0",
     "gulp": "~4.0.2",
-    "gulp-csso": "~4.0.1",
-    "gulp-eslint": "~6.0.0",
-    "gulp-if": "~3.0.0",
-    "gulp-less": "~5.0.0",
-    "gulp-plumber": "~1.2.1",
-    "gulp-real-favicon": "~0.3.2",
-    "gulp-sourcemaps": "~3.0.0",
-    "less-plugin-autoprefix": "~2.0.0",
-    "minio": "~7.0.19",
-    "node-graceful": "~3.1.0",
-    "pretty-bytes": "~5.6.0"
+    "gulp-real-favicon": "~0.3.2"
   }
 }

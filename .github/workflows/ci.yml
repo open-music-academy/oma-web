@@ -1,4 +1,4 @@
-name: Build Commit
+name: CI
 on: [push]
 jobs:
   build:
@@ -6,19 +6,23 @@ jobs:
     env:
       NODE_ENV: development
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Install node
+        uses: actions/setup-node@v2
         with:
           node-version: "16.13.1"
           cache: "yarn"
       - name: Install node modules
         run: yarn install --non-interactive --check-files --frozen-lockfile
+      - name: Lint
+        run: ./node_modules/.bin/gulp lint
       - name: Build
-        run: ./node_modules/.bin/gulp ci
+        run: ./node_modules/.bin/gulp build
       - name: Get current time
         uses: 1466587594/get-current-time@v2
         id: current-time
-      - name: Create release info
+      - name: Create release number file
         run: |
           echo "${{ steps.current-time.outputs.year }}.${{ steps.current-time.outputs.month }}.${{ steps.current-time.outputs.day }}.$GITHUB_RUN_NUMBER" > ./dist/release.txt
       - name: Upload workspace
@@ -36,18 +40,20 @@ jobs:
       OCTO_ENVIRONMENT_NAME: Integration
       OCTO_SERVER: https://elmu.octopus.app
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/download-artifact@v2
-      - name: Set RELEASE_NUMBER
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Download workspace
+        uses: actions/download-artifact@v2
+      - name: Read release number file
         run: echo "RELEASE_NUMBER="$(cat ./dist/release.txt | tr -d '\n')"" >> $GITHUB_ENV
-      - name: Create release notes
+      - name: Create release notes for Octopus
         run: echo "RELEASE_NOTES=$(echo $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/commit/$GITHUB_SHA)" >> $GITHUB_ENV
       - name: Login to DockerHub
         uses: docker/login-action@v1
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
-      - name: Build and push
+      - name: Build and push Docker image
         id: docker_build
         uses: docker/build-push-action@v2
         with:
