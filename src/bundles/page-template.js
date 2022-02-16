@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { Alert, Button } from 'antd';
-import SiteLogo from './site-logo.js';
 import React, { useState } from 'react';
+import HeaderLogo from './header-logo.js';
 import { useTranslation } from 'react-i18next';
 import urls from '@educandu/educandu/utils/urls.js';
 import Login from '@educandu/educandu/components/login.js';
@@ -153,7 +153,7 @@ function PageTemplate({ children, fullScreen, alerts }) {
       <header className={pageHeaderAreaClasses}>
         <div className="PageTemplate-header">
           <div className="PageTemplate-headerContent PageTemplate-headerContent--left">
-            <SiteLogo size="small" />
+            <HeaderLogo />
           </div>
           <div className="PageTemplate-headerContent PageTemplate-headerContent--right">
             <div className="PageTemplate-loginButton">
