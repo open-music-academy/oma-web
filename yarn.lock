@@ -392,10 +392,10 @@
     yaml "^1.10.2"
     yargs "^17.3.1"
 
-"@educandu/educandu@0.26.0":
-  version "0.26.0"
-  resolved "https://registry.yarnpkg.com/@educandu/educandu/-/educandu-0.26.0.tgz#7d874b381c461e31b81a57c38bbfaf2969fbf9b9"
-  integrity sha512-fN2IH1Yi05UZC3SW7Oa2bNLndNI93Us3/Yy/Ka8gAeJt7Nz0ZZYeyHRwVvhLmeUZDafT8PSmFY5KMVOor7CGIA==
+"@educandu/educandu@0.26.1":
+  version "0.26.1"
+  resolved "https://registry.yarnpkg.com/@educandu/educandu/-/educandu-0.26.1.tgz#f9764bf94fcd6fa3edd6bcb166f1b65e1d1c6c7b"
+  integrity sha512-LUvN4q3uYwAjTKUoqOLscA58oxkFaUHv1z1iIeBfwTksPFCd2YhcAWGVEq4bE4N83pm7zuYTGaRXZLq3ejlKTw==
   dependencies:
     "@ant-design/icons" "^4.7.0"
     "@educandu/node-jsx-loader" "^2.2.0"
@@ -415,6 +415,7 @@
     clipboard-copy "^4.0.1"
     connect-mongo "^4.6.0"
     cookie-parser "^1.4.5"
+    debounce "^1.2.1"
     decompress "^4.2.1"
     del "^6.0.0"
     dropperx "^1.0.1"
@@ -2780,6 +2781,11 @@ dayjs@1.x:
   version "1.10.7"
   resolved "https://registry.yarnpkg.com/dayjs/-/dayjs-1.10.7.tgz#2cf5f91add28116748440866a0a1d26f3a6ce468"
   integrity sha512-P6twpd70BcPK34K26uJ1KT3wlhpuOAPoMwJzpsIWUxHZ7wpmbdZL/hQqBDfz7hGurYSa5PhzdhDHtt319hL3ig==
+
+debounce@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/debounce/-/debounce-1.2.1.tgz#38881d8f4166a5c5848020c11827b834bcb3e0a5"
+  integrity sha512-XRRe6Glud4rd/ZGQfiV1ruXSfbvfJedlV9Y6zOlP+2K04vBYiJEte6stfFkCP03aMnY5tsipamumUjL14fofug==
 
 debug@2.6.9, debug@^2.2.0, debug@^2.3.3, debug@^2.6.9:
   version "2.6.9"
