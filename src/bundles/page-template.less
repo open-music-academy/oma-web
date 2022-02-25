@@ -1,7 +1,6 @@
 @page-template-header-content-min-height: 32px;
 @page-template-header-min-height: @page-template-header-content-min-height + (2* @edu-content-padding);
 @page-template-header-background-color: @edu-primary-color;
-@page-template-header-color: @edu-white;
 @page-template-header-hover-color: lighten(@page-template-header-background-color, 66%);
 @page-template-header-active-color: lighten(@page-template-header-background-color, 50%);
 
@@ -31,13 +30,11 @@
 }
 
 .PageTemplate-header {
-  .m-inverted-button;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: @page-template-header-background-color;
+  background-color: @edu-white;
   min-height: @page-template-header-min-height;
-  color: @page-template-header-color;
 }
 
 .PageTemplate-headerContent {
