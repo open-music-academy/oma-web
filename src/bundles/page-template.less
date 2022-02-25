@@ -1,9 +1,3 @@
-@page-template-header-content-min-height: 32px;
-@page-template-header-min-height: @page-template-header-content-min-height + (2* @edu-content-padding);
-@page-template-header-background-color: @edu-primary-color;
-@page-template-header-hover-color: lighten(@page-template-header-background-color, 66%);
-@page-template-header-active-color: lighten(@page-template-header-background-color, 50%);
-
 .PageTemplate {
   margin: 0;
   padding: 0;
@@ -13,59 +7,6 @@
   flex-direction: column;
   min-width: @edu-min-page-width;
   max-width: 100vw;
-}
-
-.PageTemplate-headerArea {
-  top: 0;
-  left: 0;
-  width: 100%;
-  position: sticky;
-  z-index: @edu-z-index-cover-layer;
-  box-shadow: 0 2px 8px @grey-4;
-  margin-bottom: @edu-content-padding;
-
-  &.PageTemplate-headerArea--fullScreen {
-    box-shadow: none;
-  }
-}
-
-.PageTemplate-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: @edu-white;
-  min-height: @page-template-header-min-height;
-}
-
-.PageTemplate-headerContent {
-  display: block;
-  padding: @edu-content-padding;
-
-  &.PageTemplate-headerContent--left {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-  }
-
-  &.PageTemplate-headerContent--right {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-  }
-}
-
-.PageTemplate-languageSwitch {
-  white-space: nowrap;
-}
-
-.PageTemplate-headerButton {
-  .m-icon-button;
-  .m-grouped-button;
-}
-
-.PageTemplate-loginButton {
-  cursor: pointer;
-  margin-right: (2.5 * @edu-button-spacing);
 }
 
 .PageTemplate-contentArea {
@@ -89,22 +30,9 @@
   &.PageTemplate-content--fullScreen {
     max-width: @edu-content-width-narrow;
   }
-}
 
-.PageTemplate-footer {
-  flex: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: @edu-content-padding;
-  position: relative;
-  z-index: @edu-z-index-base-layer;
-}
-
-.PageTemplate-footerLink {
-  display: inline-block;
-
-  &:not(:last-child)::after {
-    content: "\00A0\00A0|\00A0\00A0";
+  &.PageTemplate-content--aboveCenter {
+    padding-top: 20vh;
+    padding-bottom: 30vh;
   }
 }
