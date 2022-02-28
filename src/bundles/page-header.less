@@ -3,7 +3,8 @@
   left: 0;
   width: 100%;
   z-index: @edu-z-index-cover-layer;
-  margin-bottom: @edu-content-padding;
+  padding: @edu-content-padding;
+  padding-bottom: 3 * @edu-content-padding;
 }
 
 .PageHeader-header {
@@ -15,7 +16,6 @@
 
 .PageHeader-headerContent {
   display: block;
-  padding: @edu-content-padding;
 
   &.PageHeader-headerContent--left {
     display: flex;
@@ -41,5 +41,5 @@
 
 .PageHeader-loginButton {
   cursor: pointer;
-  margin-right: (2.5 * @edu-button-spacing);
+  margin-right: (3 * @edu-button-spacing);
 }
