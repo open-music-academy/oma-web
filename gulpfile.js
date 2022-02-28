@@ -45,8 +45,7 @@ const mongoContainer = new MongoContainer({
   port: 27017,
   rootUser: 'root',
   rootPassword: 'rootpw',
-  replicaSetName: 'educandurs',
-  image: 'educandu/mongo:5.0.6-multiplatform'
+  replicaSetName: 'educandurs'
 });
 
 const minioContainer = new MinioContainer({
