@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
 import { Alert, Button } from 'antd';
 import HeaderLogo from './header-logo.js';
 import { useTranslation } from 'react-i18next';
@@ -128,13 +127,8 @@ function PageHeader({ fullScreen, alerts, onUiLanguageClick }) {
     );
   };
 
-  const pageHeaderAreaClasses = classNames({
-    'PageHeader': true,
-    'PageHeader--fullScreen': fullScreen
-  });
-
   return (
-    <header className={pageHeaderAreaClasses}>
+    <header className="PageHeader">
       <div className="PageHeader-header">
         <div className="PageHeader-headerContent PageHeader-headerContent--left">
           <HeaderLogo />
