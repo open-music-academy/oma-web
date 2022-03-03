@@ -9,7 +9,7 @@ import { useSettings } from '@educandu/educandu/components/settings-context.js';
 import UiLanguageDialog from '@educandu/educandu/components/ui-language-dialog.js';
 import CookieConsentDrawer from '@educandu/educandu/components/cookie-consent-drawer.js';
 
-function HomePageTemplate({ children, alerts }) {
+function HomePageTemplate({ children }) {
   const settings = useSettings();
   const [isUiLanguageDialogVisible, setIsUiLanguageDialogVisible] = useState(false);
 
@@ -23,7 +23,7 @@ function HomePageTemplate({ children, alerts }) {
 
   return (
     <div className="PageTemplate">
-      <PageHeader fullScreen alerts={alerts} onUiLanguageClick={handleUiLanguageClick} />
+      <PageHeader fullScreen onUiLanguageClick={handleUiLanguageClick} />
       <main className="PageTemplate-contentArea PageTemplate-contentArea--fullScreen">
         <div className="PageTemplate-content PageTemplate-content--fullScreen PageTemplate-content--aboveCenter">
           <div className="HomePageTemplate-logo" >
@@ -32,9 +32,7 @@ function HomePageTemplate({ children, alerts }) {
           </div>
           {children}
           {settings.homepageInfo && (
-            <div className="HomePageTemplate-info">
-              <Markdown renderMedia>{settings.homepageInfo}</Markdown>
-            </div>
+            <Markdown renderMedia>{settings.homepageInfo}</Markdown>
           )}
         </div>
       </main>
@@ -46,15 +44,10 @@ function HomePageTemplate({ children, alerts }) {
 }
 
 HomePageTemplate.propTypes = {
-  alerts: PropTypes.arrayOf(PropTypes.shape({
-    message: PropTypes.node.isRequired,
-    type: PropTypes.oneOf(['success', 'info', 'warning', 'error'])
-  })),
   children: PropTypes.node
 };
 
 HomePageTemplate.defaultProps = {
-  alerts: [],
   children: null
 };
 

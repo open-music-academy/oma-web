@@ -1,18 +1,6 @@
-@page-header-content-min-height: 32px;
-@page-header-min-height: @page-header-content-min-height + (2* @edu-content-padding);
-
 .PageHeader {
-  top: 0;
-  left: 0;
+  .m-page-content;
   width: 100%;
-  position: sticky;
-  z-index: @edu-z-index-cover-layer;
-  box-shadow: 0 2px 8px @grey-4;
-  margin-bottom: @edu-content-padding;
-
-  &.PageHeader--fullScreen {
-    box-shadow: none;
-  }
 }
 
 .PageHeader-header {
@@ -20,12 +8,10 @@
   align-items: center;
   justify-content: space-between;
   background-color: @edu-white;
-  min-height: @page-header-min-height;
 }
 
 .PageHeader-headerContent {
   display: block;
-  padding: @edu-content-padding;
 
   &.PageHeader-headerContent--left {
     display: flex;
@@ -51,5 +37,5 @@
 
 .PageHeader-loginButton {
   cursor: pointer;
-  margin-right: (2.5 * @edu-button-spacing);
+  margin-right: (3 * @edu-button-spacing);
 }

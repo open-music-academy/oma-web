@@ -1,7 +1,6 @@
 import React from 'react';
+import { Button } from 'antd';
 import PropTypes from 'prop-types';
-import classNames from 'classnames';
-import { Alert, Button } from 'antd';
 import HeaderLogo from './header-logo.js';
 import { useTranslation } from 'react-i18next';
 import urls from '@educandu/educandu/utils/urls.js';
@@ -27,7 +26,7 @@ import {
   GlobalOutlined
 } from '@ant-design/icons';
 
-function PageHeader({ fullScreen, alerts, onUiLanguageClick }) {
+function PageHeader({ onUiLanguageClick }) {
   const user = useUser();
   const settings = useSettings();
   const { uiLanguage } = useLocale();
@@ -110,31 +109,8 @@ function PageHeader({ fullScreen, alerts, onUiLanguageClick }) {
     }
   ].filter(item => item.showWhen);
 
-  const renderAlert = (alert, index) => {
-    const shouldRenderAlert = !fullScreen || alert.showInFullScreen;
-    if (!shouldRenderAlert) {
-      return null;
-    }
-
-    return (
-      <Alert
-        key={index}
-        message={alert.message}
-        type={alert.type || 'info'}
-        banner
-        closable={alert.closable || false}
-        onClose={alert.onClose || (() => { })}
-        />
-    );
-  };
-
-  const pageHeaderAreaClasses = classNames({
-    'PageHeader': true,
-    'PageHeader--fullScreen': fullScreen
-  });
-
   return (
-    <header className={pageHeaderAreaClasses}>
+    <header className="PageHeader">
       <div className="PageHeader-header">
         <div className="PageHeader-headerContent PageHeader-headerContent--left">
           <HeaderLogo />
@@ -148,23 +124,15 @@ function PageHeader({ fullScreen, alerts, onUiLanguageClick }) {
           </LinkPopover>
         </div>
       </div>
-      {alerts && alerts.map(renderAlert)}
     </header>
   );
 }
 
 PageHeader.propTypes = {
-  alerts: PropTypes.arrayOf(PropTypes.shape({
-    message: PropTypes.node.isRequired,
-    type: PropTypes.oneOf(['success', 'info', 'warning', 'error'])
-  })),
-  fullScreen: PropTypes.bool,
   onUiLanguageClick: PropTypes.func
 };
 
 PageHeader.defaultProps = {
-  alerts: [],
-  fullScreen: false,
   onUiLanguageClick: () => {}
 };
 
