@@ -22,18 +22,20 @@ function HomePageTemplate({ children }) {
   };
 
   return (
-    <div className="PageTemplate">
-      <PageHeader fullScreen onUiLanguageClick={handleUiLanguageClick} />
-      <main className="PageTemplate-contentArea PageTemplate-contentArea--fullScreen">
-        <div className="PageTemplate-content PageTemplate-content--fullScreen PageTemplate-content--aboveCenter">
+    <div className="HomePageTemplate">
+      <PageHeader onUiLanguageClick={handleUiLanguageClick} />
+      <main className="HomePageTemplate-contentArea">
+        <div className="HomePageTemplate-content">
           <div className="HomePageTemplate-logo" >
-            <HomePageIllustration />
             <SiteLogo readonly />
+            {settings.homepageInfo && (
+            <Markdown renderMedia>{settings.homepageInfo}</Markdown>
+            )}
           </div>
           {children}
-          {settings.homepageInfo && (
-            <Markdown renderMedia>{settings.homepageInfo}</Markdown>
-          )}
+          <div className="HomePageTemplate-illustration">
+            <HomePageIllustration />
+          </div>
         </div>
       </main>
       <PageFooter />
