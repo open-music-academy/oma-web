@@ -9,8 +9,8 @@ function HomePageIllustration() {
       y="0px"
       viewBox="0 0 444.7906 210.3097"
       xmlSpace="preserve"
-      width="274"
-      height="130"
+      width="300"
+      height="143"
       xmlns="http://www.w3.org/2000/svg"
       xmlns:svg="http://www.w3.org/2000/svg"
       >

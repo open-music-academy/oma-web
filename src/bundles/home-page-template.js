@@ -29,7 +29,7 @@ function HomePageTemplate({ children }) {
           <div className="HomePageTemplate-logo" >
             <SiteLogo readonly />
             {settings.homepageInfo && (
-            <Markdown renderMedia>{settings.homepageInfo}</Markdown>
+              <div className="HomePageTemplate-info"><Markdown renderMedia>{settings.homepageInfo}</Markdown></div>
             )}
           </div>
           {children}

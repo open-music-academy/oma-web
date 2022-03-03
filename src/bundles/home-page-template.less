@@ -14,6 +14,10 @@
   align-items: center;
   justify-content: center;
   background-color: @oma-blue-1;
+
+  @media @edu-media-phone {
+    padding-bottom: 0;
+  }
 }
 
 .HomePageTemplate-content {
@@ -21,7 +25,7 @@
   width: 100%;
   max-width: @edu-content-width-narrow;
   display: grid;
-  grid-template-rows: 1fr 2fr auto;
+  grid-template-rows: 1.5fr 2fr auto;
   grid-template-columns: 100%;
 }
 
@@ -29,8 +33,13 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin-top: 30px;
-  margin-bottom: 10px;
+  margin-top: auto;
+  margin-bottom: 40px;
+}
+
+.HomePageTemplate-info {
+  font-size: 18px;
+  font-weight: 300;
 }
 
 .HomePageTemplate-illustration {
