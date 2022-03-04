@@ -47,7 +47,7 @@ function PageTemplate({ children, fullScreen, alerts }) {
 
   return (
     <div className="PageTemplate">
-      <PageHeader fullScreen={fullScreen} alerts={alerts} onUiLanguageClick={handleUiLanguageClick} />
+      <PageHeader onUiLanguageClick={handleUiLanguageClick} />
       <main className={contentAreaClasses}>
         <div className={contentClasses}>
           {!!alerts?.length && <div className="PageTemplate-contentAlerts">{alerts.map(renderAlert)}</div>}

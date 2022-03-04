@@ -22,5 +22,19 @@
       "passwordResetEmail.text": "Hallo {username}!\n\nSie möchten Ihr Kennwort auf Open Music Academy ändern?\nZum Ändern Ihres Kennworts folgen Sie bitte diesem Link: {completionLink}\n",
       "passwordResetEmail.html": "<p>Hallo {username}!<br/><br/>Sie möchten Ihr Kennwort auf Open Music Academy ändern?<br/>Zum Ändern Ihres Kennworts klicken Sie bitte hier: <a href=\"{completionLink}\">Kennwort ändern</a>.</p>\n"
     }
+  },
+  {
+    "namespace": "searchBar",
+    "language": "en",
+    "resources": {
+      "searchPlaceholder": "Topic or keyword"
+    }
+  },
+  {
+    "namespace": "searchBar",
+    "language": "de",
+    "resources": {
+      "searchPlaceholder": "Thema oder Schlagwort"
+    }
   }
 ]
