@@ -3,6 +3,7 @@ import SiteLogo from './site-logo.js';
 import React, { useState } from 'react';
 import PageHeader from './page-header.js';
 import PageFooter from './page-footer.js';
+import { useTranslation } from 'react-i18next';
 import HomePageIllustration from './home-page-illustration.js';
 import Markdown from '@educandu/educandu/components/markdown.js';
 import { useSettings } from '@educandu/educandu/components/settings-context.js';
@@ -11,6 +12,7 @@ import CookieConsentDrawer from '@educandu/educandu/components/cookie-consent-dr
 
 function HomePageTemplate({ children }) {
   const settings = useSettings();
+  const { t } = useTranslation('oma');
   const [isUiLanguageDialogVisible, setIsUiLanguageDialogVisible] = useState(false);
 
   const handleUiLanguageDialogClose = () => {
@@ -28,11 +30,14 @@ function HomePageTemplate({ children }) {
         <div className="HomePageTemplate-content">
           <div className="HomePageTemplate-logo" >
             <SiteLogo readonly />
+            <div className="HomePageTemplate-subtitle">{t('homePage.subtitle')}</div>
+          </div>
+          <div>
+            {children}
             {settings.homepageInfo && (
-              <div className="HomePageTemplate-info"><Markdown renderMedia>{settings.homepageInfo}</Markdown></div>
+            <div className="HomePageTemplate-info"><Markdown renderMedia>{settings.homepageInfo}</Markdown></div>
             )}
           </div>
-          {children}
           <div className="HomePageTemplate-illustration">
             <HomePageIllustration />
           </div>
