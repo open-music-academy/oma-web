@@ -1,0 +1,16 @@
+[
+  {
+    "namespace": "oma",
+    "language": "en",
+    "resources": {
+      "homePage.subtitle": "Free music education material"
+    }
+  },
+  {
+    "namespace": "oma",
+    "language": "de",
+    "resources": {
+      "homePage.subtitle": "Freie musikalische Bildungsmaterialien"
+    }
+  }
+]
