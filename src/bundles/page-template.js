@@ -1,9 +1,9 @@
-import { Alert } from 'antd';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import React, { useState } from 'react';
 import PageHeader from './page-header.js';
 import PageFooter from './page-footer.js';
+import Alert from '@educandu/educandu/components/alert.js';
 import UiLanguageDialog from '@educandu/educandu/components/ui-language-dialog.js';
 import CookieConsentDrawer from '@educandu/educandu/components/cookie-consent-drawer.js';
 
@@ -37,7 +37,6 @@ function PageTemplate({ children, fullScreen, alerts }) {
       <Alert
         key={index}
         message={alert.message}
-        type={alert.type || 'info'}
         banner
         closable={alert.closable || false}
         onClose={alert.onClose || (() => { })}
@@ -64,7 +63,8 @@ function PageTemplate({ children, fullScreen, alerts }) {
 PageTemplate.propTypes = {
   alerts: PropTypes.arrayOf(PropTypes.shape({
     message: PropTypes.node.isRequired,
-    type: PropTypes.oneOf(['success', 'info', 'warning', 'error'])
+    closable: PropTypes.bool,
+    onClose: PropTypes.func
   })),
   children: PropTypes.node,
   fullScreen: PropTypes.bool
