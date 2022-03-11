@@ -3,14 +3,14 @@
     "namespace": "oma",
     "language": "en",
     "resources": {
-      "homePage.subtitle": "Free music education material"
+      "homePage.subtitle": "Open educational music resources for everyone!"
     }
   },
   {
     "namespace": "oma",
     "language": "de",
     "resources": {
-      "homePage.subtitle": "Freie musikalische Bildungsmaterialien"
+      "homePage.subtitle": "Open Educational Resources zur Musik für alle!"
     }
   }
 ]
