@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button } from 'antd';
 import PropTypes from 'prop-types';
+import HeaderLogo from './header-logo.js';
 import { useTranslation } from 'react-i18next';
 import urls from '@educandu/educandu/utils/urls.js';
 import { QuestionOutlined } from '@ant-design/icons';
@@ -16,7 +17,6 @@ import { useSettings } from '@educandu/educandu/components/settings-context.js';
 import HomeIcon from '@educandu/educandu/components/icons/main-menu/home-icon.js';
 import MenuIcon from '@educandu/educandu/components/icons/main-menu/menu-icon.js';
 import UsersIcon from '@educandu/educandu/components/icons/main-menu/users-icon.js';
-import DefaultHeaderLogo from '@educandu/educandu/components/default-header-logo.js';
 import LogoffIcon from '@educandu/educandu/components/icons/main-menu/logoff-icon.js';
 import ImportsIcon from '@educandu/educandu/components/icons/main-menu/imports-icon.js';
 import LanguageIcon from '@educandu/educandu/components/icons/main-menu/language-icon.js';
@@ -111,7 +111,7 @@ function PageHeader({ onUiLanguageClick }) {
     <header className="PageHeader">
       <div className="PageHeader-header">
         <div className="PageHeader-headerContent PageHeader-headerContent--left">
-          <DefaultHeaderLogo />
+          <HeaderLogo />
         </div>
         <div className="PageHeader-headerContent PageHeader-headerContent--right">
           <div className="PageHeader-loginButton">
