@@ -28,6 +28,7 @@ const config = {
   sessionSecret: processEnv.OMA_SESSION_SECRET,
   sessionCookieDomain: processEnv.OMA_SESSION_COOKIE_DOMAIN,
   sessionCookieName: processEnv.OMA_SESSION_COOKIE_NAME,
+  consentCookieNamePrefix: processEnv.OMA_CONSENT_COOKIE_NAME_PREFIX,
   emailSenderAddress: processEnv.OMA_EMAIL_SENDER_ADDRESS,
   smtpOptions: processEnv.OMA_SMTP_OPTIONS,
   initialUser: processEnv.OMA_INITIAL_USER ? JSON.parse(processEnv.OMA_INITIAL_USER) : null,

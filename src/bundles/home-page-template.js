@@ -6,9 +6,9 @@ import PageFooter from './page-footer.js';
 import { useTranslation } from 'react-i18next';
 import HomePageIllustration from './home-page-illustration.js';
 import Markdown from '@educandu/educandu/components/markdown.js';
+import ConsentDrawer from '@educandu/educandu/components/consent-drawer.js';
 import { useSettings } from '@educandu/educandu/components/settings-context.js';
 import UiLanguageDialog from '@educandu/educandu/components/ui-language-dialog.js';
-import CookieConsentDrawer from '@educandu/educandu/components/cookie-consent-drawer.js';
 
 function HomePageTemplate({ children }) {
   const settings = useSettings();
@@ -45,7 +45,7 @@ function HomePageTemplate({ children }) {
       </main>
       <PageFooter />
       <UiLanguageDialog visible={isUiLanguageDialogVisible} onClose={handleUiLanguageDialogClose} />
-      <CookieConsentDrawer />
+      <ConsentDrawer />
     </div>
   );
 }
