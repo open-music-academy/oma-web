@@ -10,7 +10,9 @@ const processEnv = process.env;
 
 const thisDir = path.dirname(url.fileURLToPath(import.meta.url));
 
-const plugins = [
+const disabledPlugins = (processEnv.OMA_DISABLED_PLUGINS || '').split(',').map(x => x.trim()).filter(x => x);
+
+const enabledPlugins = [
   'markdown',
   'quick-tester',
   'audio',
@@ -27,9 +29,7 @@ const plugins = [
   'interval-trainer',
   'interactive-media',
   'table'
-];
-
-const disabledPlugins = (processEnv.OMA_DISABLED_PLUGINS || '').split(',');
+].filter(plugin => !disabledPlugins.includes(plugin));
 
 const config = {
   appName: 'Open Music Academy',
@@ -64,7 +64,7 @@ const config = {
   additionalControllers: [],
   additionalHeadHtml: faviconData.favicon.html_code,
   areRoomsEnabled: parseBool(processEnv.OMA_ARE_ROOMS_ENABLED || false.toString()),
-  plugins: plugins.filter(plugin => !disabledPlugins.includes(plugin))
+  plugins: enabledPlugins
 };
 
 educandu(config);
