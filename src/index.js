@@ -10,6 +10,27 @@ const processEnv = process.env;
 
 const thisDir = path.dirname(url.fileURLToPath(import.meta.url));
 
+const plugins = [
+  'markdown',
+  'quick-tester',
+  'audio',
+  'video',
+  'image',
+  'pdf-viewer',
+  'iframe',
+  'anavis',
+  'image-tiles',
+  'diagram-net',
+  'annotation',
+  'abc-notation',
+  'ear-training',
+  'interval-trainer',
+  'interactive-media',
+  'table'
+];
+
+const disabledPlugins = (processEnv.OMA_DISABLED_PLUGINS || '').split(',');
+
 const config = {
   appName: 'Open Music Academy',
   bundleConfig,
@@ -42,7 +63,8 @@ const config = {
   },
   additionalControllers: [],
   additionalHeadHtml: faviconData.favicon.html_code,
-  areRoomsEnabled: parseBool(processEnv.OMA_ARE_ROOMS_ENABLED || false.toString())
+  areRoomsEnabled: parseBool(processEnv.OMA_ARE_ROOMS_ENABLED || false.toString()),
+  plugins: plugins.filter(plugin => !disabledPlugins.includes(plugin))
 };
 
 educandu(config);
