@@ -15,7 +15,7 @@ gulp fix  // Will run eslint and fix any linting rules that are easily solvable.
 ### Tunnelling
 
 ~~~sh
-// Make sure to set correct values for these env variables:
+// Make sure to set correct values for these environment variables:
 
 export TUNNEL_TOKEN='43nv9zj935tmzmx4'
 export TUNNEL_WEBSITE_DOMAIN='mytunneldomain.com'
