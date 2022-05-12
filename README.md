@@ -1,4 +1,4 @@
-# website
+# oma-web
 
 The openmusic.academy website
 

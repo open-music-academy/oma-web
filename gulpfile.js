@@ -223,14 +223,14 @@ export async function startServer() {
     // eslint-disable-next-line no-console
     console.log('Opening tunnel connections');
     const websiteTunnel = new TunnelProxyContainer({
-      name: 'website-tunnel',
+      name: 'oma-web-tunnel',
       tunnelToken,
       tunnelDomain: tunnelWebsiteDomain,
       localPort: 3000
     });
 
     const websiteCdnTunnel = new TunnelProxyContainer({
-      name: 'website-cdn-tunnel',
+      name: 'oma-web-cdn-tunnel',
       tunnelToken,
       tunnelDomain: tunnelWebsiteCdnDomain,
       localPort: 10000

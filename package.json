@@ -1,5 +1,5 @@
 {
-  "name": "website",
+  "name": "oma-web",
   "version": "0.0.0",
   "description": "The openmusic.academy website",
   "type": "module",
@@ -14,10 +14,10 @@
   "keywords": [],
   "license": "MIT",
   "author": "Open Music Academy Team <oma@educandu.dev>",
-  "homepage": "https://github.com/open-music-academy/website",
+  "homepage": "https://github.com/open-music-academy/oma-web",
   "repository": {
     "type": "git",
-    "url": "https://github.com/open-music-academy/website"
+    "url": "https://github.com/open-music-academy/oma-web"
   },
   "private": true,
   "dependencies": {
