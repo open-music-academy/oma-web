@@ -17,7 +17,7 @@ import { useSettings } from '@educandu/educandu/components/settings-context.js';
 import HomeIcon from '@educandu/educandu/components/icons/main-menu/home-icon.js';
 import MenuIcon from '@educandu/educandu/components/icons/main-menu/menu-icon.js';
 import UsersIcon from '@educandu/educandu/components/icons/main-menu/users-icon.js';
-import LogoffIcon from '@educandu/educandu/components/icons/main-menu/logoff-icon.js';
+import LogoutIcon from '@educandu/educandu/components/icons/main-menu/logout-icon.js';
 import ImportsIcon from '@educandu/educandu/components/icons/main-menu/imports-icon.js';
 import LanguageIcon from '@educandu/educandu/components/icons/main-menu/language-icon.js';
 import SettingsIcon from '@educandu/educandu/components/icons/main-menu/settings-icon.js';
@@ -100,8 +100,8 @@ function PageHeader({ onUiLanguageClick }) {
     {
       key: 'logout',
       href: urls.getLogoutUrl(),
-      text: t('common:logoff'),
-      icon: LogoffIcon,
+      text: t('common:logout'),
+      icon: LogoutIcon,
       permission: null,
       showWhen: !!user
     }
