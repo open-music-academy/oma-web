@@ -3,8 +3,8 @@ import { Button } from 'antd';
 import PropTypes from 'prop-types';
 import HeaderLogo from './header-logo.js';
 import { useTranslation } from 'react-i18next';
-import urls from '@educandu/educandu/utils/urls.js';
 import { QuestionOutlined } from '@ant-design/icons';
+import routes from '@educandu/educandu/utils/routes.js';
 import Login from '@educandu/educandu/components/login.js';
 import permissions from '@educandu/educandu/domain/permissions.js';
 import { useUser } from '@educandu/educandu/components/user-context.js';
@@ -35,7 +35,7 @@ function PageHeader({ onUiLanguageClick }) {
   const pageMenuItems = [
     {
       key: 'home',
-      href: urls.getHomeUrl(),
+      href: routes.getHomeUrl(),
       text: t('pageNames:home'),
       icon: HomeIcon,
       permission: null,
@@ -43,7 +43,7 @@ function PageHeader({ onUiLanguageClick }) {
     },
     {
       key: 'dashboard',
-      href: urls.getDashboardUrl(),
+      href: routes.getDashboardUrl(),
       text: t('pageNames:dashboard'),
       icon: DashboardIcon,
       permission: null,
@@ -51,7 +51,7 @@ function PageHeader({ onUiLanguageClick }) {
     },
     {
       key: 'docs',
-      href: urls.getDocsUrl(),
+      href: routes.getDocsUrl(),
       text: t('pageNames:docs'),
       icon: DocumentsIcon,
       permission: permissions.VIEW_DOCS,
@@ -59,7 +59,7 @@ function PageHeader({ onUiLanguageClick }) {
     },
     {
       key: 'users',
-      href: urls.getUsersUrl(),
+      href: routes.getUsersUrl(),
       text: t('pageNames:users'),
       icon: UsersIcon,
       permission: permissions.EDIT_USERS,
@@ -67,7 +67,7 @@ function PageHeader({ onUiLanguageClick }) {
     },
     {
       key: 'admin',
-      href: urls.getAdminUrl(),
+      href: routes.getAdminUrl(),
       text: t('pageNames:admin'),
       icon: SettingsIcon,
       permission: permissions.ADMIN,
@@ -75,7 +75,7 @@ function PageHeader({ onUiLanguageClick }) {
     },
     {
       key: 'import',
-      href: urls.getImportsUrl(),
+      href: routes.getImportsUrl(),
       text: t('pageNames:imports'),
       icon: ImportsIcon,
       permission: permissions.MANAGE_IMPORT,
@@ -83,7 +83,7 @@ function PageHeader({ onUiLanguageClick }) {
     },
     {
       key: 'help',
-      href: helpPage ? urls.getDocUrl({ key: helpPage.documentKey }) : '',
+      href: helpPage ? routes.getDocUrl({ key: helpPage.documentKey }) : '',
       text: helpPage?.linkTitle,
       icon: QuestionOutlined,
       permission: null,
@@ -99,7 +99,7 @@ function PageHeader({ onUiLanguageClick }) {
     },
     {
       key: 'logout',
-      href: urls.getLogoutUrl(),
+      href: routes.getLogoutUrl(),
       text: t('common:logout'),
       icon: LogoutIcon,
       permission: null,
