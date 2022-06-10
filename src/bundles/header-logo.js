@@ -1,5 +1,5 @@
 import React from 'react';
-import urls from '@educandu/educandu/utils/urls.js';
+import routes from '@educandu/educandu/utils/routes.js';
 
 function HeaderLogo() {
   const renderImage = () => (
@@ -30,7 +30,7 @@ function HeaderLogo() {
   );
 
   return (
-    <a style={{ display: 'flex' }} href={urls.getHomeUrl()}>{renderImage()}</a>
+    <a style={{ display: 'flex' }} href={routes.getHomeUrl()}>{renderImage()}</a>
   );
 }
 
