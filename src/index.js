@@ -65,7 +65,8 @@ const config = {
   additionalControllers: [],
   additionalHeadHtml: faviconData.favicon.html_code,
   areRoomsEnabled: parseBool(processEnv.OMA_ARE_ROOMS_ENABLED || false.toString()),
-  plugins: enabledPlugins
+  plugins: enabledPlugins,
+  basicAuthUsers: JSON.parse(processEnv.OMA_BASIC_AUTH_USERS || '{}')
 };
 
 educandu(config);
