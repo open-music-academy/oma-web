@@ -385,10 +385,10 @@
     yaml "^1.10.2"
     yargs "^17.3.1"
 
-"@educandu/educandu@0.49.1":
-  version "0.49.1"
-  resolved "https://registry.yarnpkg.com/@educandu/educandu/-/educandu-0.49.1.tgz#426c32593a930e09b9fd86fa2ce366f9832cbb89"
-  integrity sha512-87EEtjqi0PZr1IuMPNZF8e+fBH5uhVVn9K8RsmnsmKAnOvUtuH7LjW2aLvtsg0/8RdfzSc8HN1RjBZ/xyzu7Mg==
+"@educandu/educandu@0.50.0":
+  version "0.50.0"
+  resolved "https://registry.yarnpkg.com/@educandu/educandu/-/educandu-0.50.0.tgz#dc18c2fd3085e5466031ef256189f67b904d8ad5"
+  integrity sha512-QpVdYaiR9E3Q2hssMeGKNz0at/AyOayqPOY9JwUKEszH0VgbVj2ln2OAV/wvPC8FjbrSxoCXz2qqRwDkW3e5KA==
   dependencies:
     "@ant-design/icons" "^4.7.0"
     "@educandu/node-jsx-loader" "^2.2.0"
@@ -413,6 +413,7 @@
     escape-string-regexp "^5.0.0"
     express "^4.17.1"
     express-async-errors "^3.1.1"
+    express-basic-auth "^1.2.1"
     express-joi-validation "^5.0.0"
     express-session "^1.17.2"
     express-useragent "^1.0.15"
@@ -1738,6 +1739,13 @@ base@^0.11.1:
     isobject "^3.0.1"
     mixin-deep "^1.2.0"
     pascalcase "^0.1.1"
+
+basic-auth@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/basic-auth/-/basic-auth-2.0.1.tgz#b998279bf47ce38344b4f3cf916d4679bbf51e3a"
+  integrity sha512-NF+epuEdnUYVlGuhaxbbq+dvJttwLnGY+YixlXlME5KpQ5W3CnXA5cVTneY3SPbPDRkcjMbifrwmFYcClgOZeg==
+  dependencies:
+    safe-buffer "5.1.2"
 
 bcrypt@^5.0.1:
   version "5.0.1"
@@ -3947,6 +3955,13 @@ express-async-errors@^3.1.1:
   version "3.1.1"
   resolved "https://registry.yarnpkg.com/express-async-errors/-/express-async-errors-3.1.1.tgz#6053236d61d21ddef4892d6bd1d736889fc9da41"
   integrity sha512-h6aK1da4tpqWSbyCa3FxB/V6Ehd4EEB15zyQq9qe75OZBp0krinNKuH4rAY+S/U/2I36vdLAUFSjQJ+TFmODng==
+
+express-basic-auth@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/express-basic-auth/-/express-basic-auth-1.2.1.tgz#d31241c03a915dd55db7e5285573049cfcc36381"
+  integrity sha512-L6YQ1wQ/mNjVLAmK3AG1RK6VkokA1BIY6wmiH304Xtt/cLTps40EusZsU1Uop+v9lTDPxdtzbFmdXfFO3KEnwA==
+  dependencies:
+    basic-auth "^2.0.1"
 
 express-joi-validation@^5.0.0:
   version "5.0.0"
@@ -8848,15 +8863,15 @@ rxjs@^7.2.0:
   dependencies:
     tslib "^2.1.0"
 
+safe-buffer@5.1.2, safe-buffer@~5.1.0, safe-buffer@~5.1.1:
+  version "5.1.2"
+  resolved "https://registry.yarnpkg.com/safe-buffer/-/safe-buffer-5.1.2.tgz#991ec69d296e0313747d59bdfd2b745c35f8828d"
+  integrity sha512-Gd2UZBJDkXlY7GbJxfsE8/nvKkUEU1G38c1siN6QP6a9PT9MmHB8GnpscSmMJSoF8LOIrt8ud/wPtojys4G6+g==
+
 safe-buffer@5.2.1, safe-buffer@^5.0.1, safe-buffer@^5.1.0, safe-buffer@^5.1.1, safe-buffer@^5.1.2, safe-buffer@^5.2.0, safe-buffer@~5.2.0:
   version "5.2.1"
   resolved "https://registry.yarnpkg.com/safe-buffer/-/safe-buffer-5.2.1.tgz#1eaf9fa9bdb1fdd4ec75f58f9cdb4e6b7827eec6"
   integrity sha512-rp3So07KcdmmKbGvgaNxQSJr7bGVSVk5S9Eq1F+ppbRo70+YeaDxkw5Dd8NPN+GD6bjnYm2VuPuCXmpuYvmCXQ==
-
-safe-buffer@~5.1.0, safe-buffer@~5.1.1:
-  version "5.1.2"
-  resolved "https://registry.yarnpkg.com/safe-buffer/-/safe-buffer-5.1.2.tgz#991ec69d296e0313747d59bdfd2b745c35f8828d"
-  integrity sha512-Gd2UZBJDkXlY7GbJxfsE8/nvKkUEU1G38c1siN6QP6a9PT9MmHB8GnpscSmMJSoF8LOIrt8ud/wPtojys4G6+g==
 
 safe-regex@^1.1.0:
   version "1.1.0"
