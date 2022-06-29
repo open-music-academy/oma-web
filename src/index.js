@@ -66,7 +66,17 @@ const config = {
   additionalHeadHtml: faviconData.favicon.html_code,
   areRoomsEnabled: parseBool(processEnv.OMA_ARE_ROOMS_ENABLED || false.toString()),
   plugins: enabledPlugins,
-  basicAuthUsers: JSON.parse(processEnv.OMA_BASIC_AUTH_USERS || '{}')
+  basicAuthUsers: JSON.parse(processEnv.OMA_BASIC_AUTH_USERS || '{}'),
+  ambConfig: {
+    apiKey: processEnv.OMA_AMB_API_KEY,
+    publisher: [
+      {
+        type: 'Organization',
+        name: 'Open Music Academy'
+      }
+    ],
+    image: './images/oma-amb-logo.png'
+  }
 };
 
 educandu(config);
