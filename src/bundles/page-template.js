@@ -35,9 +35,10 @@ function PageTemplate({ children, fullScreen, alerts }) {
 
     return (
       <Alert
-        key={index}
-        message={alert.message}
         banner
+        key={index}
+        type={alert.type}
+        message={alert.message}
         closable={alert.closable || false}
         onClose={alert.onClose || (() => { })}
         />

@@ -74,6 +74,12 @@ const config = {
         type: 'Organization',
         name: 'Open Music Academy'
       }
+
+    ],
+    about: [
+      {
+        id: 'https://w3id.org/kim/hochschulfaechersystematik/n78'
+      }
     ],
     image: './images/oma-amb-logo.png'
   }
