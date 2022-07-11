@@ -81,7 +81,7 @@ const config = {
         id: 'https://w3id.org/kim/hochschulfaechersystematik/n78'
       }
     ],
-    image: './images/oma-amb-logo-560x420.png'
+    image: './images/oma-amb-logo.png'
   }
 };
 
