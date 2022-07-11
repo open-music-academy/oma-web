@@ -25,6 +25,12 @@ export TUNNEL_WEBSITE_CDN_DOMAIN='cdn.mytunneldomain.com'
 gulp tunnel
 ~~~
 
+## OERSI integration
+
+The `ambConfig` setup serves as configuration for integrating OMA into the OERSI platform.
+
+https://oersi.org/resources/?provider=%5B%22Open+Music+Academy%22%5D
+
 ## License
 
 Open Music Academy is released under the MIT License. See the bundled LICENSE file for details.
