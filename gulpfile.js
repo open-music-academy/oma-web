@@ -36,7 +36,7 @@ const omaEnv = {
   OMA_UPLOAD_LIABILITY_COOKIE_NAME: 'UPLOAD_LIABILITY_OMA_LOCAL',
   OMA_EMAIL_SENDER_ADDRESS: 'educandu-test-app@test.com',
   OMA_SMTP_OPTIONS: 'smtp://127.0.0.1:8025/?ignoreTLS=true',
-  OMA_INITIAL_USER: JSON.stringify({ username: 'test', password: 'test', email: 'test@test.com' }),
+  OMA_INITIAL_USER: JSON.stringify({ displayName: 'test', password: 'test', email: 'test@test.com' }),
   OMA_EXPOSE_ERROR_DETAILS: true.toString(),
   OMA_ARE_ROOMS_ENABLED: true.toString(),
   OMA_IMPORT_SOURCES: JSON.stringify([{ name: 'ELMU - Integration', hostName: 'integration.elmu.online', apiKey: '03a026b939154f41bb1dabf578a33e11' }]),
