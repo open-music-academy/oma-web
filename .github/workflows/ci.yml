@@ -33,7 +33,7 @@ jobs:
   deploy:
     runs-on: ubuntu-20.04
     needs: [build]
-    if: github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/main' || startsWith(github.ref, 'refs/heads/hotfix')
     env:
       DOCKER_IMAGE: openmusicacademy/oma-web
       OCTO_PROJECT_NAME: oma-web
