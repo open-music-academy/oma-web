@@ -385,10 +385,10 @@
     yaml "^1.10.2"
     yargs "^17.3.1"
 
-"@educandu/educandu@0.59.4":
-  version "0.59.4"
-  resolved "https://registry.yarnpkg.com/@educandu/educandu/-/educandu-0.59.4.tgz#8341cd4dd6f7b08eb3ab749fb55d097f512d0ea5"
-  integrity sha512-A9iTa1+jcj48JXoiJxDmSRqGiU1JI9Qy0wEDz1Bs9jPRzSuZA7QWbtJJ7p1iF9OPoevWjxcz6Lojr+dBtMxaeg==
+"@educandu/educandu@0.60.0":
+  version "0.60.0"
+  resolved "https://registry.yarnpkg.com/@educandu/educandu/-/educandu-0.60.0.tgz#c1f27758cdbafa00956546e3d8bd2fc704ceffae"
+  integrity sha512-QfNd9iLRxuHTxYasQtw4mRh25+CPxUIrsj0hs0jz3XKcKXo0dGHPY9RAhqRv5Ej6Vni400InH+aFXGGN2wgJYA==
   dependencies:
     "@ant-design/icons" "^4.7.0"
     "@educandu/node-jsx-loader" "^2.2.0"
