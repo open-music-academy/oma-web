@@ -385,10 +385,10 @@
     yaml "^1.10.2"
     yargs "^17.3.1"
 
-"@educandu/educandu@0.60.0":
-  version "0.60.0"
-  resolved "https://registry.yarnpkg.com/@educandu/educandu/-/educandu-0.60.0.tgz#c1f27758cdbafa00956546e3d8bd2fc704ceffae"
-  integrity sha512-QfNd9iLRxuHTxYasQtw4mRh25+CPxUIrsj0hs0jz3XKcKXo0dGHPY9RAhqRv5Ej6Vni400InH+aFXGGN2wgJYA==
+"@educandu/educandu@0.61.0":
+  version "0.61.0"
+  resolved "https://registry.yarnpkg.com/@educandu/educandu/-/educandu-0.61.0.tgz#78f9027cf11385450201830c9ef395439255118a"
+  integrity sha512-Oa+yDx+hmzMXqFGe7FbNSPdVyEesGQBetGtIrV7G+C6Gy6dFtvLyuUFksOAT0rnOexY3Sx2gz3Kx5+sKm5XrAA==
   dependencies:
     "@ant-design/icons" "^4.7.0"
     "@educandu/node-jsx-loader" "^2.2.0"
@@ -405,6 +405,7 @@
     classnames "^2.3.1"
     connect-mongo "^4.6.0"
     cookie-parser "^1.4.5"
+    cropperjs "^1.5.12"
     crypto-js "^4.1.1"
     debounce "^1.2.1"
     decompress "^4.2.1"
@@ -2549,6 +2550,11 @@ create-hmac@^1.1.0, create-hmac@^1.1.4, create-hmac@^1.1.7:
     ripemd160 "^2.0.0"
     safe-buffer "^5.0.1"
     sha.js "^2.4.8"
+
+cropperjs@^1.5.12:
+  version "1.5.12"
+  resolved "https://registry.yarnpkg.com/cropperjs/-/cropperjs-1.5.12.tgz#d9c0db2bfb8c0d769d51739e8f916bbc44e10f50"
+  integrity sha512-re7UdjE5UnwdrovyhNzZ6gathI4Rs3KGCBSc8HCIjUo5hO42CtzyblmWLj6QWVw7huHyDMfpKxhiO2II77nhDw==
 
 cross-spawn@^7.0.2, cross-spawn@^7.0.3:
   version "7.0.3"

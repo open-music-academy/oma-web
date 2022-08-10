@@ -27,8 +27,9 @@ const enabledPlugins = [
   'abc-notation',
   'ear-training',
   'interval-trainer',
+  'table',
   'interactive-media',
-  'table'
+  'multitrack-media'
 ].filter(plugin => !disabledPlugins.includes(plugin));
 
 const config = {
