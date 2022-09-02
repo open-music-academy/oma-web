@@ -14,22 +14,22 @@ const disabledPlugins = (processEnv.OMA_DISABLED_PLUGINS || '').split(',').map(x
 
 const enabledPlugins = [
   'markdown',
-  'quick-tester',
   'audio',
   'video',
   'image',
-  'pdf-viewer',
-  'iframe',
-  'anavis',
-  'image-tiles',
-  'diagram-net',
+  'catalog',
   'annotation',
+  'table',
+  'pdf-viewer',
+  'diagram-net',
+  'iframe',
   'abc-notation',
+  'quick-tester',
   'ear-training',
   'interval-trainer',
-  'table',
   'interactive-media',
-  'multitrack-media'
+  'multitrack-media',
+  'anavis'
 ].filter(plugin => !disabledPlugins.includes(plugin));
 
 const config = {
@@ -66,6 +66,7 @@ const config = {
   additionalControllers: [],
   additionalHeadHtml: faviconData.favicon.html_code,
   areRoomsEnabled: parseBool(processEnv.OMA_ARE_ROOMS_ENABLED || false.toString()),
+  disabledFeatures: JSON.parse(processEnv.OMA_DISABLED_FEATURES || '[]'),
   plugins: enabledPlugins,
   basicAuthUsers: JSON.parse(processEnv.OMA_BASIC_AUTH_USERS || '{}'),
   ambConfig: {
