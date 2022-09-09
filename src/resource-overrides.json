@@ -27,14 +27,14 @@
     "namespace": "searchBar",
     "language": "en",
     "resources": {
-      "searchPlaceholder": "Topic or keyword"
+      "searchPlaceholder": "Search terms, e.g. ear training, music theory, analysis, etc."
     }
   },
   {
     "namespace": "searchBar",
     "language": "de",
     "resources": {
-      "searchPlaceholder": "Thema oder Schlagwort"
+      "searchPlaceholder": "Suchbegriffe, z.B. Gehörbildung, Musiktheorie, Analyse, etc."
     }
   }
 ]
