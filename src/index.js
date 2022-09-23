@@ -30,6 +30,7 @@ const enabledPlugins = [
   'media-slideshow',
   'interactive-media',
   'multitrack-media',
+  'media-analysis',
   'anavis'
 ].filter(plugin => !disabledPlugins.includes(plugin));
 
