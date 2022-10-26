@@ -7,16 +7,12 @@ import { QuestionOutlined } from '@ant-design/icons';
 import routes from '@educandu/educandu/utils/routes.js';
 import Login from '@educandu/educandu/components/login.js';
 import { useUser } from '@educandu/educandu/components/user-context.js';
-import ClientConfig from '@educandu/educandu/bootstrap/client-config.js';
-import { FEATURE_TOGGLES } from '@educandu/educandu/domain/constants.js';
 import { useLocale } from '@educandu/educandu/components/locale-context.js';
-import { useService } from '@educandu/educandu/components/container-context.js';
 import { useSettings } from '@educandu/educandu/components/settings-context.js';
 import HomeIcon from '@educandu/educandu/components/icons/main-menu/home-icon.js';
 import MenuIcon from '@educandu/educandu/components/icons/main-menu/menu-icon.js';
 import UsersIcon from '@educandu/educandu/components/icons/main-menu/users-icon.js';
 import LogoutIcon from '@educandu/educandu/components/icons/main-menu/logout-icon.js';
-import ImportsIcon from '@educandu/educandu/components/icons/main-menu/imports-icon.js';
 import permissions, { hasUserPermission } from '@educandu/educandu/domain/permissions.js';
 import LanguageIcon from '@educandu/educandu/components/icons/main-menu/language-icon.js';
 import SettingsIcon from '@educandu/educandu/components/icons/main-menu/settings-icon.js';
@@ -28,7 +24,6 @@ function PageHeader({ onUiLanguageClick }) {
   const settings = useSettings();
   const { uiLanguage } = useLocale();
   const { t } = useTranslation('page');
-  const clientConfig = useService(ClientConfig);
   const helpPage = settings?.helpPage?.[uiLanguage];
 
   const pageMenuItems = [
@@ -66,13 +61,6 @@ function PageHeader({ onUiLanguageClick }) {
       icon: <SettingsIcon />,
       onClick: () => { window.location = routes.getAdminUrl(); },
       showWhen: hasUserPermission(user, permissions.ADMIN)
-    },
-    {
-      key: 'import',
-      label: t('pageNames:imports'),
-      icon: <ImportsIcon />,
-      onClick: () => { window.location = routes.getImportsUrl(); },
-      showWhen: hasUserPermission(user, permissions.MANAGE_IMPORT) && !clientConfig.disabledFeatures.includes(FEATURE_TOGGLES.import)
     },
     {
       key: 'help',

@@ -38,8 +38,6 @@ const omaEnv = {
   OMA_SMTP_OPTIONS: 'smtp://127.0.0.1:8025/?ignoreTLS=true',
   OMA_INITIAL_USER: JSON.stringify({ displayName: 'test', password: 'test', email: 'test@test.com' }),
   OMA_EXPOSE_ERROR_DETAILS: true.toString(),
-  OMA_ARE_ROOMS_ENABLED: true.toString(),
-  OMA_IMPORT_SOURCES: JSON.stringify([{ name: 'ELMU - Integration', hostName: 'integration.elmu.online', apiKey: '03a026b939154f41bb1dabf578a33e11' }]),
   OMA_SKIP_MAINTENANCE: false.toString(),
   OMA_AMB_API_KEY: 'ABEE12673E7044D89F5D908893BABE77'
 };
