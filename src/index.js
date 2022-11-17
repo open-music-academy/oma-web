@@ -23,7 +23,7 @@ const enabledPlugins = [
   'table',
   'pdf-viewer',
   'table-of-contents',
-  'memory',
+  'matching-cards',
   'diagram-net',
   'iframe',
   'abc-notation',
