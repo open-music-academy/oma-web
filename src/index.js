@@ -2,8 +2,8 @@ import url from 'url';
 import path from 'path';
 import parseBool from 'parseboolean';
 import educandu from '@educandu/educandu';
-import faviconData from '../favicon-data.json';
 import bundleConfig from './bundles/bundle-config.js';
+import faviconData from '../favicon-data.json' assert { type: 'json' };
 
 // eslint-disable-next-line no-process-env
 const processEnv = process.env;
@@ -78,7 +78,6 @@ const config = {
         type: 'Organization',
         name: 'Open Music Academy'
       }
-
     ],
     about: [
       {
