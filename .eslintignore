@@ -1,3 +1,3 @@
 dist/**
-test/**
-src/plugins/*/static/**
+# Following files will be removed from this list in https://educandu.atlassian.net/browse/EDU-936
+src/index.js
