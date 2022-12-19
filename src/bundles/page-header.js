@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Button, Dropdown } from 'antd';
 import HeaderLogo from './header-logo.js';
-import { Button, Dropdown, Menu } from 'antd';
 import { useTranslation } from 'react-i18next';
 import { QuestionOutlined } from '@ant-design/icons';
 import routes from '@educandu/educandu/utils/routes.js';
@@ -92,8 +92,6 @@ function PageHeader({ onUiLanguageClick }) {
 
   const menuItems = pageMenuItems.map(({ key, label, icon }) => ({ key, label, icon }));
 
-  const menu = <Menu items={menuItems} onClick={handleMenuItemClick} />;
-
   return (
     <header className="PageHeader">
       <div className="PageHeader-header">
@@ -104,7 +102,12 @@ function PageHeader({ onUiLanguageClick }) {
           <div className="PageHeader-loginButton">
             <Login />
           </div>
-          <Dropdown overlay={menu} placement="bottomRight" trigger={['click']} arrow={{ pointAtCenter: true }}>
+          <Dropdown
+            trigger={['click']}
+            placement="bottomRight"
+            arrow={{ pointAtCenter: true }}
+            menu={{ items: menuItems, onClick: handleMenuItemClick }}
+            >
             <Button className="PageHeader-headerButton" icon={<MenuIcon />} type="link" />
           </Dropdown>
         </div>
