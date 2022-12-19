@@ -39,6 +39,7 @@ jobs:
       OCTO_PROJECT_NAME: oma-web
       OCTO_ENVIRONMENT_NAME: Integration
       OCTO_SERVER: https://elmu.octopus.app
+      OCTO_SPACE: default
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -69,6 +70,7 @@ jobs:
         with:
           api_key: ${{ secrets.OCTO_API_KEY }}
           project: ${{ env.OCTO_PROJECT_NAME }}
+          space: ${{ env.OCTO_SPACE }}
           server: ${{ env.OCTO_SERVER }}
           release_notes: ${{ env.RELEASE_NOTES }}
           release_number: ${{ env.RELEASE_NUMBER }}
