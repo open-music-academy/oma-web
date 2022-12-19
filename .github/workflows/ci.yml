@@ -39,6 +39,7 @@ jobs:
       OCTO_PROJECT_NAME: oma-web
       OCTO_ENVIRONMENT_NAME: Integration
       OCTO_SERVER: https://elmu.octopus.app
+      OCTO_SPACE: Default
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -61,11 +62,11 @@ jobs:
           context: .
           tags: ${{ env.DOCKER_IMAGE }}:${{ env.RELEASE_NUMBER }}
       - name: Install Octopus CLI
-        uses: OctopusDeploy/install-octopus-cli-action@v3
+        uses: OctopusDeploy/install-octopus-cli-action@v3.0.0
         with:
           version: latest
       - name: Create a release in Octopus Deploy 🐙
-        uses: OctopusDeploy/create-release-action@v3
+        uses: OctopusDeploy/create-release-action@v3.0.1
         with:
           api_key: ${{ secrets.OCTO_API_KEY }}
           project: ${{ env.OCTO_PROJECT_NAME }}
@@ -73,14 +74,15 @@ jobs:
           space: ${{ env.OCTO_SPACE }}
           release_notes: ${{ env.RELEASE_NOTES }}
           release_number: ${{ env.RELEASE_NUMBER }}
-          deploy_to: ${{ env.OCTO_ENVIRONMENT_NAME }}
       - name: Deploy a release in Octopus Deploy 🐙
-        uses: OctopusDeploy/deploy-release-action@v3
+        uses: OctopusDeploy/deploy-release-action@v3.0.1
         with:
           api_key: ${{ secrets.OCTO_API_KEY }}
           project: ${{ env.OCTO_PROJECT_NAME }}
           server: ${{ env.OCTO_SERVER }}
           space: ${{ env.OCTO_SPACE }}
           release_number: ${{ env.RELEASE_NUMBER }}
-          environments: [${{ env.OCTO_ENVIRONMENT_NAME }}]
+          environments: [ |
+            ${{ env.OCTO_ENVIRONMENT_NAME }}
+          ]
 
