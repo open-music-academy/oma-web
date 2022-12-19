@@ -81,6 +81,6 @@ jobs:
           project: ${{ env.OCTO_PROJECT_NAME }}
           server: ${{ env.OCTO_SERVER }}
           space: ${{ env.OCTO_SPACE }}
-          release_version: ${{ env.RELEASE_NUMBER }}
+          release_number: ${{ env.RELEASE_NUMBER }}
           environments: [${{ env.OCTO_ENVIRONMENT_NAME }}]
 
