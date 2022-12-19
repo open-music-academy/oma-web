@@ -27,7 +27,7 @@
     "parseboolean": "~1.0.0"
   },
   "devDependencies": {
-    "@educandu/dev-tools": "~6.0.2",
+    "@educandu/dev-tools": "~6.0.3",
     "@educandu/rooms-auth-lambda": "~2.0.3",
     "eslint": "~8.30.0",
     "eslint-plugin-react": "~7.31.11",
