@@ -103,7 +103,7 @@ export async function buildJs() {
   }
 }
 
-export const build = gulp.parallel(buildCss, buildJs);
+export const build = gulp.series(buildJs, buildCss);
 
 export function faviconGenerate(done) {
   realFavicon.generateFavicon({
