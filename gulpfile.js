@@ -81,8 +81,8 @@ export async function fix() {
 
 export async function buildCss() {
   await less.compile({
-    inputFile: './src/main.less',
-    outputFile: './dist/main.css',
+    inputFile: 'src/main.less',
+    outputFile: 'dist/main.css',
     optimize: true
   });
 }
