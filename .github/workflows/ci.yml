@@ -20,7 +20,7 @@ jobs:
       - name: Build
         run: ./node_modules/.bin/gulp build
       - name: Get current time
-        uses: 1466587594/get-current-time@v2.0.2
+        uses: 1466587594/get-current-time@v2
         id: current-time
       - name: Create release number file
         run: |
@@ -39,7 +39,6 @@ jobs:
       OCTO_PROJECT_NAME: oma-web
       OCTO_ENVIRONMENT_NAME: Integration
       OCTO_SERVER: https://elmu.octopus.app
-      OCTO_SPACE: Default
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -50,7 +49,7 @@ jobs:
       - name: Create release notes for Octopus
         run: echo "RELEASE_NOTES=$(echo $GITHUB_SERVER_URL/$GITHUB_REPOSITORY/commit/$GITHUB_SHA)" >> $GITHUB_ENV
       - name: Login to DockerHub
-        uses: docker/login-action@v2.1.0
+        uses: docker/login-action@v2
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
@@ -62,11 +61,11 @@ jobs:
           context: .
           tags: ${{ env.DOCKER_IMAGE }}:${{ env.RELEASE_NUMBER }}
       - name: Install Octopus CLI
-        uses: OctopusDeploy/install-octopus-cli-action@v3.0.0
+        uses: OctopusDeploy/install-octopus-cli-action@v3
         with:
           version: latest
       - name: Create a release in Octopus Deploy 🐙
-        uses: OctopusDeploy/create-release-action@v3.0.1
+        uses: OctopusDeploy/create-release-action@v3
         with:
           api_key: ${{ secrets.OCTO_API_KEY }}
           project: ${{ env.OCTO_PROJECT_NAME }}
@@ -75,3 +74,13 @@ jobs:
           release_notes: ${{ env.RELEASE_NOTES }}
           release_number: ${{ env.RELEASE_NUMBER }}
           deploy_to: ${{ env.OCTO_ENVIRONMENT_NAME }}
+      - name: Deploy a release in Octopus Deploy 🐙
+        uses: OctopusDeploy/deploy-release-action@v3
+        with:
+          api_key: ${{ secrets.OCTO_API_KEY }}
+          project: ${{ env.OCTO_PROJECT_NAME }}
+          server: ${{ env.OCTO_SERVER }}
+          space: ${{ env.OCTO_SPACE }}
+          release_version: ${{ env.RELEASE_NUMBER }}
+          environments: [${{ env.OCTO_ENVIRONMENT_NAME }}]
+
