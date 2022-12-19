@@ -37,7 +37,7 @@ jobs:
     env:
       DOCKER_IMAGE: openmusicacademy/oma-web
       OCTO_PROJECT_NAME: oma-web
-      OCTO_ENVIRONMENTS: ['Integration']
+      OCTO_ENVIRONMENT: Integration
       OCTO_SERVER: https://elmu.octopus.app
       OCTO_SPACE: Default
     steps:
@@ -82,5 +82,5 @@ jobs:
           server: ${{ env.OCTO_SERVER }}
           space: ${{ env.OCTO_SPACE }}
           release_number: ${{ env.RELEASE_NUMBER }}
-          environments: ${{ env.OCTO_ENVIRONMENTS }}
+          environments: [${{ env.OCTO_ENVIRONMENT }}]
 
