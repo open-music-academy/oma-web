@@ -13,14 +13,14 @@ import UiLanguageDialog from '@educandu/educandu/components/ui-language-dialog.j
 function HomePageTemplate({ children }) {
   const settings = useSettings();
   const { t } = useTranslation('oma');
-  const [isUiLanguageDialogVisible, setIsUiLanguageDialogVisible] = useState(false);
+  const [isUiLanguageDialogOpen, setIsUiLanguageDialogOpen] = useState(false);
 
   const handleUiLanguageDialogClose = () => {
-    setIsUiLanguageDialogVisible(false);
+    setIsUiLanguageDialogOpen(false);
   };
 
   const handleUiLanguageClick = () => {
-    setIsUiLanguageDialogVisible(true);
+    setIsUiLanguageDialogOpen(true);
   };
 
   return (
@@ -44,7 +44,7 @@ function HomePageTemplate({ children }) {
         </div>
       </main>
       <PageFooter />
-      <UiLanguageDialog visible={isUiLanguageDialogVisible} onClose={handleUiLanguageDialogClose} />
+      <UiLanguageDialog isOpen={isUiLanguageDialogOpen} onClose={handleUiLanguageDialogClose} />
       <ConsentDrawer />
     </div>
   );

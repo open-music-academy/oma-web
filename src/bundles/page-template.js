@@ -8,14 +8,14 @@ import ConsentDrawer from '@educandu/educandu/components/consent-drawer.js';
 import UiLanguageDialog from '@educandu/educandu/components/ui-language-dialog.js';
 
 function PageTemplate({ children, fullScreen, alerts }) {
-  const [isUiLanguageDialogVisible, setIsUiLanguageDialogVisible] = useState(false);
+  const [isUiLanguageDialogOpen, setIsUiLanguageDialogOpen] = useState(false);
 
   const handleUiLanguageDialogClose = () => {
-    setIsUiLanguageDialogVisible(false);
+    setIsUiLanguageDialogOpen(false);
   };
 
   const handleUiLanguageClick = () => {
-    setIsUiLanguageDialogVisible(true);
+    setIsUiLanguageDialogOpen(true);
   };
 
   const contentAreaClasses = classNames({
@@ -55,7 +55,7 @@ function PageTemplate({ children, fullScreen, alerts }) {
         </div>
       </main>
       <PageFooter />
-      <UiLanguageDialog visible={isUiLanguageDialogVisible} onClose={handleUiLanguageDialogClose} />
+      <UiLanguageDialog isOpen={isUiLanguageDialogOpen} onClose={handleUiLanguageDialogClose} />
       <ConsentDrawer />
     </div>
   );

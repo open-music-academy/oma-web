@@ -5,11 +5,10 @@
   "type": "module",
   "main": "src/index.js",
   "engines": {
-    "node": ">=18.0.0"
+    "node": "^18.0.0"
   },
   "scripts": {
-    "start": "gulp",
-    "test": "gulp test"
+    "start": "gulp"
   },
   "keywords": [],
   "license": "MIT",
@@ -21,15 +20,16 @@
   },
   "private": true,
   "dependencies": {
-    "@educandu/educandu": "0.85.3",
-    "@educandu/node-jsx-loader": "~3.0.0",
+    "@educandu/educandu": "~0.86.0",
+    "@educandu/eslint-config": "~2.0.0",
+    "@educandu/node-jsx-loader": "~3.0.1",
+    "del": "~7.0.0",
     "parseboolean": "~1.0.0"
   },
   "devDependencies": {
-    "@educandu/dev-tools": "~4.0.0",
-    "@educandu/rooms-auth-lambda": "~2.0.1",
-    "eslint": "~8.29.0",
-    "eslint-plugin-import": "~2.26.0",
+    "@educandu/dev-tools": "~6.0.2",
+    "@educandu/rooms-auth-lambda": "~2.0.3",
+    "eslint": "~8.30.0",
     "eslint-plugin-react": "~7.31.11",
     "eslint-plugin-react-hooks": "~4.6.0",
     "gulp": "~4.0.2",

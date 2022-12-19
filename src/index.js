@@ -43,6 +43,7 @@ const config = {
   port: Number(processEnv.OMA_PORT) || 3000,
   publicFolders: ['../dist', '../static'].map(x => path.resolve(thisDir, x)),
   resources: ['./src/local-resources.json', './src/resource-overrides.json'].map(x => path.resolve(x)),
+  themeFile: path.resolve('./src/theme.less'),
   sessionDurationInMinutes: Number(processEnv.OMA_SESSION_DURATION_IN_MINUTES) || 60,
   skipMaintenance: parseBool(processEnv.OMA_SKIP_MAINTENANCE || false.toString()),
   mongoConnectionString: processEnv.OMA_WEB_CONNECTION_STRING,

@@ -1,7 +1,7 @@
-import del from 'del';
 import gulp from 'gulp';
-import { promises as fs } from 'fs';
+import { deleteAsync } from 'del';
 import Graceful from 'node-graceful';
+import { promises as fs } from 'node:fs';
 import realFavicon from 'gulp-real-favicon';
 import {
   cliArgs,
@@ -68,7 +68,7 @@ Graceful.on('exit', async () => {
 });
 
 export async function clean() {
-  await del(['dist']);
+  await deleteAsync(['dist']);
 }
 
 export async function lint() {
@@ -103,7 +103,7 @@ export async function buildJs() {
   }
 }
 
-export const build = gulp.parallel(buildCss, buildJs);
+export const build = gulp.series(buildJs, buildCss);
 
 export function faviconGenerate(done) {
   realFavicon.generateFavicon({
