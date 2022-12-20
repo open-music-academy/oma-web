@@ -44,7 +44,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3.2.0
       - name: Download workspace
-        uses: actions/download-artifact@v3.5.1
+        uses: actions/download-artifact@v3.0.1
       - name: Read release number file
         run: echo "RELEASE_NUMBER="$(cat ./dist/release.txt | tr -d '\n')"" >> $GITHUB_ENV
       - name: Create release notes for Octopus
