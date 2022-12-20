@@ -82,3 +82,4 @@ jobs:
           server: ${{ env.OCTO_SERVER }}
           space: ${{ env.OCTO_SPACE }}
           release_number: ${{ env.RELEASE_NUMBER }}
+          use_guided_failure: true
