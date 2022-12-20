@@ -84,3 +84,4 @@ jobs:
           release_number: ${{ env.RELEASE_NUMBER }}
           environments: |
             ${{ env.OCTO_ENVIRONMENT }}
+            Staging
