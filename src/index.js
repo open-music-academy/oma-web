@@ -10,6 +10,10 @@ const processEnv = process.env;
 
 const thisDir = path.dirname(url.fileURLToPath(import.meta.url));
 
+const trustProxy = /^\d+$/.test(processEnv.OMA_TRUST_PROXY)
+  ? Number.parseInt(processEnv.OMA_TRUST_PROXY)
+  : parseBool(processEnv.OMA_TRUST_PROXY || false.toString())
+
 const disabledPlugins = (processEnv.OMA_DISABLED_PLUGINS || '').split(',').map(x => x.trim()).filter(x => x);
 
 const enabledPlugins = [
@@ -40,7 +44,7 @@ const enabledPlugins = [
 const config = {
   appName: 'Open Music Academy',
   port: Number(processEnv.OMA_PORT) || 3000,
-  trustProxy: parseBool(processEnv.OMA_TRUST_PROXY || false.toString()),
+  trustProxy,
   mongoConnectionString: processEnv.OMA_WEB_CONNECTION_STRING,
   skipMaintenance: parseBool(processEnv.OMA_SKIP_MAINTENANCE || false.toString()),
   cdnEndpoint: processEnv.OMA_CDN_ENDPOINT,
