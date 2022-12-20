@@ -82,5 +82,6 @@ jobs:
           server: ${{ env.OCTO_SERVER }}
           space: ${{ env.OCTO_SPACE }}
           release_number: ${{ env.RELEASE_NUMBER }}
-          environments: ['Integration']
+          environments:
+            - ${{ env.OCTO_ENVIRONMENT }}
 
