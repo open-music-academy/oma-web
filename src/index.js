@@ -14,8 +14,6 @@ const trustProxy = /^\d+$/.test(processEnv.OMA_TRUST_PROXY)
   ? Number.parseInt(processEnv.OMA_TRUST_PROXY)
   : parseBool(processEnv.OMA_TRUST_PROXY || false.toString())
 
-console.log('Running with:', JSON.stringify({ trustProxy }));
-
 const disabledPlugins = (processEnv.OMA_DISABLED_PLUGINS || '').split(',').map(x => x.trim()).filter(x => x);
 
 const enabledPlugins = [
