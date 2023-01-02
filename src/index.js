@@ -69,6 +69,8 @@ const config = {
   xFrameOptions: processEnv.OMA_X_FRAME_OPTIONS || null,
   smtpOptions: processEnv.OMA_SMTP_OPTIONS,
   emailSenderAddress: processEnv.OMA_EMAIL_SENDER_ADDRESS,
+  adminEmailAddress: processEnv.OMA_ADMIN_EMAIL_ADDRESS || null,
+  externalAccountProviders: JSON.parse(processEnv.OMA_EXTERNAL_ACCOUNT_PROVIDERS || '[]'),
   initialUser: processEnv.OMA_INITIAL_USER ? JSON.parse(processEnv.OMA_INITIAL_USER) : null,
   basicAuthUsers: JSON.parse(processEnv.OMA_BASIC_AUTH_USERS || '{}'),
   plugins: enabledPlugins,
