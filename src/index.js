@@ -67,6 +67,7 @@ const config = {
   consentCookieNamePrefix: processEnv.OMA_CONSENT_COOKIE_NAME_PREFIX,
   uploadLiabilityCookieName: processEnv.OMA_UPLOAD_LIABILITY_COOKIE_NAME,
   xFrameOptions: processEnv.OMA_X_FRAME_OPTIONS || null,
+  xRoomsAuthSecret: processEnv.OMA_X_ROOMS_AUTH_SECRET || null,
   smtpOptions: processEnv.OMA_SMTP_OPTIONS,
   emailSenderAddress: processEnv.OMA_EMAIL_SENDER_ADDRESS,
   adminEmailAddress: processEnv.OMA_ADMIN_EMAIL_ADDRESS || null,

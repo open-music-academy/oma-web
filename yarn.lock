@@ -858,10 +858,10 @@
     yaml "^2.1.3"
     yargs "^17.6.2"
 
-"@educandu/educandu@0.88.1":
-  version "0.88.1"
-  resolved "https://registry.yarnpkg.com/@educandu/educandu/-/educandu-0.88.1.tgz#909ea0408a5158678a0eb411d4c2285cd4dd7168"
-  integrity sha512-56O+q/CuYEgsLD7PPx4On+raBgf5GMi8cHoU+uBLsILkPuG6da9fDV1QC15JVeHdQnu4bKJPnPIVfooPyMKJVA==
+"@educandu/educandu@0.88.2":
+  version "0.88.2"
+  resolved "https://registry.yarnpkg.com/@educandu/educandu/-/educandu-0.88.2.tgz#5591fd60d5d0cf945e90a578216eadc6e88cea7e"
+  integrity sha512-XMYcMnOyRNYSENo4E3C4jVW6Fy47QXPHvcQ8NJOQ+8wmzJQjfnJMHRUzoBs6E0/ZqFE2ZpAuA/Eb10kqXRpkVQ==
   dependencies:
     "@ant-design/icons" "^4.8.0"
     "@sindresorhus/slugify" "^2.1.1"

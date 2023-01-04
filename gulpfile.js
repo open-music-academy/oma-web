@@ -34,6 +34,7 @@ const omaEnv = {
   OMA_SESSION_COOKIE_NAME: 'SESSION_ID_OMA_LOCAL',
   OMA_CONSENT_COOKIE_NAME_PREFIX: 'CONSENT_OMA_LOCAL',
   OMA_UPLOAD_LIABILITY_COOKIE_NAME: 'UPLOAD_LIABILITY_OMA_LOCAL',
+  OMA_X_ROOMS_AUTH_SECRET: 'F3BCBB69EC8442E79AE3D0EA9647AA96',
   OMA_EMAIL_SENDER_ADDRESS: 'educandu-test-app@test.com',
   OMA_SMTP_OPTIONS: 'smtp://127.0.0.1:8025/?ignoreTLS=true',
   OMA_INITIAL_USER: JSON.stringify({ displayName: 'test', password: 'test', email: 'test@test.com' }),
@@ -265,7 +266,8 @@ export async function startServer() {
       PORT: 10000,
       WEBSITE_BASE_URL: tunnel ? `https://${tunnelWebsiteDomain}` : 'http://localhost:3000',
       CDN_BASE_URL: 'http://localhost:9000/dev-educandu-cdn',
-      SESSION_COOKIE_NAME: omaEnv.OMA_SESSION_COOKIE_DOMAIN
+      SESSION_COOKIE_NAME: omaEnv.OMA_SESSION_COOKIE_DOMAIN,
+      X_ROOMS_AUTH_SECRET: omaEnv.X_ROOMS_AUTH_SECRET
     }
   });
 
