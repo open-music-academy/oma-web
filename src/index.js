@@ -96,7 +96,7 @@ const config = {
     ],
     image: './images/oma-amb-logo.png'
   },
-  externalAccountProviders: JSON.parse(processEnv.OMA_EXTERNAL_ACCOUNT_PROVIDERS || '[]')
+  samlAuth: JSON.parse(processEnv.OMA_SAML_AUTH || 'null')
 };
 
 educandu(config);
