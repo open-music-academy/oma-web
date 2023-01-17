@@ -40,7 +40,10 @@ const omaEnv = {
   OMA_INITIAL_USER: JSON.stringify({ displayName: 'test', password: 'test', email: 'test@test.com' }),
   OMA_EXPOSE_ERROR_DETAILS: true.toString(),
   OMA_SKIP_MAINTENANCE: false.toString(),
-  OMA_AMB_API_KEY: 'ABEE12673E7044D89F5D908893BABE77'
+  OMA_AMB_API_KEY: 'ABEE12673E7044D89F5D908893BABE77',
+  OMA_SAML_AUTH_DECRYPTION: process.env.TUNNEL_WEBSITE_SAML_AUTH_DECRYPTION || '',
+  OMA_SAML_IDENTITY_PROVIDER_KEYS: 'hfmutm, samltest',
+  OMA_TRUST_PROXY: true.toString()
 };
 
 const mongoContainer = new MongoContainer({
@@ -256,7 +259,9 @@ export async function startServer() {
     NODE_ENV: 'development',
     ...omaEnv,
     OMA_CDN_ROOT_URL: tunnel ? `https://${tunnelWebsiteCdnDomain}` : 'http://localhost:10000',
-    OMA_SESSION_COOKIE_DOMAIN: tunnel ? tunnelWebsiteDomain : omaEnv.OMA_SESSION_COOKIE_DOMAIN
+    OMA_SESSION_COOKIE_DOMAIN: tunnel ? tunnelWebsiteDomain : omaEnv.OMA_SESSION_COOKIE_DOMAIN,
+    OMA_SAML_AUTH_DECRYPTION: tunnel ? omaEnv.OMA_SAML_AUTH_DECRYPTION : '',
+    OMA_SAML_IDENTITY_PROVIDER_KEYS: tunnel ? omaEnv.OMA_SAML_IDENTITY_PROVIDER_KEYS : ''
   };
 
   currentCdnProxy = new NodeProcess({
@@ -267,7 +272,7 @@ export async function startServer() {
       WEBSITE_BASE_URL: tunnel ? `https://${tunnelWebsiteDomain}` : 'http://localhost:3000',
       CDN_BASE_URL: 'http://localhost:9000/dev-educandu-cdn',
       SESSION_COOKIE_NAME: omaEnv.OMA_SESSION_COOKIE_DOMAIN,
-      X_ROOMS_AUTH_SECRET: omaEnv.X_ROOMS_AUTH_SECRET
+      X_ROOMS_AUTH_SECRET: omaEnv.OMA_X_ROOMS_AUTH_SECRET
     }
   });
 
