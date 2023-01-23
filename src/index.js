@@ -24,6 +24,16 @@ const availableIdentityProviders = {
       entityId: 'https://sso.hmtm.de/idp/shibboleth'
     }
   },
+  hfmn: {
+    key: 'hfmn',
+    displayName: 'Hochschule für Musik Nürnberg',
+    logoUrl: 'https://www.hfm-nuernberg.de/fileadmin/templates/images/layout/logo-hfmn.png',
+    expiryTimeoutInDays: 6 * 30,
+    metadata: {
+      url: 'https://www.aai.dfn.de/metadata/dfn-aai-idp-metadata.xml',
+      entityId: 'https://sso.hfm-nuernberg.de/idp/shibboleth'
+    }
+  },
   samltest: {
     key: 'samltest',
     displayName: 'SAMLTEST.ID',
