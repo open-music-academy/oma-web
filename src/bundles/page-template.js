@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import PageHeader from './page-header.js';
 import PageFooter from './page-footer.js';
 import Alert from '@educandu/educandu/components/alert.js';
-import ConsentDrawer from '@educandu/educandu/components/consent-drawer.js';
+import ConsentDialog from '@educandu/educandu/components/consent-dialog.js';
 import UiLanguageDialog from '@educandu/educandu/components/ui-language-dialog.js';
 
 function PageTemplate({ children, fullScreen, alerts }) {
@@ -56,7 +56,7 @@ function PageTemplate({ children, fullScreen, alerts }) {
       </main>
       <PageFooter />
       <UiLanguageDialog isOpen={isUiLanguageDialogOpen} onClose={handleUiLanguageDialogClose} />
-      <ConsentDrawer />
+      <ConsentDialog />
     </div>
   );
 }
