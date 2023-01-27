@@ -11,7 +11,6 @@ import { useLocale } from '@educandu/educandu/components/locale-context.js';
 import { useSettings } from '@educandu/educandu/components/settings-context.js';
 import HomeIcon from '@educandu/educandu/components/icons/main-menu/home-icon.js';
 import MenuIcon from '@educandu/educandu/components/icons/main-menu/menu-icon.js';
-import UsersIcon from '@educandu/educandu/components/icons/main-menu/users-icon.js';
 import LogoutIcon from '@educandu/educandu/components/icons/main-menu/logout-icon.js';
 import permissions, { hasUserPermission } from '@educandu/educandu/domain/permissions.js';
 import LanguageIcon from '@educandu/educandu/components/icons/main-menu/language-icon.js';
@@ -47,13 +46,6 @@ function PageHeader({ onUiLanguageClick }) {
       icon: <DocumentsIcon />,
       onClick: () => { window.location = routes.getDocsUrl(); },
       showWhen: hasUserPermission(user, permissions.VIEW_DOCS)
-    },
-    {
-      key: 'users',
-      label: t('pageNames:users'),
-      icon: <UsersIcon />,
-      onClick: () => { window.location = routes.getUsersUrl(); },
-      showWhen: hasUserPermission(user, permissions.EDIT_USERS)
     },
     {
       key: 'admin',
