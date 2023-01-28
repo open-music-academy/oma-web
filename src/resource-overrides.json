@@ -4,8 +4,8 @@
     "language": "en",
     "resources": {
       "registrationVerificationEmail.subject": "Welcome to Open Music Academy!",
-      "registrationVerificationEmail.text": "Welcome!\n\nYou have registered with Open Music Academy as {displayName}.\nTo complete your registration, please confirm your email address through the following link: {verificationLink}\nThe link remains valid for {hours, plural, =1 {one hour} other {# hours}}.\n",
-      "registrationVerificationEmail.html": "<p>Welcome!<br/><br/>You have registered with Open Music Academy as {displayName}.<br/>To complete your registration, please confirm your email address through the following link: <a href=\"{verificationLink}\">confirm registration</a><br/>The link remains valid for {hours, plural, =1 {one hour} other {# hours}}.</p>\n",
+      "registrationVerificationEmail.text": "Welcome!\n\nYou have registered with Open Music Academy as {displayName}.\nPlease complete your registration using the following code:\n\n{verificationCode}\n\nThe code remains valid for {minutes, plural, =1 {one minute} other {# minutes}}.\n",
+      "registrationVerificationEmail.html": "<p>\nWelcome!\n<br/>\n<br/>\nYou have registered with Open Music Academy as {displayName}.\n<br/>\nPlease complete your registration using the following code:\n<br>\n<br>\n<b><pre>{verificationCode}</pre></b>\n<br />\n<br/>\nThe code remains valid for {minutes, plural, =1 {one minute} other {# minutes}}.\n</p>\n",
       "passwordResetEmail.subject": "Your password for Open Music Academy",
       "passwordResetEmail.text": "Hello {displayName}!\n\nYou have requested a password reset on Open Music Academy.\nTo assign a new password, please follow this link: {completionLink}\nThe link remains valid for {hours, plural, =1 {one hour} other {# hours}}.\n",
       "passwordResetEmail.html": "<p>Hello {displayName}!<br/><br/>You have requested a password reset on Open Music Academy.<br/>To assign a new password, please follow this link: <a href=\"{completionLink}\">change password</a>.<br/>The link remains valid for {hours, plural, =1 {one hour} other {# hours}}.</p>\n"
@@ -16,8 +16,8 @@
     "language": "de",
     "resources": {
       "registrationVerificationEmail.subject": "Willkommen auf Open Music Academy!",
-      "registrationVerificationEmail.text": "Willkommen!\n\nDu hast dich als {displayName} auf Open Music Academy registriert.\nZum Abschluss der Registrierung bestätige bitte deine E-Mail-Adresse über diesen Link: {verificationLink}\nDer Link bleibt {hours, plural, =1 {eine Stunde} other {# Stunden}} gültig.\n",
-      "registrationVerificationEmail.html": "<p>Willkommen!<br/><br/>Du hast dich als {displayName} auf Open Music Academy registriert.<br/>Zum Abschluss der Registrierung bestätige bitte deine E-Mail-Adresse über diesen Link: <a href=\"{verificationLink}\">Registrierung bestätigen</a><br/>Der Link bleibt {hours, plural, =1 {eine Stunde} other {# Stunden}} gültig.</p>\n",
+      "registrationVerificationEmail.text": "Willkommen!\n\nDu hast dich als {displayName} auf Open Music Academy registriert.\nBitte schließe deine Registrierung mit dem folgendem Code ab:\n\n{verificationCode}\n\nDer Code bleibt {minutes, plural, =1 {eine Minute} other {# Minuten}} gültig.\n",
+      "registrationVerificationEmail.html": "<p>\nWillkommen!\n<br/>\n<br/>\nDu hast dich als {displayName} auf Open Music Academy registriert.\n<br/>\nBitte schließe deine Registrierung mit dem folgendem Code ab:\n<br>\n<br>\n<b><pre>{verificationCode}</pre></b>\n<br />\n<br/>\nDer Code bleibt {minutes, plural, =1 {eine Minute} other {# Minuten}} gültig.\n</p>\n",
       "passwordResetEmail.subject": "Dein Kennwort auf Open Music Academy",
       "passwordResetEmail.text": "Hallo {displayName}!\n\nDu hast das Zurücksetzen deines Kennworts auf Open Music Academy angefordert.\nZur Vergabe eines neuen Kennworts folge bitte diesem Link: {completionLink}\nDer Link bleibt {hours, plural, =1 {eine Stunde} other {# Stunden}} gültig.\n",
       "passwordResetEmail.html": "<p>Hallo {displayName}!<br/><br/>Du hast das Zurücksetzen deines Kennworts auf Open Music Academy angefordert.<br/>Zur Vergabe eines neuen Kennworts folge bitte diesem Link: <a href=\"{completionLink}\">Kennwort ändern</a>.<br/>Der Link bleibt {hours, plural, =1 {eine Stunde} other {# Stunden}} gültig.</p>\n"
