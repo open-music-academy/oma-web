@@ -1,22 +1,24 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React, { useState } from 'react';
 import { Button, Dropdown } from 'antd';
 import HeaderLogo from './header-logo.js';
 import { useTranslation } from 'react-i18next';
-import { QuestionOutlined } from '@ant-design/icons';
 import routes from '@educandu/educandu/utils/routes.js';
 import Login from '@educandu/educandu/components/login.js';
+import { PlusOutlined, QuestionOutlined } from '@ant-design/icons';
 import { useUser } from '@educandu/educandu/components/user-context.js';
 import { useLocale } from '@educandu/educandu/components/locale-context.js';
+import { DOC_VIEW_QUERY_PARAM } from '@educandu/educandu/domain/constants.js';
+import EditIcon from '@educandu/educandu/components/icons/general/edit-icon.js';
 import { useSettings } from '@educandu/educandu/components/settings-context.js';
-import HomeIcon from '@educandu/educandu/components/icons/main-menu/home-icon.js';
 import MenuIcon from '@educandu/educandu/components/icons/main-menu/menu-icon.js';
 import LogoutIcon from '@educandu/educandu/components/icons/main-menu/logout-icon.js';
 import permissions, { hasUserPermission } from '@educandu/educandu/domain/permissions.js';
 import LanguageIcon from '@educandu/educandu/components/icons/main-menu/language-icon.js';
 import SettingsIcon from '@educandu/educandu/components/icons/main-menu/settings-icon.js';
-import DocumentsIcon from '@educandu/educandu/components/icons/main-menu/documents-icon.js';
 import DashboardIcon from '@educandu/educandu/components/icons/main-menu/dashboard-icon.js';
+import DocumentMetadataModal from '@educandu/educandu/components/document-metadata-modal.js';
+import { DOCUMENT_METADATA_MODAL_MODE } from '@educandu/educandu/components/document-metadata-modal-utils.js';
 
 function PageHeader({ onUiLanguageClick }) {
   const user = useUser();
@@ -25,13 +27,15 @@ function PageHeader({ onUiLanguageClick }) {
   const { t } = useTranslation('page');
   const helpPage = settings?.helpPage?.[uiLanguage];
 
+  const [isDocumentMetadataModalOpen, setIsDocumentMetadataModalOpen] = useState(false);
+
   const pageMenuItems = [
     {
-      key: 'home',
-      label: t('pageNames:home'),
-      icon: <HomeIcon />,
-      onClick: () => { window.location = routes.getHomeUrl(); },
-      showWhen: true
+      key: 'createDocument',
+      label: t('common:newDocument'),
+      icon: <PlusOutlined />,
+      onClick: () => { setIsDocumentMetadataModalOpen(true); },
+      showWhen: !!user
     },
     {
       key: 'dashboard',
@@ -41,11 +45,11 @@ function PageHeader({ onUiLanguageClick }) {
       showWhen: !!user
     },
     {
-      key: 'docs',
-      label: t('pageNames:docs'),
-      icon: <DocumentsIcon />,
-      onClick: () => { window.location = routes.getDocsUrl(); },
-      showWhen: hasUserPermission(user, permissions.VIEW_DOCS)
+      key: 'redaction',
+      label: t('pageNames:redaction'),
+      icon: <EditIcon />,
+      onClick: () => { window.location = routes.getRedactionUrl(); },
+      showWhen: hasUserPermission(user, permissions.MANAGE_CONTENT)
     },
     {
       key: 'admin',
@@ -70,7 +74,7 @@ function PageHeader({ onUiLanguageClick }) {
     },
     {
       key: 'logout',
-      label: t('common:logout'),
+      label: t('common:logOut'),
       icon: <LogoutIcon />,
       onClick: () => { window.location = routes.getLogoutUrl(); },
       showWhen: !!user
@@ -80,6 +84,20 @@ function PageHeader({ onUiLanguageClick }) {
   const handleMenuItemClick = ({ key }) => {
     const clickedItem = pageMenuItems.find(item => item.key === key);
     clickedItem.onClick();
+  };
+
+  const handleDocumentMetadataModalSave = createdDocuments => {
+    setIsDocumentMetadataModalOpen(false);
+
+    window.location = routes.getDocUrl({
+      id: createdDocuments[0]._id,
+      slug: createdDocuments[0].slug,
+      view: DOC_VIEW_QUERY_PARAM.edit
+    });
+  };
+
+  const handleDocumentMetadataModalClose = () => {
+    setIsDocumentMetadataModalOpen(false);
   };
 
   const menuItems = pageMenuItems.map(({ key, label, icon }) => ({ key, label, icon }));
@@ -104,6 +122,13 @@ function PageHeader({ onUiLanguageClick }) {
           </Dropdown>
         </div>
       </div>
+      <DocumentMetadataModal
+        initialDocumentMetadata={{}}
+        isOpen={isDocumentMetadataModalOpen}
+        mode={DOCUMENT_METADATA_MODAL_MODE.create}
+        onSave={handleDocumentMetadataModalSave}
+        onClose={handleDocumentMetadataModalClose}
+        />
     </header>
   );
 }
