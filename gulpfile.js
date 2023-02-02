@@ -17,9 +17,10 @@ import {
   TunnelProxyContainer
 } from '@educandu/dev-tools';
 
-let bundler = null;
 let currentApp = null;
+let isInWatchMode = false;
 let currentCdnProxy = null;
+let currentAppBuildContext = null;
 
 const omaEnv = {
   OMA_WEB_CONNECTION_STRING: 'mongodb://root:rootpw@localhost:27017/dev-educandu-db?replicaSet=educandurs&authSource=admin',
@@ -29,6 +30,7 @@ const omaEnv = {
   OMA_CDN_SECRET_KEY: 'SXtajmM3uahrQ1ALECh3Z3iKT76s2s5GBJlbQMZx',
   OMA_CDN_BUCKET_NAME: 'dev-educandu-cdn',
   OMA_CDN_ROOT_URL: 'http://localhost:9000/dev-educandu-cdn',
+  OMA_ALLOWED_LICENSES: 'CC0-1.0,CC-BY-4.0,CC-BY-SA-4.0,CC-BY-NC-4.0,CC-BY-NC-SA-4.0,CC-BY-ND-4.0,CC-BY-NC-ND-4.0,MIT',
   OMA_SESSION_SECRET: 'd4340515fa834498b3ab1aba1e4d9013',
   OMA_SESSION_COOKIE_DOMAIN: 'localhost',
   OMA_SESSION_COOKIE_NAME: 'SESSION_ID_OMA_LOCAL',
@@ -66,7 +68,7 @@ const maildevContainer = new MaildevContainer({
 });
 
 Graceful.on('exit', async () => {
-  bundler?.rebuild?.dispose();
+  await currentAppBuildContext?.dispose();
   await currentApp?.waitForExit();
   await currentCdnProxy?.waitForExit();
 });
@@ -76,7 +78,7 @@ export async function clean() {
 }
 
 export async function lint() {
-  await eslint.lint(['*.js', 'src/**/*.js'], { failOnError: !currentApp });
+  await eslint.lint(['*.js', 'src/**/*.js'], { failOnError: !isInWatchMode });
 }
 
 export async function fix() {
@@ -92,15 +94,15 @@ export async function buildCss() {
 }
 
 export async function buildJs() {
-  if (bundler?.rebuild) {
-    await bundler.rebuild();
+  if (currentAppBuildContext) {
+    await currentAppBuildContext.rebuild();
   } else {
     // eslint-disable-next-line require-atomic-updates
-    bundler = await esbuild.bundle({
+    currentAppBuildContext = await esbuild.bundle({
       entryPoints: ['./src/bundles/main.js'],
       outdir: './dist',
       minify: true,
-      incremental: !!currentApp,
+      incremental: isInWatchMode,
       inject: ['./src/polyfills.js'],
       metaFilePath: './dist/meta.json'
     });
@@ -319,12 +321,17 @@ export const serve = gulp.series(gulp.parallel(up, build), startServer);
 
 export const verify = gulp.series(lint, build);
 
-export function setupWatchers(done) {
+export function setupWatchMode(done) {
+  isInWatchMode = true;
+  done();
+}
+
+export function startWatchers(done) {
   gulp.watch(['src/**/*.{js,json}'], gulp.series(buildJs, restartServer));
   gulp.watch(['src/**/*.less'], buildCss);
   done();
 }
 
-export const startWatch = gulp.series(serve, setupWatchers);
+export const watch = gulp.series(setupWatchMode, serve, startWatchers);
 
-export default startWatch;
+export default watch;

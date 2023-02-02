@@ -88,6 +88,7 @@ const config = {
   publicFolders: ['../dist', '../static'].map(x => path.resolve(thisDir, x)),
   resources: ['./resources.json'].map(x => path.resolve(thisDir, x)),
   themeFile: path.resolve(thisDir, './theme.less'),
+  allowedLicenses: getCsv(process.env.OMA_ALLOWED_LICENSES),
   additionalControllers: [],
   additionalHeadHtml: faviconData.favicon.html_code,
   sessionSecret: process.env.OMA_SESSION_SECRET,

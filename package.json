@@ -20,15 +20,15 @@
   },
   "private": true,
   "dependencies": {
-    "@educandu/educandu": "0.96.2",
-    "@educandu/eslint-config": "~2.2.0",
-    "@educandu/node-jsx-loader": "~3.0.3",
+    "@educandu/educandu": "0.97.1",
+    "@educandu/eslint-config": "~2.2.1",
+    "@educandu/node-jsx-loader": "~3.0.4",
     "del": "~7.0.0",
     "parseboolean": "~1.0.0"
   },
   "devDependencies": {
-    "@educandu/dev-tools": "~7.0.1",
-    "@educandu/rooms-auth-lambda": "~3.0.1",
+    "@educandu/dev-tools": "~8.0.0",
+    "@educandu/rooms-auth-lambda": "~4.0.1",
     "eslint": "~8.33.0",
     "eslint-plugin-import": "~2.27.5",
     "eslint-plugin-react": "~7.32.2",
