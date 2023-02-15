@@ -1,6 +1,6 @@
 # oma-web
 
-The openmusic.academy website
+The openmusic.academy website.
 
 ## Local development:
 
