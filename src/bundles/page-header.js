@@ -1,111 +1,62 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Button, Dropdown } from 'antd';
+import md5 from 'md5';
+import { Alert } from 'antd';
 import HeaderLogo from './header-logo.js';
-import { useTranslation } from 'react-i18next';
-import { QuestionOutlined } from '@ant-design/icons';
-import routes from '@educandu/educandu/utils/routes.js';
-import Login from '@educandu/educandu/components/login.js';
-import { useUser } from '@educandu/educandu/components/user-context.js';
-import { useLocale } from '@educandu/educandu/components/locale-context.js';
-import EditIcon from '@educandu/educandu/components/icons/general/edit-icon.js';
+import React, { useEffect, useMemo, useState } from 'react';
+import Markdown from '@educandu/educandu/components/markdown.js';
+import ClientConfig from '@educandu/educandu/bootstrap/client-config.js';
 import { useSettings } from '@educandu/educandu/components/settings-context.js';
-import MenuIcon from '@educandu/educandu/components/icons/main-menu/menu-icon.js';
-import LogoutIcon from '@educandu/educandu/components/icons/main-menu/logout-icon.js';
-import permissions, { hasUserPermission } from '@educandu/educandu/domain/permissions.js';
-import LanguageIcon from '@educandu/educandu/components/icons/main-menu/language-icon.js';
-import SettingsIcon from '@educandu/educandu/components/icons/main-menu/settings-icon.js';
-import DashboardIcon from '@educandu/educandu/components/icons/main-menu/dashboard-icon.js';
+import { useService } from '@educandu/educandu/components/container-context.js';
+import NavigationMobile from '@educandu/educandu/components/navigation-mobile.js';
+import NavigationDesktop from '@educandu/educandu/components/navigation-desktop.js';
+import { getCookie, setLongLastingCookie } from '@educandu/educandu/common/cookie.js';
 
-function PageHeader({ onUiLanguageClick }) {
-  const user = useUser();
+const generateCookieHash = textInAllLanguages => {
+  return textInAllLanguages ? md5(JSON.stringify(textInAllLanguages)) : '';
+};
+
+function PageHeader() {
   const settings = useSettings();
-  const { uiLanguage } = useLocale();
-  const { t } = useTranslation('page');
-  const helpPage = settings?.helpPage?.[uiLanguage];
+  const { announcementCookieNamePrefix } = useService(ClientConfig);
 
-  const pageMenuItems = [
-    {
-      key: 'dashboard',
-      label: t('pageNames:dashboard'),
-      icon: <DashboardIcon />,
-      onClick: () => { window.location = routes.getDashboardUrl(); },
-      showWhen: !!user
-    },
-    {
-      key: 'redaction',
-      label: t('pageNames:redaction'),
-      icon: <EditIcon />,
-      onClick: () => { window.location = routes.getRedactionUrl(); },
-      showWhen: hasUserPermission(user, permissions.MANAGE_CONTENT)
-    },
-    {
-      key: 'admin',
-      label: t('pageNames:admin'),
-      icon: <SettingsIcon />,
-      onClick: () => { window.location = routes.getAdminUrl(); },
-      showWhen: hasUserPermission(user, permissions.ADMIN)
-    },
-    {
-      key: 'help',
-      label: helpPage?.linkTitle,
-      icon: <QuestionOutlined />,
-      onClick: () => { window.location = helpPage ? routes.getDocUrl({ id: helpPage.documentId }) : ''; },
-      showWhen: !!helpPage?.documentId
-    },
-    {
-      key: 'ui-language',
-      label: t('common:language'),
-      icon: <LanguageIcon />,
-      onClick: () => onUiLanguageClick(),
-      showWhen: true
-    },
-    {
-      key: 'logout',
-      label: t('common:logOut'),
-      icon: <LogoutIcon />,
-      onClick: () => { window.location = routes.getLogoutUrl(); },
-      showWhen: !!user
+  const [showAnnouncement, setShowAnnouncement] = useState(false);
+
+  const announcementCookieName = `${announcementCookieNamePrefix}_${useMemo(() => generateCookieHash(JSON.stringify(settings.announcement)), [settings.announcement])}`;
+
+  useEffect(() => {
+    const announcementCookie = getCookie(announcementCookieName);
+    if (!announcementCookie && settings.announcement?.text) {
+      setShowAnnouncement(true);
     }
-  ].filter(item => item.showWhen);
+  }, [announcementCookieName, settings.announcement]);
 
-  const handleMenuItemClick = ({ key }) => {
-    const clickedItem = pageMenuItems.find(item => item.key === key);
-    clickedItem.onClick();
+  const handleAnnouncementClose = () => {
+    setLongLastingCookie(announcementCookieName, 'true');
+    setShowAnnouncement(false);
   };
-
-  const menuItems = pageMenuItems.map(({ key, label, icon }) => ({ key, label, icon }));
 
   return (
     <header className="PageHeader">
-      <div className="PageHeader-header">
-        <div className="PageHeader-headerContent PageHeader-headerContent--left">
-          <HeaderLogo />
+      <div className="PageHeader-content">
+        <HeaderLogo />
+        <div className="PageHeader-navigation PageHeader-navigation--desktop">
+          <NavigationDesktop />
         </div>
-        <div className="PageHeader-headerContent PageHeader-headerContent--right">
-          <div className="PageHeader-loginButton">
-            <Login />
-          </div>
-          <Dropdown
-            trigger={['click']}
-            placement="bottomRight"
-            arrow={{ pointAtCenter: true }}
-            menu={{ items: menuItems, onClick: handleMenuItemClick }}
-            >
-            <Button className="PageHeader-headerButton" icon={<MenuIcon />} type="link" />
-          </Dropdown>
+        <div className="PageHeader-navigation PageHeader-navigation--mobile">
+          <NavigationMobile />
         </div>
       </div>
+      {!!showAnnouncement && (
+        <Alert
+          closable
+          banner
+          type={settings.announcement.type}
+          message={<Markdown>{settings.announcement.text}</Markdown>}
+          className="PageHeader-announcement"
+          onClose={handleAnnouncementClose}
+          />
+      )}
     </header>
   );
 }
-
-PageHeader.propTypes = {
-  onUiLanguageClick: PropTypes.func
-};
-
-PageHeader.defaultProps = {
-  onUiLanguageClick: () => { }
-};
 
 export default PageHeader;

@@ -2,38 +2,32 @@
   .m-page-content;
 }
 
-.PageHeader-header {
-  display: flex;
+.PageHeader-content {
+  display: grid;
+  place-items: start;
   align-items: center;
-  justify-content: space-between;
+  grid-template-columns: auto 1fr;
   background-color: @edu-white;
 }
 
-.PageHeader-headerContent {
-  display: block;
+.PageHeader-navigation {
+  width: 100%;
 
-  &.PageHeader-headerContent--left {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
+  &.PageHeader-navigation--desktop {
+    @media @edu-media-phone {
+      display: none;
+    }
   }
 
-  &.PageHeader-headerContent--right {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
+  &.PageHeader-navigation--mobile {
+    display: none;
+
+    @media @edu-media-phone {
+      display: block;
+    }
   }
 }
 
-.PageHeader-languageSwitch {
-  white-space: nowrap;
-}
-
-.PageHeader-headerButton {
-  .m-icon-button;
-  .m-grouped-button;
-}
-
-.PageHeader-loginButton {
-  margin-right: (3 * @edu-control-spacing-base);
+.PageHeader-announcement {
+  margin-top: @edu-page-content-padding !important;
 }

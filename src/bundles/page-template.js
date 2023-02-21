@@ -1,23 +1,12 @@
+import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import React, { useState } from 'react';
 import PageHeader from './page-header.js';
-import PageFooter from './page-footer.js';
 import Alert from '@educandu/educandu/components/alert.js';
 import ConsentDialog from '@educandu/educandu/components/consent-dialog.js';
-import UiLanguageDialog from '@educandu/educandu/components/ui-language-dialog.js';
+import DefaultPageFooter from '@educandu/educandu/components/default-page-footer.js';
 
 function PageTemplate({ children, fullScreen, alerts }) {
-  const [isUiLanguageDialogOpen, setIsUiLanguageDialogOpen] = useState(false);
-
-  const handleUiLanguageDialogClose = () => {
-    setIsUiLanguageDialogOpen(false);
-  };
-
-  const handleUiLanguageClick = () => {
-    setIsUiLanguageDialogOpen(true);
-  };
-
   const contentAreaClasses = classNames({
     'PageTemplate-contentArea': true,
     'PageTemplate-contentArea--fullScreen': fullScreen
@@ -29,6 +18,7 @@ function PageTemplate({ children, fullScreen, alerts }) {
 
   const renderAlert = (alert, index) => {
     const shouldRenderAlert = !fullScreen || alert.showInFullScreen;
+
     if (!shouldRenderAlert) {
       return null;
     }
@@ -47,15 +37,14 @@ function PageTemplate({ children, fullScreen, alerts }) {
 
   return (
     <div className="PageTemplate">
-      <PageHeader onUiLanguageClick={handleUiLanguageClick} />
+      <PageHeader />
       <main className={contentAreaClasses}>
         <div className={contentClasses}>
           {!!alerts?.length && <div className="PageTemplate-contentAlerts">{alerts.map(renderAlert)}</div>}
           {children}
         </div>
       </main>
-      <PageFooter />
-      <UiLanguageDialog isOpen={isUiLanguageDialogOpen} onClose={handleUiLanguageDialogClose} />
+      <DefaultPageFooter />
       <ConsentDialog />
     </div>
   );
