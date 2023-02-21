@@ -98,6 +98,7 @@ const config = {
   sessionDurationInMinutes: Number(process.env.OMA_SESSION_DURATION_IN_MINUTES) || 60,
   consentCookieNamePrefix: process.env.OMA_CONSENT_COOKIE_NAME_PREFIX,
   uploadLiabilityCookieName: process.env.OMA_UPLOAD_LIABILITY_COOKIE_NAME,
+  announcementCookieNamePrefix: process.env.OMA_ANNOUNCEMENT_COOKIE_NAME_PREFIX,
   xFrameOptions: process.env.OMA_X_FRAME_OPTIONS || null,
   xRoomsAuthSecret: process.env.OMA_X_ROOMS_AUTH_SECRET || null,
   smtpOptions: process.env.OMA_SMTP_OPTIONS,
