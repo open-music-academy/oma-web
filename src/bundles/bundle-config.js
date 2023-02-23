@@ -1,13 +1,13 @@
 import SiteLogo from './site-logo.js';
 import PageTemplate from './page-template.js';
-import HomePageTemplate from './home-page-template.js';
+import HomepageTemplate from './homepage-template.js';
 
 export default {
   getPageTemplateComponent() {
     return PageTemplate;
   },
   getHomePageTemplateComponent() {
-    return HomePageTemplate;
+    return HomepageTemplate;
   },
   getSiteLogoComponent() {
     return SiteLogo;
