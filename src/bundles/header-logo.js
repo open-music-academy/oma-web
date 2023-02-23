@@ -1,16 +1,17 @@
 import React from 'react';
+import PropType from 'prop-types';
 import routes from '@educandu/educandu/utils/routes.js';
 
-function HeaderLogo() {
+function HeaderLogo({ width, height }) {
   const renderImage = () => (
     <svg
       version="1.1"
       x="0px"
       y="0px"
+      width={width}
+      height={height}
       viewBox="0 0 118 32"
       xmlSpace="preserve"
-      width="90"
-      height="32"
       xmlns="http://www.w3.org/2000/svg"
       >
       <path
@@ -32,5 +33,15 @@ function HeaderLogo() {
     <a style={{ display: 'flex' }} href={routes.getHomeUrl()}>{renderImage()}</a>
   );
 }
+
+HeaderLogo.propTypes = {
+  width: PropType.number,
+  height: PropType.number
+};
+
+HeaderLogo.defaultProps = {
+  width: 90,
+  height: 32
+};
 
 export default HeaderLogo;
