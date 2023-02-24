@@ -100,7 +100,7 @@ export async function buildJs() {
   } else {
     // eslint-disable-next-line require-atomic-updates
     currentAppBuildContext = await esbuild.bundle({
-      entryPoints: ['./src/bundles/main.js'],
+      entryPoints: ['./src/main.js'],
       outdir: './dist',
       minify: true,
       incremental: isInWatchMode,
