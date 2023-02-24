@@ -2,7 +2,7 @@ import url from 'url';
 import path from 'path';
 import parseBool from 'parseboolean';
 import educandu from '@educandu/educandu';
-import bundleConfig from './bundles/bundle-config.js';
+import customResolvers from './custom-resolvers.js';
 import faviconData from '../favicon-data.json' assert { type: 'json' };
 
 const thisDir = path.dirname(url.fileURLToPath(import.meta.url));
@@ -84,7 +84,7 @@ const config = {
   cdnSecretKey: process.env.OMA_CDN_SECRET_KEY,
   cdnBucketName: process.env.OMA_CDN_BUCKET_NAME,
   cdnRootUrl: process.env.OMA_CDN_ROOT_URL,
-  bundleConfig,
+  customResolvers,
   publicFolders: ['../dist', '../static'].map(x => path.resolve(thisDir, x)),
   resources: ['./resources.json'].map(x => path.resolve(thisDir, x)),
   themeFile: path.resolve(thisDir, './theme.less'),
