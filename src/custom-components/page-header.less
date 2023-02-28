@@ -1,5 +1,19 @@
-.PageHeader {
+.PageHeader {}
+
+.PageHeader-container {
   .m-page-content;
+  background-color: @edu-white;
+  z-index: @edu-z-index-sticky-content-layer;
+
+  &.is-sticky {
+    .m-box-shadow;
+    transition: all 300ms ease;
+    border-radius: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
 }
 
 .PageHeader-content {
@@ -9,6 +23,8 @@
   grid-template-columns: auto 1fr;
   background-color: @edu-white;
 }
+
+.PageHeader-logo {}
 
 .PageHeader-navigation {
   width: 100%;
