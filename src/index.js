@@ -109,11 +109,6 @@ const config = {
   plugins: enabledPlugins,
   disabledFeatures: getCsv(process.env.OMA_DISABLED_FEATURES),
   exposeErrorDetails: parseBool(process.env.OMA_EXPOSE_ERROR_DETAILS || false.toString()),
-  taskProcessing: {
-    isEnabled: true,
-    idlePollIntervalInMs: 10000,
-    maxAttempts: 3
-  },
   ambConfig: {
     apiKey: process.env.OMA_AMB_API_KEY,
     publisher: [
