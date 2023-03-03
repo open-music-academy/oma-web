@@ -74,6 +74,7 @@ const enabledPlugins = [
 
 const config = {
   appName: 'Open Music Academy',
+  appRootUrl: process.env.OMA_APP_ROOT_URL,
   port: Number(process.env.OMA_PORT) || 3000,
   trustProxy,
   mongoConnectionString: process.env.OMA_WEB_CONNECTION_STRING,
