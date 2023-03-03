@@ -23,6 +23,7 @@ let currentCdnProxy = null;
 let currentAppBuildContext = null;
 
 const omaEnv = {
+  OMA_APP_ROOT_URL: 'http://localhost:3000',
   OMA_WEB_CONNECTION_STRING: 'mongodb://root:rootpw@localhost:27017/dev-educandu-db?replicaSet=educandurs&authSource=admin',
   OMA_CDN_ENDPOINT: 'http://localhost:9000',
   OMA_CDN_REGION: 'eu-central-1',
