@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import PageHeader from './page-header.js';
-import Alert from '@educandu/educandu/components/alert.js';
+import CustomAlert from '@educandu/educandu/components/custom-alert.js';
 import ConsentDialog from '@educandu/educandu/components/consent-dialog.js';
 import DefaultPageFooter from '@educandu/educandu/components/default-page-footer.js';
 
@@ -24,7 +24,7 @@ function PageTemplate({ children, fullScreen, alerts }) {
     }
 
     return (
-      <Alert
+      <CustomAlert
         banner
         key={index}
         type={alert.type}
