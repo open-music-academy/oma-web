@@ -4,9 +4,9 @@ import SiteLogo from './site-logo.js';
 import PageHeader from './page-header.js';
 import HeaderLogo from './header-logo.js';
 import { useTranslation } from 'react-i18next';
-import HomepageSponsors from './homepage-sponsors.js';
 import ConsentDialog from '@educandu/educandu/components/consent-dialog.js';
 import DefaultPageFooter from '@educandu/educandu/components/default-page-footer.js';
+import HomepageTrustFooter from '@educandu/educandu/components/homepage/homepage-trust-footer.js';
 import HomepageDocumentCards from '@educandu/educandu/components/homepage/homepage-document-cards.js';
 import HomepageFoldDividerTop from '@educandu/educandu/components/homepage/homepage-fold-divider-top.js';
 import HomepageOerPresentation from '@educandu/educandu/components/homepage/homepage-oer-presentation.js';
@@ -54,7 +54,7 @@ function HomepageTemplate({ children }) {
             </div>
           </div>
         </section>
-        <HomepageSponsors />
+        <HomepageTrustFooter />
       </main>
       <DefaultPageFooter />
       <ConsentDialog />

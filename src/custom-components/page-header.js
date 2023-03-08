@@ -1,10 +1,10 @@
 import md5 from 'md5';
-import { Alert } from 'antd';
 import classNames from 'classnames';
 import HeaderLogo from './header-logo.js';
 import Markdown from '@educandu/educandu/components/markdown.js';
 import { useScrollTopOffset } from '@educandu/educandu/ui/hooks.js';
 import React, { useEffect, useMemo, useRef, useState } from 'react';
+import CustomAlert from '@educandu/educandu/components/custom-alert.js';
 import ClientConfig from '@educandu/educandu/bootstrap/client-config.js';
 import { useSettings } from '@educandu/educandu/components/settings-context.js';
 import { useService } from '@educandu/educandu/components/container-context.js';
@@ -56,7 +56,7 @@ function PageHeader() {
           </div>
         </div>
         {!!showAnnouncement && (
-          <Alert
+          <CustomAlert
             closable
             banner
             type={settings.announcement.type}
