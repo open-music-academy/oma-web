@@ -71,7 +71,8 @@ const enabledPlugins = [
   'media-slideshow',
   'interactive-media',
   'multitrack-media',
-  'media-analysis'
+  'media-analysis',
+  'benewagner/educandu-plugin-piano'
 ].filter(plugin => !disabledPlugins.includes(plugin));
 
 const config = {
@@ -89,7 +90,10 @@ const config = {
   cdnRootUrl: process.env.OMA_CDN_ROOT_URL,
   customResolvers,
   publicFolders: ['../dist', '../static'].map(x => path.resolve(thisDir, x)),
-  resources: ['./resources.json'].map(x => path.resolve(thisDir, x)),
+  resources: [
+    './resources.json',
+    '../node_modules/@benewagner/educandu-plugin-piano/dist/translations.json'
+  ].map(x => path.resolve(thisDir, x)),
   themeFile: path.resolve(thisDir, './theme.less'),
   allowedLicenses: getCsv(process.env.OMA_ALLOWED_LICENSES),
   additionalControllers: [],
