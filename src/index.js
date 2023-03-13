@@ -129,7 +129,7 @@ const config = {
         id: 'https://w3id.org/kim/hochschulfaechersystematik/n78'
       }
     ],
-    image: './images/oma-amb-logo.png'
+    image: './images/oma-amb-logo.png?v=2'
   },
   samlAuth: process.env.OMA_SAML_AUTH_DECRYPTION ? {
     decryption: JSON.parse(process.env.OMA_SAML_AUTH_DECRYPTION),
