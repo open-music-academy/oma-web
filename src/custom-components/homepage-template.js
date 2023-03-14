@@ -8,9 +8,7 @@ import ConsentDialog from '@educandu/educandu/components/consent-dialog.js';
 import DefaultPageFooter from '@educandu/educandu/components/default-page-footer.js';
 import HomepageTrustFooter from '@educandu/educandu/components/homepage/homepage-trust-footer.js';
 import HomepageDocumentCards from '@educandu/educandu/components/homepage/homepage-document-cards.js';
-import HomepageFoldDividerTop from '@educandu/educandu/components/homepage/homepage-fold-divider-top.js';
 import HomepageOerPresentation from '@educandu/educandu/components/homepage/homepage-oer-presentation.js';
-import HomepageFoldDividerBottom from '@educandu/educandu/components/homepage/homepage-fold-divider-bottom.js';
 import HomepageProjectPresentation from '@educandu/educandu/components/homepage/homepage-project-presentation.js';
 
 function HomepageTemplate({ children }) {
@@ -21,26 +19,22 @@ function HomepageTemplate({ children }) {
       <main className="HomepageTemplate-main">
         <section className="HomepageTemplate-aboveFold">
           <PageHeader />
-          <div className="HomepageTemplate-aboveFoldContent">
-            <div className="HomepageTemplate-logo" >
-              <SiteLogo />
-              <div className="HomepageTemplate-subtitle">{t('homepage.subtitle')}</div>
+          <div className="HomepageTemplate-aboveFoldContentWrapper">
+            <div className="HomepageTemplate-aboveFoldContent">
+              <div className="HomepageTemplate-logo" >
+                <SiteLogo inverted />
+                <div className="HomepageTemplate-subtitle">{t('homepage.subtitle')}</div>
+              </div>
+              <div className="HomepageTemplate-children">
+                {children}
+              </div>
             </div>
-            <div>
-              {children}
-            </div>
-          </div>
-          <div className="HomepageTemplate-foldDividerTop">
-            <HomepageFoldDividerTop />
           </div>
         </section>
         <section className="HomepageTemplate-underFold">
           <div className="HomepageTemplate-underFoldStripe HomepageTemplate-underFoldStripe--documents">
             <div className="HomepageTemplate-underFoldStripeContent">
               <HomepageDocumentCards />
-            </div>
-            <div className="HomepageTemplate-foldDividerBottom">
-              <HomepageFoldDividerBottom />
             </div>
           </div>
           <div className="HomepageTemplate-underFoldStripe HomepageTemplate-underFoldStripe--project">

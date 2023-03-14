@@ -1,9 +1,19 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import classNames from 'classnames';
 
-function SiteLogo() {
+function SiteLogo({ inverted }) {
   return (
-    <div className="SiteLogo">Open Music Academy</div>
+    <div className={classNames('SiteLogo', { 'SiteLogo--inverted': inverted })}>Open Music Academy</div>
   );
 }
+
+SiteLogo.propTypes = {
+  inverted: PropTypes.bool
+};
+
+SiteLogo.defaultProps = {
+  inverted: false
+};
 
 export default SiteLogo;
