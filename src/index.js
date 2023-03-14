@@ -115,6 +115,7 @@ const config = {
   basicAuthUsers: JSON.parse(process.env.OMA_BASIC_AUTH_USERS || '{}'),
   plugins: enabledPlugins,
   disabledFeatures: getCsv(process.env.OMA_DISABLED_FEATURES),
+  disableScheduling: parseBool(process.env.OMA_DISABLE_SCHEDULING || false.toString()),
   exposeErrorDetails: parseBool(process.env.OMA_EXPOSE_ERROR_DETAILS || false.toString()),
   ambConfig: {
     apiKey: process.env.OMA_AMB_API_KEY,
