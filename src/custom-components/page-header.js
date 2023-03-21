@@ -1,9 +1,11 @@
 import md5 from 'md5';
+import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import HeaderLogo from './header-logo.js';
+import useDimensionsNs from 'react-cool-dimensions';
+import React, { useEffect, useMemo, useState } from 'react';
 import Markdown from '@educandu/educandu/components/markdown.js';
 import { useScrollTopOffset } from '@educandu/educandu/ui/hooks.js';
-import React, { useEffect, useMemo, useRef, useState } from 'react';
 import CustomAlert from '@educandu/educandu/components/custom-alert.js';
 import ClientConfig from '@educandu/educandu/bootstrap/client-config.js';
 import { useSettings } from '@educandu/educandu/components/settings-context.js';
@@ -12,22 +14,22 @@ import NavigationMobile from '@educandu/educandu/components/navigation-mobile.js
 import NavigationDesktop from '@educandu/educandu/components/navigation-desktop.js';
 import { getCookie, setLongLastingCookie } from '@educandu/educandu/common/cookie.js';
 
+const useDimensions = useDimensionsNs.default || useDimensionsNs;
+
 const generateCookieHash = textInAllLanguages => {
   return textInAllLanguages ? md5(JSON.stringify(textInAllLanguages)) : '';
 };
 
-function PageHeader() {
+function PageHeader({ focusContent }) {
   const settings = useSettings();
-  const headerRef = useRef(null);
-  const { announcementCookieNamePrefix } = useService(ClientConfig);
-
   const topOffset = useScrollTopOffset();
   const [showAnnouncement, setShowAnnouncement] = useState(false);
+  const { announcementCookieNamePrefix } = useService(ClientConfig);
+  const { observe, height } = useDimensions({ useBorderBoxSize: true });
 
-  const isScrolled = useMemo(() => topOffset > 0, [topOffset]);
-  const scrolledHeaderPadding = useMemo(() => isScrolled ? headerRef.current?.getBoundingClientRect()?.height : 0, [headerRef, isScrolled]);
-
-  const announcementCookieName = `${announcementCookieNamePrefix}_${useMemo(() => generateCookieHash(JSON.stringify(settings.announcement)), [settings.announcement])}`;
+  const isSticky = !!topOffset || !!focusContent;
+  const cookieHash = useMemo(() => generateCookieHash(JSON.stringify(settings.announcement)), [settings.announcement]);
+  const announcementCookieName = `${announcementCookieNamePrefix}_${cookieHash}`;
 
   useEffect(() => {
     const announcementCookie = getCookie(announcementCookieName);
@@ -42,20 +44,25 @@ function PageHeader() {
   };
 
   return (
-    <header className="PageHeader" ref={headerRef} style={{ paddingBottom: `${scrolledHeaderPadding}px` }}>
-      <div className={classNames('PageHeader-container', { 'is-sticky': isScrolled })}>
-        <div className="PageHeader-content">
-          <div className="PageHeader-logo">
-            <HeaderLogo />
+    <header className="PageHeader" style={{ paddingBottom: `${isSticky ? height : 0}px` }}>
+      <div ref={observe} className={classNames('PageHeader-container', { 'is-sticky': isSticky })}>
+        {!!focusContent && (
+          <div>{focusContent}</div>
+        )}
+        {!focusContent && (
+          <div className="PageHeader-content">
+            <div className="PageHeader-logo">
+              <HeaderLogo />
+            </div>
+            <div className="PageHeader-navigation PageHeader-navigation--desktop">
+              <NavigationDesktop />
+            </div>
+            <div className="PageHeader-navigation PageHeader-navigation--mobile">
+              <NavigationMobile />
+            </div>
           </div>
-          <div className="PageHeader-navigation PageHeader-navigation--desktop">
-            <NavigationDesktop />
-          </div>
-          <div className="PageHeader-navigation PageHeader-navigation--mobile">
-            <NavigationMobile />
-          </div>
-        </div>
-        {!!showAnnouncement && (
+        )}
+        {!focusContent && !!showAnnouncement && (
           <CustomAlert
             closable
             banner
@@ -69,5 +76,13 @@ function PageHeader() {
     </header>
   );
 }
+
+PageHeader.propTypes = {
+  focusContent: PropTypes.node
+};
+
+PageHeader.defaultProps = {
+  focusContent: null
+};
 
 export default PageHeader;
