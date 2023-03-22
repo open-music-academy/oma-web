@@ -53,8 +53,7 @@ const enabledPlugins = [
   'image',
   'catalog',
   'separator',
-  'annotation',
-  'music-learning-block',
+  'music-accentuation',
   'audio',
   'video',
   'table',
@@ -75,6 +74,8 @@ const enabledPlugins = [
   'benewagner/educandu-plugin-piano'
 ].filter(plugin => !disabledPlugins.includes(plugin));
 
+const jsWithChecksumPathPattern = /\w+-[A-Z0-9]{8}\.js$/;
+
 const config = {
   appName: 'Open Music Academy',
   appRootUrl: process.env.OMA_APP_ROOT_URL,
@@ -89,7 +90,20 @@ const config = {
   cdnBucketName: process.env.OMA_CDN_BUCKET_NAME,
   cdnRootUrl: process.env.OMA_CDN_ROOT_URL,
   customResolvers,
-  publicFolders: ['../dist', '../static'].map(x => path.resolve(thisDir, x)),
+  publicFolders: [
+    {
+      publicPath: '/',
+      destination: path.resolve(thisDir, '../dist'),
+      setHeaders: (res, requestPath) => {
+        const maxAge = jsWithChecksumPathPattern.test(requestPath) ? 604800 : 0;
+        res.setHeader('Cache-Control', `public, max-age=${maxAge}`);
+      }
+    },
+    {
+      publicPath: '/',
+      destination: path.resolve(thisDir, '../static')
+    }
+  ],
   resources: [
     './resources.json',
     '../node_modules/@benewagner/educandu-plugin-piano/dist/translations.json'
