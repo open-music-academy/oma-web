@@ -29,7 +29,7 @@
     "react-cool-dimensions": "~3.0.1"
   },
   "devDependencies": {
-    "@educandu/dev-tools": "~8.0.0",
+    "@educandu/dev-tools": "~8.0.2",
     "@educandu/rooms-auth-lambda": "~4.0.1",
     "eslint": "~8.33.0",
     "eslint-plugin-import": "~2.27.5",
