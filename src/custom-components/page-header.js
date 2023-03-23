@@ -20,7 +20,7 @@ const generateCookieHash = textInAllLanguages => {
   return textInAllLanguages ? md5(JSON.stringify(textInAllLanguages)) : '';
 };
 
-function PageHeader({ focusContent }) {
+function PageHeader({ focusContent, headerRef }) {
   const settings = useSettings();
   const topOffset = useScrollTopOffset();
   const [showAnnouncement, setShowAnnouncement] = useState(false);
@@ -46,43 +46,47 @@ function PageHeader({ focusContent }) {
   return (
     <header className="PageHeader" style={{ paddingBottom: `${isSticky ? height : 0}px` }}>
       <div ref={observe} className={classNames('PageHeader-container', { 'is-sticky': isSticky })}>
-        {!!focusContent && (
-          <div>{focusContent}</div>
-        )}
-        {!focusContent && (
-          <div className="PageHeader-content">
-            <div className="PageHeader-logo">
-              <HeaderLogo />
+        <div ref={headerRef} className="DefaultPageHeader-contentWrapper">
+          {!!focusContent && (
+            <div>{focusContent}</div>
+          )}
+          {!focusContent && (
+            <div className="PageHeader-content">
+              <div className="PageHeader-logo">
+                <HeaderLogo />
+              </div>
+              <div className="PageHeader-navigation PageHeader-navigation--desktop">
+                <NavigationDesktop />
+              </div>
+              <div className="PageHeader-navigation PageHeader-navigation--mobile">
+                <NavigationMobile />
+              </div>
             </div>
-            <div className="PageHeader-navigation PageHeader-navigation--desktop">
-              <NavigationDesktop />
-            </div>
-            <div className="PageHeader-navigation PageHeader-navigation--mobile">
-              <NavigationMobile />
-            </div>
-          </div>
-        )}
-        {!focusContent && !!showAnnouncement && (
-          <CustomAlert
-            closable
-            banner
-            type={settings.announcement.type}
-            message={<Markdown>{settings.announcement.text}</Markdown>}
-            className="PageHeader-announcement"
-            onClose={handleAnnouncementClose}
-            />
-        )}
+          )}
+          {!focusContent && !!showAnnouncement && (
+            <CustomAlert
+              closable
+              banner
+              type={settings.announcement.type}
+              message={<Markdown>{settings.announcement.text}</Markdown>}
+              className="PageHeader-announcement"
+              onClose={handleAnnouncementClose}
+              />
+          )}
+        </div>
       </div>
     </header>
   );
 }
 
 PageHeader.propTypes = {
-  focusContent: PropTypes.node
+  focusContent: PropTypes.node,
+  headerRef: PropTypes.object
 };
 
 PageHeader.defaultProps = {
-  focusContent: null
+  focusContent: null,
+  headerRef: null
 };
 
 export default PageHeader;
