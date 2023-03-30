@@ -1,38 +1,41 @@
 .PageTemplate {
+  position: relative;
   margin: 0;
   padding: 0;
   display: flex;
-  min-height: 100vh;
-  position: relative;
   flex-direction: column;
+  min-height: 100vh;
   min-width: @edu-min-page-width;
   max-width: 100vw;
 }
 
 .PageTemplate-contentArea {
-  .m-page-content;
+  position: relative;
   flex: 1 0 0%;
   display: flex;
   align-items: flex-start;
-  position: relative;
+  flex-direction: column;
   z-index: @edu-z-index-base-layer;
 
   &.PageTemplate-contentArea--fullScreen {
     align-items: center;
+    flex-direction: row;
   }
 }
 
 .PageTemplate-content {
+  .m-page-content;
   margin: 0 auto;
   width: 100%;
   min-width: @edu-min-page-width;
   max-width: @edu-content-width-wide;
 
   &.PageTemplate-content--fullScreen {
+    .m-page-content-fullscreen;
     max-width: @edu-content-width-narrow;
   }
 }
 
 .PageTemplate-contentAlerts {
-  padding-bottom: 40px;
+  padding-bottom: 20px;
 }
