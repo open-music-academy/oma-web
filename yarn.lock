@@ -888,10 +888,10 @@
     yaml "^2.1.3"
     yargs "^17.6.2"
 
-"@educandu/educandu@0.115.0":
-  version "0.115.0"
-  resolved "https://registry.yarnpkg.com/@educandu/educandu/-/educandu-0.115.0.tgz#020bf0ec3dd3ae62747debe8f170e2cf7b21042c"
-  integrity sha512-4bFBMWHQtt/Qp6bg37Ys0xtM4WVHaTJWCO0vvIykcBT1PPNCuL4INk/FqYYx8g1FzNhk5uXDGToDWXSV6Nmm9A==
+"@educandu/educandu@0.116.0":
+  version "0.116.0"
+  resolved "https://registry.yarnpkg.com/@educandu/educandu/-/educandu-0.116.0.tgz#8ee44f52b26dee09959c66e204adaee994a6bba8"
+  integrity sha512-hnzYVULC+ViOxSnyQljVA6fozNrmvxaSBdkiSI6JFdXrFqyZmng0/b5PLVBH74skbWyFAaMvKtvtxRKRCqfd/Q==
   dependencies:
     "@ant-design/icons" "^4.8.0"
     "@node-saml/passport-saml" "^4.0.2"
