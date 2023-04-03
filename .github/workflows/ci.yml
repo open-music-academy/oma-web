@@ -37,7 +37,7 @@ jobs:
     env:
       DOCKER_IMAGE: openmusicacademy/oma-web
       OCTO_PROJECT_NAME: oma-web
-      OCTO_ENVIRONMENT: Integration
+      OCTO_ENVIRONMENT: Staging
       OCTO_SERVER: https://elmu.octopus.app
       OCTO_SPACE: Default
     steps:
