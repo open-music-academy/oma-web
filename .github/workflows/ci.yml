@@ -38,7 +38,7 @@ jobs:
       DOCKER_IMAGE: openmusicacademy/oma-web
       OCTO_PROJECT_NAME: oma-web
       OCTO_ENVIRONMENT: Staging
-      OCTO_SERVER: https://elmu.octopus.app
+      OCTO_SERVER: https://oma.octopus.app
       OCTO_SPACE: Default
     steps:
       - name: Checkout code
