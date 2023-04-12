@@ -6,7 +6,7 @@ import CustomAlert from '@educandu/educandu/components/custom-alert.js';
 import ConsentDialog from '@educandu/educandu/components/consent-dialog.js';
 import DefaultPageFooter from '@educandu/educandu/components/default-page-footer.js';
 
-function PageTemplate({ children, fullScreen, focusHeader, alerts, headerRef, contentRef }) {
+function PageTemplate({ children, fullScreen, focusHeader, contentHeader, alerts, headerRef, contentRef }) {
   const contentAreaClasses = classNames({
     'PageTemplate-contentArea': true,
     'PageTemplate-contentArea--fullScreen': fullScreen
@@ -39,8 +39,13 @@ function PageTemplate({ children, fullScreen, focusHeader, alerts, headerRef, co
     <div className="PageTemplate">
       <PageHeader focusContent={focusHeader} headerRef={headerRef} />
       <main className={contentAreaClasses}>
+        {contentHeader}
         <div className={contentClasses} ref={contentRef}>
-          {!!alerts?.length && <div className="PageTemplate-contentAlerts">{alerts.map(renderAlert)}</div>}
+          {!!alerts?.length && (
+            <div className="PageTemplate-contentAlerts">
+              {alerts.map(renderAlert)}
+            </div>
+          )}
           {children}
         </div>
       </main>
@@ -59,6 +64,7 @@ PageTemplate.propTypes = {
   children: PropTypes.node,
   fullScreen: PropTypes.bool,
   focusHeader: PropTypes.node,
+  contentHeader: PropTypes.node,
   headerRef: PropTypes.object,
   contentRef: PropTypes.object
 };
@@ -68,6 +74,7 @@ PageTemplate.defaultProps = {
   children: null,
   fullScreen: false,
   focusHeader: null,
+  contentHeader: null,
   headerRef: null,
   contentRef: null
 };

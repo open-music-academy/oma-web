@@ -23,7 +23,7 @@ function HomepageTemplate({ children }) {
             <div className="HomepageTemplate-aboveFoldContent">
               <div className="HomepageTemplate-logo" >
                 <SiteLogo inverted />
-                <div className="HomepageTemplate-subtitle">{t('homepage.subtitle')}</div>
+                <div className="HomepageTemplate-subtitle">{t('homepageSubtitle')}</div>
               </div>
               <div className="HomepageTemplate-children">
                 {children}
