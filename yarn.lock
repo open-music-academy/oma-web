@@ -823,10 +823,10 @@
   dependencies:
     regenerator-runtime "^0.13.11"
 
-"@benewagner/educandu-plugin-piano@~1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@benewagner/educandu-plugin-piano/-/educandu-plugin-piano-1.0.1.tgz#9ae61cec0c3f8d86f41c2b3f4c638770189d5b52"
-  integrity sha512-izg8iag2d9FcL/aj8GPeEgfG1OoM/WJPCLP7kgF9X0Cs2fvuhkFRu1SoUpmGJO/SOLhcJ0TIPShM3M7rl4ELRg==
+"@benewagner/educandu-plugin-piano@~1.0.3":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@benewagner/educandu-plugin-piano/-/educandu-plugin-piano-1.0.3.tgz#4934bbdf1bf46d385eba79088a1d067c6a2b52f3"
+  integrity sha512-K5d0AgLSmuGW7vKl5lIH89NF8Zr4PBf12mDpM+VaWN26E9NdeT7+PIM50n82XiBGuI7w1OR41ZjqQ6TOogspcQ==
   dependencies:
     "@ant-design/icons" "^4.8.0"
     antd "^5.1.6"
