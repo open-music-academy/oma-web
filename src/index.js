@@ -74,7 +74,8 @@ const enabledPlugins = [
   'benewagner/educandu-plugin-piano',
   'text-field',
   'select-field',
-  'file-upload-field'
+  'file-upload-field',
+  'whiteboard'
 ].filter(plugin => !disabledPlugins.includes(plugin));
 
 const jsWithChecksumPathPattern = /\w+-[A-Z0-9]{8}\.js$/;
