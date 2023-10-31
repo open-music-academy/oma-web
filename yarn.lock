@@ -874,10 +874,10 @@
     yaml "^2.1.3"
     yargs "^17.6.2"
 
-"@educandu/educandu@1.7.0":
-  version "1.7.0"
-  resolved "https://registry.yarnpkg.com/@educandu/educandu/-/educandu-1.7.0.tgz#0d043a28c8b2823f9f46d48fdfd2f72a1a45a18f"
-  integrity sha512-1LsJFBJwFzJQJ4Nl6lk4s8FOG84xFoqUtBDdT6eJ0b592Kro3ppVbKwLRAFQTPLt7/C+fC1YrQCVXYGYMfTn+w==
+"@educandu/educandu@1.8.0":
+  version "1.8.0"
+  resolved "https://registry.yarnpkg.com/@educandu/educandu/-/educandu-1.8.0.tgz#cb0596b70c4b4cba4c101d138f8322451a84fc67"
+  integrity sha512-KY66o9Z1ho7ekrloFQNHyuoXXSbzrtVERW2oDfR9UUDPvA0qq2SsY/tIa2l2gqCRbppfDI59dwIXOVnbFVfhQA==
   dependencies:
     "@ant-design/icons" "^5.0.1"
     "@node-saml/passport-saml" "^4.0.2"
