@@ -874,14 +874,15 @@
     yaml "^2.1.3"
     yargs "^17.6.2"
 
-"@educandu/educandu@1.8.0":
-  version "1.8.0"
-  resolved "https://registry.yarnpkg.com/@educandu/educandu/-/educandu-1.8.0.tgz#cb0596b70c4b4cba4c101d138f8322451a84fc67"
-  integrity sha512-KY66o9Z1ho7ekrloFQNHyuoXXSbzrtVERW2oDfR9UUDPvA0qq2SsY/tIa2l2gqCRbppfDI59dwIXOVnbFVfhQA==
+"@educandu/educandu@1.9.0":
+  version "1.9.0"
+  resolved "https://registry.yarnpkg.com/@educandu/educandu/-/educandu-1.9.0.tgz#d869169f427565db141a741c40fce4c02c08cefb"
+  integrity sha512-LCkqjPMPIrBUooTTVYKHSC3LLd1EBUXdMbdoli/yZzvL4Q/ArKab4oytqbrhUXYOaoIiCdhZdNueULqehTqsZQ==
   dependencies:
     "@ant-design/icons" "^5.0.1"
     "@node-saml/passport-saml" "^4.0.2"
     "@sindresorhus/slugify" "^2.2.0"
+    "@tabler/icons-react" "^2.40.0"
     "@unly/iso3166-1" "^1.0.2"
     abcjs "^6.2.0"
     accept-language-parser "^1.5.0"
@@ -1532,6 +1533,19 @@
   integrity sha512-doH1gimEu3A46VX6aVxpHTeHrytJAG6HgdxntYnCFiIFHEM/ZGpG8KiZGBChchjQmG0XFIBL552kBTjVcMZXwQ==
   dependencies:
     escape-string-regexp "^5.0.0"
+
+"@tabler/icons-react@^2.40.0":
+  version "2.40.0"
+  resolved "https://registry.yarnpkg.com/@tabler/icons-react/-/icons-react-2.40.0.tgz#14efb60f0d841689c1ddf5691646dbfc3fa01901"
+  integrity sha512-C+dDOZowFbwI3LGQP0fdua+hOPkGkW7XeMcRXTSdEKc5fD75W6zRO5nXnWivIMRKsi/Y26EDmnQo15N8JX378w==
+  dependencies:
+    "@tabler/icons" "2.40.0"
+    prop-types "^15.7.2"
+
+"@tabler/icons@2.40.0":
+  version "2.40.0"
+  resolved "https://registry.yarnpkg.com/@tabler/icons/-/icons-2.40.0.tgz#96cecc990a03412b88194ce3765280d2e63c1be6"
+  integrity sha512-VqKsBSX159cLFTnCzkCmGhZtSPJHNN0lM2sC4xe0HPOfPUnjiex7rDHDdut4oe4iKRecDDpwXwM9BcU6xCPlCg==
 
 "@tootallnate/once@2":
   version "2.0.0"
