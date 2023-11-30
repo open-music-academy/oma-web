@@ -849,10 +849,10 @@
   resolved "https://registry.yarnpkg.com/@ctrl/tinycolor/-/tinycolor-3.6.0.tgz#53fa5fe9c34faee89469e48f91d51a3766108bc8"
   integrity sha512-/Z3l6pXthq0JvMYdUFyX9j0MaCltlIn6mfh9jLyQwg5aPKxkyNa0PTHtU1AlFXLNk55ZuAeJRcpvq+tmLfKmaQ==
 
-"@educandu/dev-tools@~9.0.0":
-  version "9.0.0"
-  resolved "https://registry.yarnpkg.com/@educandu/dev-tools/-/dev-tools-9.0.0.tgz#e862a51264b619c0ee20fcf1ca329415b660af44"
-  integrity sha512-uPzqM4h2H9O46h6B9RDW1zJZmmWWU5HnePMl1CmTU6xXUX1BX2rh7iZRtBUDfwtVP7gNTQIZg9e30xDcIJLwZw==
+"@educandu/dev-tools@10.0.0":
+  version "10.0.0"
+  resolved "https://registry.yarnpkg.com/@educandu/dev-tools/-/dev-tools-10.0.0.tgz#a85d0e93b542c878eb60d3a76bd7314284b646c4"
+  integrity sha512-FdvntsoGG46lQAnEbTWRnO6nuppSJaSYucmk3EZKd45ji2YL8tMGP3H17o2NkPY0X1Wnu/dUeFT3s1ofd6J5DQ==
   dependencies:
     "@rauschma/stringio" "^1.4.0"
     axios "^1.2.1"
@@ -987,10 +987,10 @@
   dependencies:
     esbuild "^0.16.9"
 
-"@educandu/rooms-auth-lambda@~5.0.1":
-  version "5.0.1"
-  resolved "https://registry.yarnpkg.com/@educandu/rooms-auth-lambda/-/rooms-auth-lambda-5.0.1.tgz#d98c8a4c2d47cbc521773db00fdfc98e4c74d0ae"
-  integrity sha512-5lSHWYWtr7Ivrbrp+CmjUBIuQo+q9CQ+Anlg/iV42XSxA9t2UdICCv/YOsz8TNSVaUaYwsb4eM1263O/lPci5A==
+"@educandu/rooms-auth-lambda@~6.0.1":
+  version "6.0.1"
+  resolved "https://registry.yarnpkg.com/@educandu/rooms-auth-lambda/-/rooms-auth-lambda-6.0.1.tgz#d620679d1601c3c3337a3813185cc7ff692dc77b"
+  integrity sha512-HEGxDg9CcrlwwyXS2LgmdNO2TF+1w9D0SXTfgsyriJmUS1+rl7baDVKf1JU7r/9hvmy7WTq4Y6Ol5Tpr6x0MSw==
   dependencies:
     cors "^2.8.5"
     envalid "^7.3.1"
