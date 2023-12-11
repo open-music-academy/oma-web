@@ -863,10 +863,10 @@
     yaml "^2.1.3"
     yargs "^17.6.2"
 
-"@educandu/educandu@1.17.4":
-  version "1.17.4"
-  resolved "https://registry.yarnpkg.com/@educandu/educandu/-/educandu-1.17.4.tgz#6afaefc044463ded8d8950006a5c4647b84c4df2"
-  integrity sha512-Huh/OoyzxFMRam+KfYYXLOEzt6pUGjw8oXP5gYkd5Tu3jCK45nYDxbh2wOaKuZiImUEg9NojxNGo/FDzyTEq3g==
+"@educandu/educandu@1.17.5":
+  version "1.17.5"
+  resolved "https://registry.yarnpkg.com/@educandu/educandu/-/educandu-1.17.5.tgz#6eff9c4d9b8bfc3510019df7eb03d9e77c41c6a3"
+  integrity sha512-0UcW0Lv3UP39vb+8HhAX+c4FKghuf/mCwQhm6qC4esVgTOYAO+HMOubB8SiVr8ZBxawFcyFmIp6anW0A6lqUKw==
   dependencies:
     "@ant-design/icons" "^5.0.1"
     "@node-saml/passport-saml" "^4.0.2"
