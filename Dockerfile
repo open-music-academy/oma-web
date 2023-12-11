@@ -6,10 +6,8 @@ WORKDIR /app
 
 COPY package.json yarn.lock /app/
 
-RUN apk --no-cache add curl \
-    && apk --no-cache --virtual build-dependencies add git \
-    && yarn install --non-interactive --frozen-lockfile --check-files --production=true \
-    && apk del build-dependencies
+RUN apk --no-cache add curl git make gcc g++ python3 pkgconfig pixman-dev cairo-dev pango-dev libjpeg-turbo-dev giflib-dev \
+    && yarn install --non-interactive --frozen-lockfile --check-files --production=true
 
 COPY . /app/
 
