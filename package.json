@@ -20,8 +20,7 @@
   },
   "private": true,
   "dependencies": {
-    "@benewagner/educandu-plugin-piano": "1.0.4",
-    "@educandu/educandu": "1.17.5",
+    "@educandu/educandu": "3.0.0",
     "@educandu/eslint-config": "~2.2.1",
     "@educandu/node-jsx-loader": "~3.1.0",
     "del": "~7.1.0",
