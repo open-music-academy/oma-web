@@ -20,7 +20,7 @@
   },
   "private": true,
   "dependencies": {
-    "@educandu/educandu": "3.1.0",
+    "@educandu/educandu": "~3.2.0",
     "@educandu/node-jsx-loader": "~3.1.0",
     "parseboolean": "~1.0.0",
     "react-cool-dimensions": "~3.0.1"
