@@ -20,7 +20,7 @@
   },
   "private": true,
   "dependencies": {
-    "@educandu/educandu": "3.0.0",
+    "@educandu/educandu": "3.1.0",
     "@educandu/eslint-config": "~2.2.1",
     "@educandu/node-jsx-loader": "~3.1.0",
     "del": "~7.1.0",
