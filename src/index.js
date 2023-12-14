@@ -70,6 +70,7 @@ const enabledPlugins = [
   'media-slideshow',
   'interactive-media',
   'multitrack-media',
+  'combined-multitrack-media',
   'media-analysis',
   'benewagner/educandu-plugin-piano',
   'text-field',
