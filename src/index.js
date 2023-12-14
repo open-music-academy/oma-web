@@ -71,6 +71,7 @@ const enabledPlugins = [
   'interactive-media',
   'multitrack-media',
   'media-analysis',
+  'benewagner/educandu-plugin-piano',
   'text-field',
   'select-field',
   'file-upload-field',
@@ -108,7 +109,8 @@ const config = {
     }
   ],
   resources: [
-    './resources.json'
+    './resources.json',
+    '../node_modules/@benewagner/educandu-plugin-piano/dist/translations.json'
   ].map(x => path.resolve(thisDir, x)),
   themeFile: path.resolve(thisDir, './theme.less'),
   allowedLicenses: getCsv(process.env.OMA_ALLOWED_LICENSES),

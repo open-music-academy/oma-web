@@ -665,15 +665,23 @@
   dependencies:
     regenerator-runtime "^0.14.0"
 
+"@benewagner/educandu-plugin-piano@~1.0.5":
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/@benewagner/educandu-plugin-piano/-/educandu-plugin-piano-1.0.5.tgz#7a3b2b3b53f668aff0b868b7f3de03bce2f03ae1"
+  integrity sha512-gk5ktMNHLkblWZQvWCnU5z6rn2g6cmdGixBkkhQ+W/HOovFyrg1bFUu6vnuyWpZkP3ks4FFkVgpD+FSdNzXIQg==
+  dependencies:
+    midi-player-js "^2.0.16"
+    tone "^14.7.77"
+
 "@ctrl/tinycolor@^3.4.0", "@ctrl/tinycolor@^3.6.0":
   version "3.6.0"
   resolved "https://registry.yarnpkg.com/@ctrl/tinycolor/-/tinycolor-3.6.0.tgz#53fa5fe9c34faee89469e48f91d51a3766108bc8"
   integrity sha512-/Z3l6pXthq0JvMYdUFyX9j0MaCltlIn6mfh9jLyQwg5aPKxkyNa0PTHtU1AlFXLNk55ZuAeJRcpvq+tmLfKmaQ==
 
-"@educandu/dev-tools@~11.5.0":
-  version "11.5.0"
-  resolved "https://registry.yarnpkg.com/@educandu/dev-tools/-/dev-tools-11.5.0.tgz#4d6908c541b23f0282b13a676a635c66007d4917"
-  integrity sha512-PDrQqpQpvTVHkOSCbcld0vmw+uKV6Cc9+hjP0WIh36OM0LncGT4peiCfhH870NP3Q12Qb3YLTeim0DzQwxDScw==
+"@educandu/dev-tools@~11.5.1":
+  version "11.5.1"
+  resolved "https://registry.yarnpkg.com/@educandu/dev-tools/-/dev-tools-11.5.1.tgz#24e7f58d2afa6ec5bdb13b643b4335100f3632f9"
+  integrity sha512-QYMLxj3dJ2yf8OfZRHShOz0PKmF+nBo97FqClvCjMGSyjGawsmDisNqYsmQDsHKZf43T83/MAys4t+vdfvTvUw==
   dependencies:
     "@rauschma/stringio" "^1.4.0"
     axios "^1.6.2"
@@ -7084,6 +7092,11 @@ micromatch@^4.0.4:
     braces "^3.0.2"
     picomatch "^2.3.1"
 
+midi-player-js@^2.0.16:
+  version "2.0.16"
+  resolved "https://registry.yarnpkg.com/midi-player-js/-/midi-player-js-2.0.16.tgz#41167859e3f430e55eeb962887cb498726d6c570"
+  integrity sha512-Y1yCRvvSjJjT5J4U8T4XTCDF1FLXtw8Otvq5BAmIob/2cj10aQUDrPDFByTWeuMRPu6/nLhusROc1DuTLCzRnw==
+
 mime-db@1.52.0:
   version "1.52.0"
   resolved "https://registry.yarnpkg.com/mime-db/-/mime-db-1.52.0.tgz#bbabcdc02859f4987301c856e3387ce5ec43bf70"
@@ -9745,7 +9758,7 @@ stack-trace@0.0.10:
   resolved "https://registry.yarnpkg.com/stack-trace/-/stack-trace-0.0.10.tgz#547c70b347e8d32b4e108ea1a2a159e5fdde19c0"
   integrity sha512-KGzahc7puUKkzyMt+IqAep+TVNbKP+k2Lmwhub39m1AsTSkaDutx56aDCo+HLDzf/D26BIHTJWNiTG1KAJiQCg==
 
-standardized-audio-context@^25.3.60:
+standardized-audio-context@^25.1.8, standardized-audio-context@^25.3.60:
   version "25.3.60"
   resolved "https://registry.yarnpkg.com/standardized-audio-context/-/standardized-audio-context-25.3.60.tgz#f37a0e35bac7ca230dd44fc66efb28949f6bb864"
   integrity sha512-h4ntLsHqnRESxyuU4C5/gvZTBqjBw1SoAR5lsQbqXPI4R3KKZTJWnMMpnRdiySr7cXokbEcepaPGGQ1V+UwlLw==
@@ -10221,6 +10234,14 @@ toidentifier@1.0.1:
   resolved "https://registry.yarnpkg.com/toidentifier/-/toidentifier-1.0.1.tgz#3be34321a88a820ed1bd80dfaa33e479fbb8dd35"
   integrity sha512-o5sSPKEkg/DIQNmH43V0/uerLrpzVedkUh8tGNvaeXpfpuwjKenlSox/2O/BTlZUtEe+JG7s5YhEz608PlAHRA==
 
+tone@^14.7.77:
+  version "14.7.77"
+  resolved "https://registry.yarnpkg.com/tone/-/tone-14.7.77.tgz#12a2a9f033952ccdb552275a6384ca5d36d4b5ed"
+  integrity sha512-tCfK73IkLHyzoKUvGq47gyDyxiKLFvKiVCOobynGgBB9Dl0NkxTM2p+eRJXyCYrjJwy9Y0XCMqD3uOYsYt2Fdg==
+  dependencies:
+    standardized-audio-context "^25.1.8"
+    tslib "^2.0.1"
+
 tough-cookie@^4.0.0:
   version "4.1.3"
   resolved "https://registry.yarnpkg.com/tough-cookie/-/tough-cookie-4.1.3.tgz#97b9adb0728b42280aa3d814b6b999b2ff0318bf"
@@ -10277,7 +10298,7 @@ tsconfig-paths@^3.14.2:
     minimist "^1.2.6"
     strip-bom "^3.0.0"
 
-tslib@2.6.2, tslib@^2.6.2:
+tslib@2.6.2, tslib@^2.0.1, tslib@^2.6.2:
   version "2.6.2"
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.6.2.tgz#703ac29425e7b37cd6fd456e92404d46d1f3e4ae"
   integrity sha512-AEYxH93jGFPn/a2iVAwW87VuUIkR1FVUKB77NwMF7nBTDkDrrT/Hpt/IrCJ0QXhW27jTBDcf5ZY7w6RiqTMw2Q==
