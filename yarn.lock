@@ -678,10 +678,10 @@
   resolved "https://registry.yarnpkg.com/@ctrl/tinycolor/-/tinycolor-3.6.0.tgz#53fa5fe9c34faee89469e48f91d51a3766108bc8"
   integrity sha512-/Z3l6pXthq0JvMYdUFyX9j0MaCltlIn6mfh9jLyQwg5aPKxkyNa0PTHtU1AlFXLNk55ZuAeJRcpvq+tmLfKmaQ==
 
-"@educandu/dev-tools@~11.5.1":
-  version "11.5.1"
-  resolved "https://registry.yarnpkg.com/@educandu/dev-tools/-/dev-tools-11.5.1.tgz#24e7f58d2afa6ec5bdb13b643b4335100f3632f9"
-  integrity sha512-QYMLxj3dJ2yf8OfZRHShOz0PKmF+nBo97FqClvCjMGSyjGawsmDisNqYsmQDsHKZf43T83/MAys4t+vdfvTvUw==
+"@educandu/dev-tools@~11.6.0":
+  version "11.6.0"
+  resolved "https://registry.yarnpkg.com/@educandu/dev-tools/-/dev-tools-11.6.0.tgz#d070bd2afaee371ee96c819624db734da6ae9278"
+  integrity sha512-nLjvqIxcoDRZdhMtqHMKG6kBeHwijl4KeKoBfWK5tqZoDzTQB5Otw5U8TnENWYvhe70Hj9uxycUjPTEaCbrTLQ==
   dependencies:
     "@rauschma/stringio" "^1.4.0"
     axios "^1.6.2"
@@ -707,6 +707,7 @@
     less-plugin-glob "^3.0.0"
     minio "^7.1.3"
     mongodb "^6.3.0"
+    normalize-path "^3.0.0"
     semver "^7.5.4"
     umzug "^3.4.0"
     yaml "^2.3.4"
@@ -808,17 +809,17 @@
     umzug "^3.4.0"
     unidiff "^1.0.4"
 
-"@educandu/node-jsx-loader@~3.1.0":
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/@educandu/node-jsx-loader/-/node-jsx-loader-3.1.0.tgz#1adf0ff22f389f22e3145eff7ed97f18542d7362"
-  integrity sha512-R07vN+kJtTi0znWq7lyfdA1S47dobWGKm6FIONF9qkNmivMEFUx0d7nTWNME7PMg4YqFAdXakLDNzFk30i0Eww==
+"@educandu/node-jsx-loader@~3.2.0":
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/@educandu/node-jsx-loader/-/node-jsx-loader-3.2.0.tgz#35113b2eeb2861f6043583fb8c6bd01e21d9a7f7"
+  integrity sha512-0ElBWawABbR6NAkCK/YclLT3QgBTUiE2hh9WDcnZ6uL0wm6S7jXuTAkN+QkMcFBoyC/3c1R7w5ICBeZkODZK6w==
   dependencies:
     esbuild "^0.19.8"
 
-"@educandu/rooms-auth-lambda@~6.1.0":
-  version "6.1.0"
-  resolved "https://registry.yarnpkg.com/@educandu/rooms-auth-lambda/-/rooms-auth-lambda-6.1.0.tgz#1fad7d54f1d4f2540ee980cb766b64aef95e4abd"
-  integrity sha512-EuXbT8u2b245Uz3xOOoKkmlMEFWaDxBr38tgSMQdoloc6flbfM1yVd16nByArbsfJjzyWwhMRw3Tzq7hX5puxg==
+"@educandu/rooms-auth-lambda@~6.2.0":
+  version "6.2.0"
+  resolved "https://registry.yarnpkg.com/@educandu/rooms-auth-lambda/-/rooms-auth-lambda-6.2.0.tgz#b3749919af6d69c73258f76a4c165780bed2ad41"
+  integrity sha512-wApHQVpQ8JX/tBLdsu+lA+strBtqhJxqS8fWK1sciw108cVLcty5OGa2ngDd4omRLq6H8G2Jlbm7CqJKu2rtUg==
   dependencies:
     cors "^2.8.5"
     envalid "^8.0.0"
