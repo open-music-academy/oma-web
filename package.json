@@ -22,12 +22,12 @@
   "dependencies": {
     "@benewagner/educandu-plugin-piano": "~1.0.5",
     "@educandu/educandu": "3.4.0",
+    "@educandu/node-jsx-loader": "~3.2.0",
     "parseboolean": "~1.0.0",
     "react-cool-dimensions": "~3.0.1"
   },
   "devDependencies": {
     "@educandu/dev-tools": "~11.6.0",
-    "@educandu/node-jsx-loader": "~3.2.0",
     "@educandu/rooms-auth-lambda": "~6.2.0",
     "del": "~7.1.0",
     "eslint": "~8.55.0",
