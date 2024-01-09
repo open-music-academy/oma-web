@@ -21,7 +21,7 @@
   "private": true,
   "dependencies": {
     "@benewagner/educandu-plugin-piano": "~1.0.5",
-    "@educandu/educandu": "3.4.0",
+    "@educandu/educandu": "3.5.0",
     "@educandu/node-jsx-loader": "~3.2.0",
     "parseboolean": "~1.0.0",
     "react-cool-dimensions": "~3.0.1"
