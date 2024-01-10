@@ -665,6 +665,13 @@
   dependencies:
     regenerator-runtime "^0.14.0"
 
+"@benewagner/educandu-plugin-list@~1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@benewagner/educandu-plugin-list/-/educandu-plugin-list-1.0.2.tgz#29bb54fbc6fb469a3e9deb22747dbeab7cec909f"
+  integrity sha512-mr1w7usC5nAaVJtot+jdMTdFz7MMjBx3JqcXvpzD5V4/kX/FtoP5/m5dT5nu4Cth+cGLAdKlHmlk2upPTOZ01w==
+  dependencies:
+    jschardet "^3.0.0"
+
 "@benewagner/educandu-plugin-piano@~1.0.5":
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/@benewagner/educandu-plugin-piano/-/educandu-plugin-piano-1.0.5.tgz#7a3b2b3b53f668aff0b868b7f3de03bce2f03ae1"
@@ -6420,6 +6427,11 @@ jsbn@~0.1.0:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/jsbn/-/jsbn-0.1.1.tgz#a5e654c2e5a2deb5f201d96cefbca80c0ef2f513"
   integrity sha512-UVU9dibq2JcFWxQPA6KCqj5O42VOmAY3zQUfEKxU0KpTGXwNoCjkX1e13eHNvw/xPynt6pU0rZ1htjWTNTSXsg==
+
+jschardet@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/jschardet/-/jschardet-3.0.0.tgz#898d2332e45ebabbdb6bf2feece9feea9a99e882"
+  integrity sha512-lJH6tJ77V8Nzd5QWRkFYCLc13a3vADkh3r/Fi8HupZGWk2OVVDfnZP8V/VgQgZ+lzW0kG2UGb5hFgt3V3ndotQ==
 
 jsdom@^19.0.0:
   version "19.0.0"
