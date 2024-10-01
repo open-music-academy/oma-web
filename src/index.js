@@ -72,12 +72,11 @@ const enabledPlugins = [
   'multitrack-media',
   'combined-multitrack-media',
   'media-analysis',
-  'benewagner/educandu-plugin-piano',
   'text-field',
   'select-field',
   'file-upload-field',
   'whiteboard',
-  'benewagner/educandu-plugin-list'
+  'educandu/educandu-plugin-example'
 ].filter(plugin => !disabledPlugins.includes(plugin));
 
 const jsWithChecksumPathPattern = /\w+-[A-Z0-9]{8}\.js$/;
@@ -112,8 +111,7 @@ const config = {
   ],
   resources: [
     './resources.json',
-    '../node_modules/@benewagner/educandu-plugin-piano/dist/translations.json',
-    '../node_modules/@benewagner/educandu-plugin-list/dist/translations.json'
+    '../node_modules/@educandu/educandu-plugin-example/dist/translations.json'
   ].map(x => path.resolve(thisDir, x)),
   themeFile: path.resolve(thisDir, './theme.less'),
   allowedLicenses: getCsv(process.env.OMA_ALLOWED_LICENSES),
