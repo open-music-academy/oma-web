@@ -22,6 +22,8 @@ let isInWatchMode = false;
 let currentCdnProxy = null;
 let currentAppBuildContext = null;
 
+process.env.NODE_ENV ||= 'development';
+
 const omaEnv = {
   OMA_APP_ROOT_URL: 'http://localhost:3000',
   OMA_WEB_CONNECTION_STRING: 'mongodb://root:rootpw@localhost:27017/dev-educandu-db?replicaSet=educandurs&authSource=admin',
@@ -260,7 +262,7 @@ export async function startServer() {
   }
 
   const finalOmaEnv = {
-    NODE_ENV: 'development',
+    NODE_ENV: process.env.NODE_ENV,
     ...omaEnv,
     OMA_CDN_ROOT_URL: tunnel ? `https://${tunnelWebsiteCdnDomain}` : 'http://localhost:10000',
     OMA_SESSION_COOKIE_DOMAIN: tunnel ? tunnelWebsiteDomain : omaEnv.OMA_SESSION_COOKIE_DOMAIN,
@@ -271,7 +273,7 @@ export async function startServer() {
   currentCdnProxy = new NodeProcess({
     script: 'node_modules/@educandu/rooms-auth-lambda/src/dev-server/run.js',
     env: {
-      NODE_ENV: 'development',
+      NODE_ENV: process.env.NODE_ENV,
       PORT: 10000,
       WEBSITE_BASE_URL: tunnel ? `https://${tunnelWebsiteDomain}` : 'http://localhost:3000',
       CDN_BASE_URL: 'http://localhost:9000/dev-educandu-cdn',

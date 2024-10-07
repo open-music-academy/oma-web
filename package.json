@@ -5,7 +5,7 @@
   "type": "module",
   "main": "src/index.js",
   "engines": {
-    "node": "^18.0.0"
+    "node": "^20.0.0"
   },
   "scripts": {
     "start": "gulp"
@@ -20,16 +20,16 @@
   },
   "private": true,
   "dependencies": {
-    "@benewagner/educandu-plugin-list": "~1.0.2",
-    "@benewagner/educandu-plugin-piano": "~1.0.5",
-    "@educandu/educandu": "3.16.0",
-    "@educandu/node-jsx-loader": "~3.2.0",
+    "@benewagner/educandu-plugin-list": "~1.1.1",
+    "@benewagner/educandu-plugin-piano": "~1.1.1",
+    "@educandu/educandu": "~3.21.0",
+    "@educandu/node-jsx-loader": "~4.0.0",
     "parseboolean": "~1.0.0",
     "react-cool-dimensions": "~3.0.1"
   },
   "devDependencies": {
-    "@educandu/dev-tools": "~11.6.0",
-    "@educandu/rooms-auth-lambda": "~6.2.0",
+    "@educandu/dev-tools": "~14.0.0",
+    "@educandu/rooms-auth-lambda": "~6.2.1",
     "del": "~7.1.0",
     "eslint": "~8.55.0",
     "eslint-plugin-import": "~2.29.0",
@@ -39,7 +39,6 @@
     "gulp-real-favicon": "~0.3.2"
   },
   "resolutions": {
-    "**/gl": "6.0.2",
-    "**/strip-ansi": "6.0.1"
+    "**/gl": "8.0.2"
   }
 }
