@@ -14,7 +14,7 @@ jobs:
           node-version: "20.17.0"
           cache: "yarn"
       - name: Install node modules
-        run: yarn install --non-interactive --check-files --frozen-lockfile
+        run: yarn install --non-interactive --check-files --frozen-lockfile --production=false
       - name: Lint
         run: ./node_modules/.bin/gulp lint
       - name: Build
