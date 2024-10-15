@@ -30,7 +30,7 @@ jobs:
         with:
           name: dist
           path: dist
-  deploy:
+  publish:
     runs-on: ubuntu-22.04
     needs: [build]
     if: github.ref == 'refs/heads/main' || startsWith(github.ref, 'refs/heads/hotfix')
