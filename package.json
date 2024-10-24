@@ -22,7 +22,7 @@
   "dependencies": {
     "@benewagner/educandu-plugin-list": "~1.1.1",
     "@benewagner/educandu-plugin-piano": "~1.1.1",
-    "@educandu/educandu": "3.22.3",
+    "@educandu/educandu": "3.24.0",
     "@educandu/node-jsx-loader": "~4.0.0",
     "parseboolean": "~1.0.0",
     "react-cool-dimensions": "~3.0.1"
