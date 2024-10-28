@@ -1190,6 +1190,13 @@
     call-me-maybe "^1.0.1"
     glob-to-regexp "^0.3.0"
 
+"@musikisum/educandu-plugin-progression-models@~0.7.5":
+  version "0.7.5"
+  resolved "https://registry.yarnpkg.com/@musikisum/educandu-plugin-progression-models/-/educandu-plugin-progression-models-0.7.5.tgz#1007918a4993fc78a6e55e5ceda3088fe31f3931"
+  integrity sha512-iFtgOJWu6yeJAC5PZ3MVSb6cUKcN2jvykUbF5OvNnSeVE9PQ1A7qrPO16YeLIEUS0xOm4AyE/sr6tHvz5FzqIg==
+  dependencies:
+    abc-notation-transposition "^1.0.5"
+
 "@node-saml/node-saml@^4.0.4":
   version "4.0.5"
   resolved "https://registry.yarnpkg.com/@node-saml/node-saml/-/node-saml-4.0.5.tgz#039e387095b54639b06df62b1b4a6d8941c6d907"
@@ -2361,6 +2368,11 @@ abbrev@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/abbrev/-/abbrev-2.0.0.tgz#cf59829b8b4f03f89dda2771cb7f3653828c89bf"
   integrity sha512-6/mh1E2u2YgEsCHdY0Yx5oW+61gZU+1vXaoiHHrpKeuRNNgFvS+/jrwHiQhB5apAf5oB7UB7E19ol2R2LKH8hQ==
+
+abc-notation-transposition@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/abc-notation-transposition/-/abc-notation-transposition-1.0.5.tgz#f2fd812b3fe8be40f5f32f99d9e20a3e1ed631a2"
+  integrity sha512-Y9xKBjiGApa48YHLNQ3+5a/z1yXG2ruWcGwB7FcSAjMUWnLeUvbucVngDgYc7WYPDHBRGuzddQ4bRnsjl4oDlA==
 
 abcjs@^6.2.3:
   version "6.2.3"
@@ -9018,17 +9030,7 @@ rc-rate@~2.13.0:
     classnames "^2.2.5"
     rc-util "^5.0.1"
 
-rc-resize-observer@^1.0.0, rc-resize-observer@^1.1.0, rc-resize-observer@^1.3.1:
-  version "1.3.1"
-  resolved "https://registry.yarnpkg.com/rc-resize-observer/-/rc-resize-observer-1.3.1.tgz#b61b9f27048001243617b81f95e53d7d7d7a6a3d"
-  integrity sha512-iFUdt3NNhflbY3mwySv5CA1TC06zdJ+pfo0oc27xpf4PIOvfZwZGtD9Kz41wGYqC4SLio93RVAirSSpYlV/uYg==
-  dependencies:
-    "@babel/runtime" "^7.20.7"
-    classnames "^2.2.1"
-    rc-util "^5.27.0"
-    resize-observer-polyfill "^1.5.1"
-
-rc-resize-observer@^1.4.0:
+rc-resize-observer@1.4.0, rc-resize-observer@^1.0.0, rc-resize-observer@^1.1.0, rc-resize-observer@^1.3.1, rc-resize-observer@^1.4.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/rc-resize-observer/-/rc-resize-observer-1.4.0.tgz#7bba61e6b3c604834980647cce6451914750d0cc"
   integrity sha512-PnMVyRid9JLxFavTjeDXEXo65HCRqbmLBw9xX9gfC4BZiSzbLXKzW3jPz+J0P71pLbD5tBMTT+mkstV5gD0c9Q==
