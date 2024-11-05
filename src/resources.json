@@ -16,5 +16,11 @@
       "en": "Our goal is to create a community project that is carried and supported by as many people around the world as possible. If you are inspired by the idea of free music learning and of an open learning platform, then join our community for **free**.",
       "de": "Unser Ziel ist, ein Gemeinschaftsprojekt zu schaffen, das von möglichst vielen Menschen auf der ganzen Welt getragen und unterstützt wird. Wenn du von der Idee des kostenlosen Musiklernens und einer offenen Lernplattform begeistert bist und selbst Inhalte generieren möchtest, tritt unserer Community **kostenlos** bei."
     }
+  },
+  "index": {
+    "infoText": {
+      "en": "OMA currently provides {documentsCount, plural, =1 {# document} other {# documents}} and {mediaItemsCount, plural, =1 {# media resource} other {# media resources}}.",
+      "de": "OMA umfasst derzeit {documentsCount, plural, =1 {# Dokument} other {# Dokumente}} and {mediaItemsCount, plural, =1 {# Medium} other {# Medien}}."
+    }
   }
 }
