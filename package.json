@@ -22,7 +22,7 @@
   "dependencies": {
     "@benewagner/educandu-plugin-list": "~1.1.1",
     "@benewagner/educandu-plugin-piano": "~1.1.1",
-    "@educandu/educandu": "3.28.0",
+    "@educandu/educandu": "3.29.0",
     "@educandu/node-jsx-loader": "~4.0.0",
     "@musikisum/educandu-plugin-progression-models": "~0.9.9",
     "parseboolean": "~1.0.0",
