@@ -790,10 +790,10 @@
     yaml "^2.3.4"
     yargs "^17.7.2"
 
-"@educandu/educandu@3.32.0":
-  version "3.32.0"
-  resolved "https://registry.yarnpkg.com/@educandu/educandu/-/educandu-3.32.0.tgz#efd247702732e42a06d6f71bb2740d61f341106a"
-  integrity sha512-z8K0y/FwSaGiU9andlIb6NiNb279F0se9pUc0+q5he+7Bww/3qjY1vhwFu3O47Kt69TcW2KcK6uNMGXdZsldcA==
+"@educandu/educandu@3.32.1":
+  version "3.32.1"
+  resolved "https://registry.yarnpkg.com/@educandu/educandu/-/educandu-3.32.1.tgz#792d0cf880ae414e5dc0ece4dfeb08e225b48dc3"
+  integrity sha512-WgfUXXyZ29FdoIGvvyXLWaoRm6aF0wJOdVAVCQ3U2fLB5yUovc9prf9WnwsqcXaBdTX08W3/gu7+IORaM7+bYA==
   dependencies:
     "@ant-design/icons" "5.5.1"
     "@aws-sdk/client-s3" "^3.665.0"
