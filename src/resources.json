@@ -20,7 +20,7 @@
   "index": {
     "infoText": {
       "en": "OMA currently provides {documentsCount, plural, =1 {# document} other {# documents}} and {mediaItemsCount, plural, =1 {# media resource} other {# media resources}}.",
-      "de": "OMA umfasst derzeit {documentsCount, plural, =1 {# Dokument} other {# Dokumente}} and {mediaItemsCount, plural, =1 {# Medium} other {# Medien}}."
+      "de": "OMA umfasst derzeit {documentsCount, plural, =1 {# Dokument} other {# Dokumente}} und {mediaItemsCount, plural, =1 {# Medium} other {# Medien}}."
     }
   }
 }
