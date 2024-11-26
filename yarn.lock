@@ -755,6 +755,13 @@
   resolved "https://registry.yarnpkg.com/@ctrl/tinycolor/-/tinycolor-3.6.1.tgz#b6c75a56a1947cc916ea058772d666a2c8932f31"
   integrity sha512-SITSV6aIXsuVNV3f3O0f2n/cgyEDWoSqtZMYiAmcsYHydcKrOz3gUxB/iXd/Qf08+IZX4KpgNbvUdMBmWz+kcA==
 
+"@educandu/abc-tools@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@educandu/abc-tools/-/abc-tools-1.1.0.tgz#664209ac978796e51307b73f6b86de45b389419c"
+  integrity sha512-PDyT/mpWqV2F9XCCeo8dpD0kXYFKCSIODjlF/MINqKQhdxZOWnJtLs6mF6fOOyh4y9VXaySvj4tCJ5vEpZa2nA==
+  dependencies:
+    abc-notation-transposition "^1.0.5"
+
 "@educandu/dev-tools@~14.0.0":
   version "14.0.0"
   resolved "https://registry.yarnpkg.com/@educandu/dev-tools/-/dev-tools-14.0.0.tgz#4157519a8d6a80af74eb45899cfebe941784465b"
@@ -790,14 +797,15 @@
     yaml "^2.3.4"
     yargs "^17.7.2"
 
-"@educandu/educandu@3.32.1":
-  version "3.32.1"
-  resolved "https://registry.yarnpkg.com/@educandu/educandu/-/educandu-3.32.1.tgz#792d0cf880ae414e5dc0ece4dfeb08e225b48dc3"
-  integrity sha512-WgfUXXyZ29FdoIGvvyXLWaoRm6aF0wJOdVAVCQ3U2fLB5yUovc9prf9WnwsqcXaBdTX08W3/gu7+IORaM7+bYA==
+"@educandu/educandu@3.33.0":
+  version "3.33.0"
+  resolved "https://registry.yarnpkg.com/@educandu/educandu/-/educandu-3.33.0.tgz#3d4bc62ec40e96eb286a0b67b95ecea3e4025e59"
+  integrity sha512-BiCjzdWqRh05Y++ByMYZQueF+0diXQ0R4Dj5f4H4AVjHg2zdsKKGdn4eQ02yPqiU0HRoHgjmwCYauhkxJrfn4Q==
   dependencies:
     "@ant-design/icons" "5.5.1"
     "@aws-sdk/client-s3" "^3.665.0"
     "@aws-sdk/lib-storage" "^3.665.0"
+    "@educandu/abc-tools" "^1.1.0"
     "@educandu/multitrack-audio-player" "^1.0.3"
     "@node-saml/passport-saml" "^4.0.4"
     "@sindresorhus/slugify" "^2.2.1"
