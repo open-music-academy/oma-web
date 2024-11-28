@@ -34,6 +34,16 @@ const availableIdentityProviders = {
       entityId: 'https://sso.hfm-nuernberg.de/idp/shibboleth'
     }
   },
+  hfmn: {
+    key: 'hfmdd',
+    displayName: 'Hochschule für Musik Dresden',
+    logoUrl: 'https://upload.wikimedia.org/wikipedia/commons/7/76/Musik_HS_Dresden.svg',
+    expiryTimeoutInDays: 6 * 30,
+    metadata: {
+      url: 'https://www.aai.dfn.de/metadata/dfn-aai-idp-metadata.xml',
+      entityId: 'https://idp-vw.hfmdd.de/idp/shibboleth'
+    }
+  },
   samltest: {
     key: 'samltest',
     displayName: 'SAMLTEST.ID',
