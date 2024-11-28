@@ -34,7 +34,7 @@ const availableIdentityProviders = {
       entityId: 'https://sso.hfm-nuernberg.de/idp/shibboleth'
     }
   },
-  hfmn: {
+  hfmdd: {
     key: 'hfmdd',
     displayName: 'Hochschule für Musik Dresden',
     logoUrl: 'https://upload.wikimedia.org/wikipedia/commons/7/76/Musik_HS_Dresden.svg',
