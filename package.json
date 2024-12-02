@@ -21,10 +21,10 @@
   "private": true,
   "dependencies": {
     "@benewagner/educandu-plugin-list": "~1.1.1",
-    "@benewagner/educandu-plugin-piano": "~1.1.1",
+    "@benewagner/educandu-plugin-piano": "~1.1.3",
     "@educandu/educandu": "3.34.0",
     "@educandu/node-jsx-loader": "~4.0.0",
-    "@musikisum/educandu-plugin-progression-models": "~1.2.0",
+    "@musikisum/educandu-plugin-progression-models": "~1.2.2",
     "parseboolean": "~1.0.0",
     "react-cool-dimensions": "~3.0.1"
   },

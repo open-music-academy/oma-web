@@ -737,10 +737,10 @@
   dependencies:
     jschardet "^3.0.0"
 
-"@benewagner/educandu-plugin-piano@~1.1.1":
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/@benewagner/educandu-plugin-piano/-/educandu-plugin-piano-1.1.1.tgz#a65264f353c4b066abaa3e37c6c7629a19acc1e8"
-  integrity sha512-c+l9wnnVvjxg/YTR44LtN4S2//w+iWYG/BD8dFfHpILzQUkGsmcXmaLTeV2rMBwVy9TePKWeUS7ZWdg0b3vHuw==
+"@benewagner/educandu-plugin-piano@~1.1.3":
+  version "1.1.3"
+  resolved "https://registry.yarnpkg.com/@benewagner/educandu-plugin-piano/-/educandu-plugin-piano-1.1.3.tgz#5e92e4c13e476d310b9eb465838b7ae02b440d64"
+  integrity sha512-e9h9UrHexZg6NHVBsQpkozBxjAQClVbWNiMmK6hzypOW9coBIoT1tHMC0HWCQZoarz/0+IypnYRJFKdQZpVAUQ==
   dependencies:
     midi-player-js "^2.0.16"
     tone "^14.7.77"
@@ -1199,10 +1199,10 @@
     call-me-maybe "^1.0.1"
     glob-to-regexp "^0.3.0"
 
-"@musikisum/educandu-plugin-progression-models@~1.2.0":
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/@musikisum/educandu-plugin-progression-models/-/educandu-plugin-progression-models-1.2.0.tgz#10e5deadb35f09f5e47f9fe42ff3a95f0ff933db"
-  integrity sha512-UOyB8TVd/x+w210yNwX8Mmti4TowIaSjBdRNT5ln5+EjayXpzDu054on3aIm0o0nmO8YwUG011X/2mklMIpQdw==
+"@musikisum/educandu-plugin-progression-models@~1.2.2":
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/@musikisum/educandu-plugin-progression-models/-/educandu-plugin-progression-models-1.2.2.tgz#afcfffdd0432f30beeee895f5e4efd7b80d19583"
+  integrity sha512-PQXsybxZxUB5x4032Oii775mcQC+4gedDsutZK+PcXZKE5ws26X1KDQfFUZ97GI+XIuQ3UUpbs7tBwQDTC9nXg==
   dependencies:
     abc-notation-transposition "^1.0.5"
 
