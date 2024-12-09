@@ -27,7 +27,7 @@ const availableIdentityProviders = {
   hfmn: {
     key: 'hfmn',
     displayName: 'Hochschule für Musik Nürnberg',
-    logoUrl: 'https://www.hfm-nuernberg.de/fileadmin/templates/images/layout/logo-hfmn.png',
+    logoUrl: 'https://cdn.openmusic.academy/media-library/hf-m-nuernberg-logo-023-web-klein-GDyJ8hWx2J3wMzCWDLon1g.jpg',
     expiryTimeoutInDays: 6 * 30,
     metadata: {
       url: 'https://www.aai.dfn.de/metadata/dfn-aai-idp-metadata.xml',
