@@ -730,10 +730,10 @@
   dependencies:
     regenerator-runtime "^0.14.0"
 
-"@benewagner/educandu-plugin-list@~1.1.1":
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/@benewagner/educandu-plugin-list/-/educandu-plugin-list-1.1.1.tgz#c3a9f985f7562453b26dea4c48424e6fc0311086"
-  integrity sha512-bgFclE7x0A3z6hz8KrtNf4BklaR4tmrlGTJlnPNiVNl5+Vjjt8FqXSrVaJS0sO7I0bJbsGqbePcUJ2OMUruZdQ==
+"@benewagner/educandu-plugin-list@~2.0.1":
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/@benewagner/educandu-plugin-list/-/educandu-plugin-list-2.0.1.tgz#48fd92f7c3c16251def2b5a8d4be4e3b01a85d03"
+  integrity sha512-bZK2j9we0JoghNAifKZ5IKzw4fY0yBCW55+rGuqZrQFSFMpmPoFv5bleJp3oS0uMgLt+6o8gOY0A9KBIR1CtiA==
   dependencies:
     jschardet "^3.0.0"
 
@@ -797,10 +797,10 @@
     yaml "^2.3.4"
     yargs "^17.7.2"
 
-"@educandu/educandu@3.35.2":
-  version "3.35.2"
-  resolved "https://registry.yarnpkg.com/@educandu/educandu/-/educandu-3.35.2.tgz#ca50b8df0742ba5f087bc2072ae89bdb55199b53"
-  integrity sha512-KfO53qB+m+rLZBTrbLov3Ii0IrFxAHa/j8kT2TnBTm70PVV0/CI2WQYXUoPtAKdKITsnbDYJ1ZeQfYSa6xGvFg==
+"@educandu/educandu@3.35.3":
+  version "3.35.3"
+  resolved "https://registry.yarnpkg.com/@educandu/educandu/-/educandu-3.35.3.tgz#5c1239cab7cab5023c9c5266794e04750ba78fa2"
+  integrity sha512-lEj4RoAL0VpE+zv0VVfNh/Mn1q7Jl785L3mGze4JGSWAtPiuC/Ve0oqS0xzYN51wiuK257D2lSFeFtV7S7p+3A==
   dependencies:
     "@ant-design/icons" "5.5.1"
     "@aws-sdk/client-s3" "^3.665.0"
