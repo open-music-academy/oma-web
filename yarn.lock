@@ -1199,10 +1199,10 @@
     call-me-maybe "^1.0.1"
     glob-to-regexp "^0.3.0"
 
-"@musikisum/educandu-plugin-progression-models@~2.0.3":
-  version "2.0.3"
-  resolved "https://registry.yarnpkg.com/@musikisum/educandu-plugin-progression-models/-/educandu-plugin-progression-models-2.0.3.tgz#f5cc8ed76635057ac0ab0a487d847d0e561e4a30"
-  integrity sha512-yZrLULTeVmxvuNs0EIOZrOq8Dfs7oNLstNJ1AltZr2hD8ltfXPW259KSYtrzlM+AV/iVdYo+mOC+p31EwEcXDw==
+"@musikisum/educandu-plugin-progression-models@~2.1.1":
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/@musikisum/educandu-plugin-progression-models/-/educandu-plugin-progression-models-2.1.1.tgz#744e7b702aa4654793db291b5907b77905fec166"
+  integrity sha512-WOqTZWgmBOYjdJ2hJVtHdkVU3yZrVS8LFGQQaI8T7b1y4L83YzjHLY099TxcbtasGCNSQ8Buh9uAZPRiMML5Jg==
   dependencies:
     abc-notation-transposition "^1.0.5"
 
