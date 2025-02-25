@@ -24,7 +24,7 @@
     "@benewagner/educandu-plugin-piano": "~1.1.4",
     "@educandu/educandu": "3.35.4",
     "@educandu/node-jsx-loader": "~4.0.0",
-    "@musikisum/educandu-plugin-gap-genius": "~0.9.2",
+    "@musikisum/educandu-plugin-gap-genius": "~0.9.3",
     "@musikisum/educandu-plugin-progression-models": "~2.1.1",
     "parseboolean": "~1.0.0",
     "react-cool-dimensions": "~3.0.1"

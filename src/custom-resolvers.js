@@ -3,11 +3,12 @@ import PageTemplate from './custom-components/page-template.js';
 import EducanduPluginList from '@benewagner/educandu-plugin-list';
 import EducanduPluginPiano from '@benewagner/educandu-plugin-piano';
 import HomepageTemplate from './custom-components/homepage-template.js';
+import EducanduPluginGapGenius from '@musikisum/educandu-plugin-gap-genius';
 import EducanduPluginProgressionModels from '@musikisum/educandu-plugin-progression-models';
 
 export default {
   resolveCustomPageTemplate: () => PageTemplate,
   resolveCustomHomePageTemplate: () => HomepageTemplate,
   resolveCustomSiteLogo: () => SiteLogo,
-  resolveCustomPluginInfos: () => [EducanduPluginPiano, EducanduPluginList, EducanduPluginProgressionModels]
+  resolveCustomPluginInfos: () => [EducanduPluginPiano, EducanduPluginList, EducanduPluginProgressionModels, EducanduPluginGapGenius]
 };
