@@ -1204,10 +1204,10 @@
     call-me-maybe "^1.0.1"
     glob-to-regexp "^0.3.0"
 
-"@musikisum/educandu-plugin-gap-genius@~1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@musikisum/educandu-plugin-gap-genius/-/educandu-plugin-gap-genius-1.0.1.tgz#bfeffd36a2e0bc5e255826cd568aaa6adcd096d6"
-  integrity sha512-vZIvEuVmL5MhM0mPbNzsCW5ar81arDG9pmQYCASB84UFPse/170eU0nys/+TNWL/wldwWcOaUlNRra9Qa+vwRw==
+"@musikisum/educandu-plugin-gap-genius@~1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@musikisum/educandu-plugin-gap-genius/-/educandu-plugin-gap-genius-1.0.2.tgz#ecb27994c9995f2a549f6b8db7417cf8e7d19819"
+  integrity sha512-e3JRQLu5yhauqiPn7mOekhSRyPN3zYSOLcr9YNqctkczOP041Bt/HluJnn6gONARde1628PQdKPsUxFDYAS9ig==
   dependencies:
     chart.js "^4.4.7"
     fuse.js "^7.1.0"
