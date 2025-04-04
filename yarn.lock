@@ -797,10 +797,10 @@
     yaml "^2.3.4"
     yargs "^17.7.2"
 
-"@educandu/educandu@3.41.0":
-  version "3.41.0"
-  resolved "https://registry.yarnpkg.com/@educandu/educandu/-/educandu-3.41.0.tgz#e82efc4106d17128a70943f31294d6b6be1dd318"
-  integrity sha512-HqQ19Mn0ih5KkxpanUATxuw//p4b5bjnIY5lufmfLy2BJG5Wot3dqqTh8ENspmaEccTKovzseJdu0h6/FXGEyA==
+"@educandu/educandu@3.42.0":
+  version "3.42.0"
+  resolved "https://registry.yarnpkg.com/@educandu/educandu/-/educandu-3.42.0.tgz#ec70d3d962d2bed68d2cc6d4b930cb213f111179"
+  integrity sha512-qJkHEisFDMJnFBRKLzbPT/lDklSwI5XCLRZQ/zJzAnhXT7Z3cOnjTi8v7vWemA6O4P+Rmys7zC9P91l/1KHPIQ==
   dependencies:
     "@ant-design/icons" "5.5.1"
     "@aws-sdk/client-s3" "^3.665.0"
@@ -875,7 +875,7 @@
     react-beautiful-dnd "^13.1.1"
     react-beforeunload "^2.6.0"
     react-color "^2.19.3"
-    react-compare-slider "^3.0.1"
+    react-compare-slider "4.0.0-0"
     react-cool-dimensions "^3.0.1"
     react-countdown "^2.3.5"
     react-diff-view "^3.2.0"
@@ -9273,10 +9273,10 @@ react-color@^2.19.3:
     reactcss "^1.2.0"
     tinycolor2 "^1.4.1"
 
-react-compare-slider@^3.0.1:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/react-compare-slider/-/react-compare-slider-3.0.1.tgz#bed89735c06e4df19c39d753809ef3912dbf4755"
-  integrity sha512-+y7x30GCMmk7tl0lBgWRdEjOEMSD4tgPPVyQfBjN6LxU0gdYc4n0+XvnwTJQWwJPd+t2JuniYi1ZxczFVf4fnw==
+react-compare-slider@4.0.0-0:
+  version "4.0.0-0"
+  resolved "https://registry.yarnpkg.com/react-compare-slider/-/react-compare-slider-4.0.0-0.tgz#eca60a0a8c9886a2e667e7206b93a1d73094c873"
+  integrity sha512-1Il+g0r+GkK9Vj+LzqH9h19tOsVpGW5lfvVDlFQDJNSOEOvV9f5T/qaHz1S94YsY+feM7AfY0V+TRvt3F4P9CQ==
 
 react-cool-dimensions@^3.0.1, react-cool-dimensions@~3.0.1:
   version "3.0.1"
