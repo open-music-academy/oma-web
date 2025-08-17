@@ -5,10 +5,17 @@ import EducanduPluginPiano from '@benewagner/educandu-plugin-piano';
 import HomepageTemplate from './custom-components/homepage-template.js';
 import EducanduPluginGapGenius from '@musikisum/educandu-plugin-gap-genius';
 import EducanduPluginProgressionModels from '@musikisum/educandu-plugin-progression-models';
+import EducandePluginOrchestrationAssistant from '@musikisum/educandu-plugin-orchestration-assistant';
 
 export default {
   resolveCustomPageTemplate: () => PageTemplate,
   resolveCustomHomePageTemplate: () => HomepageTemplate,
   resolveCustomSiteLogo: () => SiteLogo,
-  resolveCustomPluginInfos: () => [EducanduPluginPiano, EducanduPluginList, EducanduPluginProgressionModels, EducanduPluginGapGenius]
+  resolveCustomPluginInfos: () => [
+    EducanduPluginPiano, 
+    EducanduPluginList, 
+    EducanduPluginProgressionModels, 
+    EducanduPluginGapGenius,
+    EducandePluginOrchestrationAssistant
+  ]
 };
