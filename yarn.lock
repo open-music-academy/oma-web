@@ -1213,10 +1213,10 @@
     fuse.js "^7.1.0"
     react-chartjs-2 "^5.3.0"
 
-"@musikisum/educandu-plugin-orchestration-assistant@~0.9.1":
-  version "0.9.1"
-  resolved "https://registry.yarnpkg.com/@musikisum/educandu-plugin-orchestration-assistant/-/educandu-plugin-orchestration-assistant-0.9.1.tgz#88bffc38c8827fa2acbb19a0a444053a93f2302c"
-  integrity sha512-sbft75EAe7au6heXsOH46CzcDybC+EsuM2UXrWjB6vKyQYL8bCu1xYvku58xNJ/zYzNXadQ5yt0ZQmIMWovtcA==
+"@musikisum/educandu-plugin-orchestration-assistant@~0.9.2":
+  version "0.9.2"
+  resolved "https://registry.yarnpkg.com/@musikisum/educandu-plugin-orchestration-assistant/-/educandu-plugin-orchestration-assistant-0.9.2.tgz#8a3cfe858770aa603c065d73b3e06e8533fb6a9e"
+  integrity sha512-FWew48AjoMelICmZciCifv8dcMAw+Ntisvb/WKf7ML/2rikVovFXyU2S09w1at7VkAmIzd19+Jw/hKRwJkrGPw==
 
 "@musikisum/educandu-plugin-progression-models@~2.1.1":
   version "2.1.1"
