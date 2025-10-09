@@ -797,10 +797,10 @@
     yaml "^2.3.4"
     yargs "^17.7.2"
 
-"@educandu/educandu@3.47.1":
-  version "3.47.1"
-  resolved "https://registry.yarnpkg.com/@educandu/educandu/-/educandu-3.47.1.tgz#5b8c953ebc559392ac74414f6847d11b64fa814c"
-  integrity sha512-8bzA5aknPGGd67ggyo/7tBSMZ84sgWQE1WHVfraaTHkpQnSXfSvt1PnUbbqFpbobgfY0Bu1KWXl41KtPZbosAg==
+"@educandu/educandu@3.49.0":
+  version "3.49.0"
+  resolved "https://registry.yarnpkg.com/@educandu/educandu/-/educandu-3.49.0.tgz#d0d3bbe6d0c48845fd8a21b0fc364cde42bacb88"
+  integrity sha512-bBnEDYG/o6CdV044Kd2nvte63P/cvCKHBcFNtywZhJ4LVBhkbddYUYVSfZ2K5CJ9KCm6ttiGChL/BcBJgpS0dA==
   dependencies:
     "@ant-design/icons" "5.5.1"
     "@aws-sdk/client-s3" "^3.665.0"
@@ -911,17 +911,16 @@
   dependencies:
     esbuild "^0.19.8"
 
-"@educandu/rooms-auth-lambda@~6.2.1":
-  version "6.2.1"
-  resolved "https://registry.yarnpkg.com/@educandu/rooms-auth-lambda/-/rooms-auth-lambda-6.2.1.tgz#1c2ed1cf38a10f38c3a5a54cd4c27b50822ee534"
-  integrity sha512-wRS/Vlmjlc4HOiCXxMI2ipUBsWNpc8IFxcuQu4jMSBapexBTndTRFhXzngQ5Z39APFCyu1qS92xM1TYRhneVPw==
+"@educandu/rooms-auth-lambda@~9.0.0":
+  version "9.0.0"
+  resolved "https://registry.yarnpkg.com/@educandu/rooms-auth-lambda/-/rooms-auth-lambda-9.0.0.tgz#3f0705982058ec2ebb11a8cf2d995fc873fe2bf5"
+  integrity sha512-1yX1V6ofpQS4JJHGQV5xyE3VYymcD+kIN9rSg/8Ch9/nPkdVVDRlyncyIg5L7P0IHvLS6bNQrT3VPXT8LAh/IQ==
   dependencies:
     cors "^2.8.5"
     envalid "^8.0.0"
     express "^4.18.2"
     http-proxy "^1.18.1"
     node-graceful "^3.1.0"
-    phin "^3.7.0"
 
 "@emotion/hash@^0.8.0":
   version "0.8.0"
@@ -3430,11 +3429,6 @@ caseless@~0.12.0:
   version "0.12.0"
   resolved "https://registry.yarnpkg.com/caseless/-/caseless-0.12.0.tgz#1b681c21ff84033c826543090689420d187151dc"
   integrity sha512-4tYFyifaFfGacoiObjJegolkwSU4xQNGbVgUiNYVUxbQ2x2lUsFvY4hVgVzGiIe6WLOPqycWXA40l+PWsxthUw==
-
-centra@^2.6.0:
-  version "2.6.0"
-  resolved "https://registry.yarnpkg.com/centra/-/centra-2.6.0.tgz#79117998ee6908642258db263871381aa5d1204a"
-  integrity sha512-dgh+YleemrT8u85QL11Z6tYhegAs3MMxsaWAq/oXeAmYJ7VxL3SI9TZtnfaEvNDMAPolj25FXIb3S+HCI4wQaQ==
 
 chainsaw@~0.1.0:
   version "0.1.0"
@@ -8576,13 +8570,6 @@ performance-now@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/performance-now/-/performance-now-0.2.0.tgz#33ef30c5c77d4ea21c5a53869d91b56d8f2555e5"
   integrity sha512-YHk5ez1hmMR5LOkb9iJkLKqoBlL7WD5M8ljC75ZfzXriuBIVNuecaXuU7e+hOwyqf24Wxhh7Vxgt7Hnw9288Tg==
-
-phin@^3.7.0:
-  version "3.7.0"
-  resolved "https://registry.yarnpkg.com/phin/-/phin-3.7.0.tgz#eeeff7660408515d8cf0c6252901012d4ab7153b"
-  integrity sha512-DqnVNrpYhKGBZppNKprD+UJylMeEKOZxHgPB+ZP6mGzf3uA2uox4Ep9tUm+rUc8WLIdHT3HcAE4X8fhwQA9JKg==
-  dependencies:
-    centra "^2.6.0"
 
 picomatch@^2.3.1:
   version "2.3.1"
