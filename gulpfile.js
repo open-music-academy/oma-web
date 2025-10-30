@@ -5,6 +5,7 @@ import { promises as fs } from 'node:fs';
 import realFavicon from 'gulp-real-favicon';
 import {
   cliArgs,
+  compressFiles,
   esbuild,
   eslint,
   getEnvAsString,
@@ -81,6 +82,14 @@ export async function clean() {
   await deleteAsync(['dist']);
 }
 
+export async function cleanCss() {
+  await deleteAsync(['dist/**/*.{css,css.br,css.gz,css.map,css.map.br,css.map.gz}']);
+}
+
+export async function cleanJs() {
+  await deleteAsync(['dist/**/*.{js,js.br,js.gz,js.map,js.map.br,js.map.gz}']);
+}
+
 export async function lint() {
   await eslint.lint(['*.js', 'src/**/*.js'], { failOnError: !isInWatchMode });
 }
@@ -92,7 +101,7 @@ export async function fix() {
 export async function buildCss() {
   await less.compile({
     inputFile: './src/main.less',
-    outputFile: './dist/main.css',
+    outputFile: './dist/[name]-[hash].css',
     optimize: true
   });
 }
@@ -108,12 +117,18 @@ export async function buildJs() {
       minify: true,
       incremental: isInWatchMode,
       inject: ['./src/polyfills.js'],
-      metaFilePath: './dist/meta.json'
+      metaFilePath: './dist/.meta.json'
     });
   }
 }
 
-export const build = gulp.parallel(buildJs, buildCss);
+export async function optimizeAssets() {
+  if (!isInWatchMode) {
+    await compressFiles({ sourceDir: ['./dist', './static'] });
+  }
+}
+
+export const build = gulp.series(gulp.parallel(buildJs, buildCss), optimizeAssets);
 
 export function faviconGenerate(done) {
   realFavicon.generateFavicon({
@@ -321,7 +336,7 @@ export const up = gulp.parallel(mongoUp, minioUp, maildevUp);
 
 export const down = gulp.parallel(mongoDown, minioDown, maildevDown);
 
-export const serve = gulp.series(gulp.parallel(up, build), startServer);
+export const serve = gulp.series(clean, gulp.parallel(up, build), startServer);
 
 export const verify = gulp.series(lint, build);
 
@@ -331,8 +346,8 @@ export function setupWatchMode(done) {
 }
 
 export function startWatchers(done) {
-  gulp.watch(['src/**/*.{js,json}'], gulp.series(buildJs, restartServer));
-  gulp.watch(['src/**/*.less'], buildCss);
+  gulp.watch(['src/**/*.{js,json}'], gulp.series(cleanJs, buildJs, restartServer));
+  gulp.watch(['src/**/*.less'], gulp.series(cleanCss, buildCss, restartServer));
   done();
 }
 

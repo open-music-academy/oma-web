@@ -1,5 +1,6 @@
 import url from 'url';
 import path from 'path';
+import { glob } from 'glob';
 import parseBool from 'parseboolean';
 import educandu from '@educandu/educandu';
 import customResolvers from './custom-resolvers.js';
@@ -93,8 +94,6 @@ const enabledPlugins = [
   'musikisum/educandu-plugin-orchestration-assistant'
 ].filter(plugin => !disabledPlugins.includes(plugin));
 
-const jsWithChecksumPathPattern = /\w+-[A-Z0-9]{8}\.js$/;
-
 const config = {
   appName: 'Open Music Academy',
   appRootUrl: process.env.OMA_APP_ROOT_URL,
@@ -113,9 +112,8 @@ const config = {
     {
       publicPath: '/',
       destination: path.resolve(thisDir, '../dist'),
-      setHeaders: (res, requestPath) => {
-        const maxAge = jsWithChecksumPathPattern.test(requestPath) ? 604800 : 0;
-        res.setHeader('Cache-Control', `public, max-age=${maxAge}`);
+      setHeaders: res => {
+        res.setHeader('Cache-Control', 'public, max-age=604800');
       }
     },
     {
@@ -123,6 +121,10 @@ const config = {
       destination: path.resolve(thisDir, '../static')
     }
   ],
+  entryPoints: {
+    scripts: (await glob(`main-${'[A-Z0-9]'.repeat(8)}.js`, { cwd: path.resolve(thisDir, '../dist') })).map(x => `/${x}`),
+    styles: (await glob(`main-${'[A-Z0-9]'.repeat(8)}.css`, { cwd: path.resolve(thisDir, '../dist') })).map(x => `/${x}`)
+  },
   resources: [
     './resources.json',
     '../node_modules/@benewagner/educandu-plugin-piano/dist/translations.json',
@@ -147,6 +149,7 @@ const config = {
   xRoomsAuthSecret: process.env.OMA_X_ROOMS_AUTH_SECRET || null,
   mediaTrashExpiryTimeoutInDays: Number(process.env.OMA_MEDIA_TRASH_EXPIRY_TIMEOUT_IN_DAYS) || 365,
   searchRequestExpiryTimeoutInDays: Number(process.env.OMA_SEARCH_REQUEST_EXPIRY_TIMEOUT_IN_DAYS) || 365,
+  dailyDocumentRequestExpiryTimeoutInDays: Number(process.env.OMA_DAILY_DOCUMENT_REQUEST_EXPIRY_TIMEOUT_IN_DAYS) || 365,
   smtpOptions: process.env.OMA_SMTP_OPTIONS,
   emailSenderAddress: process.env.OMA_EMAIL_SENDER_ADDRESS,
   adminEmailAddress: process.env.OMA_ADMIN_EMAIL_ADDRESS || null,
