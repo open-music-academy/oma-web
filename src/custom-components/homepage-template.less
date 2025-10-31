@@ -20,7 +20,14 @@
   min-height: calc(100vh - @homepage-template-hero-transition-breathing-room);
 }
 
+.HomepageTemplate-pageHeader {
+  grid-row: 1;
+  grid-column: 1;
+}
+
 .HomepageTemplate-aboveFoldContentWrapper {
+  grid-row: 2;
+  grid-column: 1;
   background:
     url('./images/homepage-hero-transition.svg') bottom left no-repeat,
     url('./images/homepage-hero-right.svg') right top no-repeat,
@@ -81,6 +88,14 @@
 
 .HomepageTemplate-children {
   color: @edu-white;
+}
+
+.HomepageTemplate-readMoreButton {
+  grid-row: 2;
+  grid-column: 1;
+  justify-self: center;
+  align-self: end;
+  margin-bottom: 120px;
 }
 
 .HomepageTemplate-underFold {

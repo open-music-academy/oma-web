@@ -1,0 +1,63 @@
+@keyframes bounce {
+  0%, 70%, 100% {
+    transform: translateY(0);
+  }
+  5% {
+    transform: translateY(-15px);
+  }
+  10% {
+    transform: translateY(0);
+  }
+  15% {
+    transform: translateY(-10px);
+  }
+  20% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-5px);
+  }
+  30% {
+    transform: translateY(0);
+  }
+}
+
+.ScrollIndicator {
+  cursor: pointer;
+  display: inline-block;
+  transition: transform 0.3s ease, opacity 0.5s ease;
+  animation: bounce 10s ease-in-out 10s infinite;
+  opacity: 1;
+  transform: scale(1);
+  will-change: transform, opacity;
+
+  &:hover {
+    transform: scale(1.2);
+    animation: none;
+  }
+
+  &:active {
+    .ScrollIndicator-circle {
+      fill: fade(@edu-white, 30%);
+    }
+
+    .ScrollIndicator-chevron {
+      stroke: fade(@edu-white, 90%);
+    }
+  }
+
+  &--hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+.ScrollIndicator-circle {
+  fill: fade(@edu-white, 15%);
+  transition: fill 0.2s ease;
+}
+
+.ScrollIndicator-chevron {
+  stroke: fade(@edu-white, 70%);
+  transition: stroke 0.2s ease;
+}
