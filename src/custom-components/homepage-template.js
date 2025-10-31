@@ -1,9 +1,10 @@
-import React from 'react';
 import PropTypes from 'prop-types';
 import SiteLogo from './site-logo.js';
+import React, { useRef } from 'react';
 import PageHeader from './page-header.js';
 import HeaderLogo from './header-logo.js';
 import { useTranslation } from 'react-i18next';
+import ScrollIndicator from './scroll-indicator.js';
 import ConsentDialog from '@educandu/educandu/components/consent-dialog.js';
 import DefaultPageFooter from '@educandu/educandu/components/default-page-footer.js';
 import HomepageTrustFooter from '@educandu/educandu/components/homepage/homepage-trust-footer.js';
@@ -12,13 +13,16 @@ import HomepageOerPresentation from '@educandu/educandu/components/homepage/home
 import HomepageProjectPresentation from '@educandu/educandu/components/homepage/homepage-project-presentation.js';
 
 function HomepageTemplate({ children }) {
+  const headerRef = useRef();
   const { t } = useTranslation('oma');
 
   return (
     <div className="HomepageTemplate">
       <main className="HomepageTemplate-main">
         <section className="HomepageTemplate-aboveFold">
-          <PageHeader />
+          <div className="HomepageTemplate-pageHeader" ref={headerRef}>
+            <PageHeader />
+          </div>
           <div className="HomepageTemplate-aboveFoldContentWrapper">
             <div className="HomepageTemplate-aboveFoldContent">
               <div className="HomepageTemplate-logo" >
@@ -29,6 +33,9 @@ function HomepageTemplate({ children }) {
                 {children}
               </div>
             </div>
+          </div>
+          <div className="HomepageTemplate-readMoreButton">
+            <ScrollIndicator headerRef={headerRef} />
           </div>
         </section>
         <section className="HomepageTemplate-underFold">
