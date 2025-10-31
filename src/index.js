@@ -149,7 +149,7 @@ const config = {
   xRoomsAuthSecret: process.env.OMA_X_ROOMS_AUTH_SECRET || null,
   mediaTrashExpiryTimeoutInDays: Number(process.env.OMA_MEDIA_TRASH_EXPIRY_TIMEOUT_IN_DAYS) || 365,
   searchRequestExpiryTimeoutInDays: Number(process.env.OMA_SEARCH_REQUEST_EXPIRY_TIMEOUT_IN_DAYS) || 365,
-  dailyDocumentRequestExpiryTimeoutInDays: Number(process.env.OMA_DAILY_DOCUMENT_REQUEST_EXPIRY_TIMEOUT_IN_DAYS) || 365,
+  documentRequestExpiryTimeoutInDays: Number(process.env.OMA_DOCUMENT_REQUEST_EXPIRY_TIMEOUT_IN_DAYS) || 365,
   smtpOptions: process.env.OMA_SMTP_OPTIONS,
   emailSenderAddress: process.env.OMA_EMAIL_SENDER_ADDRESS,
   adminEmailAddress: process.env.OMA_ADMIN_EMAIL_ADDRESS || null,
