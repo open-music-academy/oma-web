@@ -18,6 +18,7 @@
   display: grid;
   grid-template-rows: auto 1fr;
   min-height: calc(100vh - @homepage-template-hero-transition-breathing-room);
+  min-height: calc(100svh - @homepage-template-hero-transition-breathing-room);
 }
 
 .HomepageTemplate-pageHeader {
@@ -95,7 +96,25 @@
   grid-column: 1;
   justify-self: center;
   align-self: end;
-  margin-bottom: 120px;
+  margin-bottom: 100px;
+  width: 80px;
+  height: 80px;
+
+  @media @edu-media-phone {
+    margin-bottom: 40px;
+    width: 40px;
+    height: 40px;
+  }
+
+  // Very small phones
+  @media screen and (max-width: 375px) {
+    display: none;
+  }
+
+  // Landscape phones
+  @media screen and (max-height: 500px) {
+    display: none;
+  }
 }
 
 .HomepageTemplate-underFold {
