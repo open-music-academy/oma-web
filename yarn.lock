@@ -798,10 +798,10 @@
     yaml "^2.3.4"
     yargs "^17.7.2"
 
-"@educandu/educandu@3.55.1":
-  version "3.55.1"
-  resolved "https://registry.yarnpkg.com/@educandu/educandu/-/educandu-3.55.1.tgz#b263f983be6a6df88605cd8b07d4d823d16bd688"
-  integrity sha512-7aqUkU5erz+smubPy1H+9ryCt8oX5FVQQ0tk6lZt9feo0jCPWjscQqAvzSvI6tA7wA/HKMRZvCgN4deKNIrD2w==
+"@educandu/educandu@4.0.0":
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/@educandu/educandu/-/educandu-4.0.0.tgz#6e5f18db933e2577fa401988b91363629c4e2eb9"
+  integrity sha512-bP0Wr6ltWaZVX9n8TQWEBpmk6DU2pkKu22iR9nKJQ/Zx6kcKn//QX24jbAO3CthD7c1S9PEblKZm4+8Ca+DYpA==
   dependencies:
     "@ant-design/icons" "5.5.1"
     "@aws-sdk/client-s3" "^3.665.0"
