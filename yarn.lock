@@ -1233,10 +1233,10 @@
   resolved "https://registry.yarnpkg.com/@musikisum/educandu-plugin-orchestration-assistant/-/educandu-plugin-orchestration-assistant-1.0.6.tgz#5ff2228b43db70d314514f320ae928613ebf55a8"
   integrity sha512-oYgx5AUp+VVp91/YJBTxGP5fpE7UU9/j/FTcwHjbc7sLbYcrY3s4L34L003cbvQfYU7RBkNUuRdjS07U4mmtMQ==
 
-"@musikisum/educandu-plugin-progression-models@~2.1.1":
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/@musikisum/educandu-plugin-progression-models/-/educandu-plugin-progression-models-2.1.1.tgz#744e7b702aa4654793db291b5907b77905fec166"
-  integrity sha512-WOqTZWgmBOYjdJ2hJVtHdkVU3yZrVS8LFGQQaI8T7b1y4L83YzjHLY099TxcbtasGCNSQ8Buh9uAZPRiMML5Jg==
+"@musikisum/educandu-plugin-progression-models@~2.1.2":
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/@musikisum/educandu-plugin-progression-models/-/educandu-plugin-progression-models-2.1.2.tgz#a9008b8dab56108569c48c73e3bb34adacda74be"
+  integrity sha512-XTxerPeTQ02uXey2VRA/Ulukfs09U69S37QrxrOlG5CuQoxR9rIRDFNqLouD/E8Vu9yUQcyRdHJi9JxDBCtHWw==
   dependencies:
     abc-notation-transposition "^1.0.5"
 

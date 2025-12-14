@@ -26,7 +26,7 @@
     "@educandu/node-jsx-loader": "~4.0.0",
     "@musikisum/educandu-plugin-gap-genius": "~1.0.4",
     "@musikisum/educandu-plugin-orchestration-assistant": "~1.0.6",
-    "@musikisum/educandu-plugin-progression-models": "~2.1.1",
+    "@musikisum/educandu-plugin-progression-models": "~2.1.2",
     "glob": "~11.0.3",
     "parseboolean": "~1.0.0",
     "react-cool-dimensions": "~3.0.1"
