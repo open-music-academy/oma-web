@@ -730,10 +730,10 @@
   dependencies:
     regenerator-runtime "^0.14.0"
 
-"@benewagner/educandu-plugin-list@~2.1.5":
-  version "2.1.5"
-  resolved "https://registry.yarnpkg.com/@benewagner/educandu-plugin-list/-/educandu-plugin-list-2.1.5.tgz#d5d97376db703222fda06a1d69ad2d2d27c12dff"
-  integrity sha512-NGTpjEobTy5grzx2ALAOnLVBJnkwAIBpmuti8QZOZSTzutsaiSTYXQ6tR/g7oa6+SDGnDIBf5cubU0nQ1CMRBg==
+"@benewagner/educandu-plugin-list@~2.1.8":
+  version "2.1.8"
+  resolved "https://registry.yarnpkg.com/@benewagner/educandu-plugin-list/-/educandu-plugin-list-2.1.8.tgz#848c73090f11b571ebf05add7c0f0d7fe27170d3"
+  integrity sha512-McmJMptnyos4fxYCteIRcuD7uyw/kR6t1i7EQkxTcLuvZCWp4d2V+0S47YGuDyQ7uuR70n0h8M5HWG0vtVYyAg==
   dependencies:
     jschardet "^3.0.0"
 
