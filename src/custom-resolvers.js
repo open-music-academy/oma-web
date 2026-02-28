@@ -4,7 +4,7 @@ import EducanduPluginList from '@benewagner/educandu-plugin-list';
 import EducanduPluginPiano from '@benewagner/educandu-plugin-piano';
 import HomepageTemplate from './custom-components/homepage-template.js';
 import EducanduPluginGapGenius from '@musikisum/educandu-plugin-gap-genius';
-import EducanduPluginPitchAnalyzer from "@musikisum/educandu-plugin-pitch-analyzer";
+import EducanduPluginPitchAnalyzer from '@musikisum/educandu-plugin-pitch-analyzer';
 import EducanduPluginProgressionModels from '@musikisum/educandu-plugin-progression-models';
 import EducandePluginOrchestrationAssistant from '@musikisum/educandu-plugin-orchestration-assistant';
 
