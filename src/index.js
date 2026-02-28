@@ -91,7 +91,8 @@ const enabledPlugins = [
   'benewagner/educandu-plugin-list',
   'musikisum/educandu-plugin-progression-models',
   'musikisum/educandu-plugin-gap-genius',
-  'musikisum/educandu-plugin-orchestration-assistant'
+  'musikisum/educandu-plugin-orchestration-assistant',
+  'musikisum/educandu-plugin-pitch-analyzer'
 ].filter(plugin => !disabledPlugins.includes(plugin));
 
 const config = {
@@ -131,7 +132,8 @@ const config = {
     '../node_modules/@benewagner/educandu-plugin-list/dist/translations.json',
     '../node_modules/@musikisum/educandu-plugin-progression-models/dist/translations.json',
     '../node_modules/@musikisum/educandu-plugin-gap-genius/dist/translations.json',
-    '../node_modules/@musikisum/educandu-plugin-orchestration-assistant/dist/translations.json'
+    '../node_modules/@musikisum/educandu-plugin-orchestration-assistant/dist/translations.json',
+    '../node_modules/@musikisum/educandu-plugin-pitch-analyzer/dist/translations.json'
   ].map(x => path.resolve(thisDir, x)),
   themeFile: path.resolve(thisDir, './theme.less'),
   allowedLicenses: getCsv(process.env.OMA_ALLOWED_LICENSES),
