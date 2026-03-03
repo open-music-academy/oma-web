@@ -292,7 +292,7 @@ export async function startServer() {
       PORT: 10000,
       WEBSITE_BASE_URL: tunnel ? `https://${tunnelWebsiteDomain}` : 'http://localhost:3000',
       CDN_BASE_URL: 'http://localhost:9000/dev-educandu-cdn',
-      SESSION_COOKIE_NAME: omaEnv.OMA_SESSION_COOKIE_DOMAIN,
+      SESSION_COOKIE_NAME: omaEnv.OMA_SESSION_COOKIE_NAME,
       X_ROOMS_AUTH_SECRET: omaEnv.OMA_X_ROOMS_AUTH_SECRET
     }
   });
