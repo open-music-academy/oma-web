@@ -737,6 +737,13 @@
   dependencies:
     jschardet "^3.0.0"
 
+"@benewagner/educandu-plugin-music-mapping@~1.0.3":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@benewagner/educandu-plugin-music-mapping/-/educandu-plugin-music-mapping-1.0.3.tgz#051df04d271bc496dc2bae4be6f0bdba07245496"
+  integrity sha512-SFJ5CTFLJ98xksEY9maLuelbX5M7KIf4bceyd+/T2Y2hwMEQ4Gs6ltbit9kj+JVjVUPB1PTAKz7saAeERFh8SQ==
+  dependencies:
+    react-xarrows "^2.0.2"
+
 "@benewagner/educandu-plugin-piano@~1.1.5":
   version "1.1.5"
   resolved "https://registry.yarnpkg.com/@benewagner/educandu-plugin-piano/-/educandu-plugin-piano-1.1.5.tgz#adba78fe9c3f45e2ad7d43cf84c25aea6a3fc86c"
@@ -2285,6 +2292,11 @@
   version "15.7.5"
   resolved "https://registry.yarnpkg.com/@types/prop-types/-/prop-types-15.7.5.tgz#5f19d2b85a98e9558036f6a3cacc8819420f05cf"
   integrity sha512-JCB8C6SnDoQf0cNycqd/35A7MjcnK+ZTqE7judS6o7utxUCg6imJg3QK2qzHKszlTjcj2cn+NwMB2i96ubpj7w==
+
+"@types/prop-types@^15.7.3":
+  version "15.7.15"
+  resolved "https://registry.yarnpkg.com/@types/prop-types/-/prop-types-15.7.15.tgz#e6e5a86d602beaca71ce5163fadf5f95d70931c7"
+  integrity sha512-F6bEyamV9jKGAFBEmlQnesRPGOQqS2+Uwi0Em15xenOxHaf2hv6L8YCVn3rPdPJOiJfPiCnLIRyvwVaqMY3MIw==
 
 "@types/qs@*":
   version "6.9.7"
@@ -9538,6 +9550,15 @@ react-region-select@^2.3.0:
   dependencies:
     object-assign "*"
     prop-types "^15.6.0"
+
+react-xarrows@^2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/react-xarrows/-/react-xarrows-2.0.2.tgz#7555687612339eaefd4ed55fc5c63f2302726d9c"
+  integrity sha512-tDlAqaxHNmy0vegW/6NdhoWyXJq1LANX/WUAlHyzoHe9BwFVnJPPDghmDjYeVr7XWFmBrVTUrHsrW7GKYI6HtQ==
+  dependencies:
+    "@types/prop-types" "^15.7.3"
+    lodash "^4.17.21"
+    prop-types "^15.7.2"
 
 react@~18.2.0:
   version "18.2.0"
