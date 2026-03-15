@@ -737,10 +737,10 @@
   dependencies:
     jschardet "^3.0.0"
 
-"@benewagner/educandu-plugin-music-mapping@~1.0.3":
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/@benewagner/educandu-plugin-music-mapping/-/educandu-plugin-music-mapping-1.0.3.tgz#051df04d271bc496dc2bae4be6f0bdba07245496"
-  integrity sha512-SFJ5CTFLJ98xksEY9maLuelbX5M7KIf4bceyd+/T2Y2hwMEQ4Gs6ltbit9kj+JVjVUPB1PTAKz7saAeERFh8SQ==
+"@benewagner/educandu-plugin-music-mapping@~1.0.5":
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/@benewagner/educandu-plugin-music-mapping/-/educandu-plugin-music-mapping-1.0.5.tgz#7b0ee6cc1660188ef1178bc50ceb45b7b7b9ab0c"
+  integrity sha512-H3lUu1C9C1UxU495LVI06jAkgQrplAF2adAL5W8vDqtE307TdODWWIfgKfV9zGpG/tIoHpNARrq5MqpkphbBfg==
   dependencies:
     react-xarrows "^2.0.2"
 

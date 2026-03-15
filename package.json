@@ -21,7 +21,7 @@
   "private": true,
   "dependencies": {
     "@benewagner/educandu-plugin-list": "~2.1.8",
-    "@benewagner/educandu-plugin-music-mapping": "~1.0.3",
+    "@benewagner/educandu-plugin-music-mapping": "~1.0.5",
     "@benewagner/educandu-plugin-piano": "~1.1.5",
     "@educandu/educandu": "4.0.0",
     "@educandu/node-jsx-loader": "~4.0.0",
