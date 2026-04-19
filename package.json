@@ -25,11 +25,11 @@
     "@benewagner/educandu-plugin-piano": "~1.1.5",
     "@educandu/educandu": "~4.1.0",
     "@educandu/node-jsx-loader": "~4.0.0",
+    "@musikisum/educandu-plugin-embedded-html": "~1.2.0",
     "@musikisum/educandu-plugin-gap-genius": "~1.0.4",
     "@musikisum/educandu-plugin-orchestration-assistant": "~1.0.6",
     "@musikisum/educandu-plugin-pitch-analyzer": "~1.1.83",
     "@musikisum/educandu-plugin-progression-models": "~2.1.2",
-    "@musikisum/educandu-plugin-embedded-html": "~1.0.0",
     "glob": "~11.0.3",
     "parseboolean": "~1.0.0",
     "react-cool-dimensions": "~3.0.1"
