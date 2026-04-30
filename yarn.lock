@@ -805,10 +805,10 @@
     yaml "^2.3.4"
     yargs "^17.7.2"
 
-"@educandu/educandu@~4.1.0":
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/@educandu/educandu/-/educandu-4.1.0.tgz#188909ae4c3742c932e5a51bc6357d8d83298abf"
-  integrity sha512-BhMfattb6Sp8UB7t+3Kv9TtFJS1A0CPea/JvXVc9E4UVs7cDgFrks4IW2wlgEQn8yfTeYe1sDeVg2Js0uAo2YQ==
+"@educandu/educandu@~4.1.1":
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/@educandu/educandu/-/educandu-4.1.1.tgz#acf519e56ddb418ef224a87f596805433d2870a0"
+  integrity sha512-Pa1BaSoK7Og7MAx+kL0TtlSsH3xkOEBffiJd8kG3jHESOdztKPENcXmsNXoqhA83bT98jztf95lI12LdBcc2VA==
   dependencies:
     "@ant-design/icons" "5.5.1"
     "@aws-sdk/client-s3" "^3.665.0"
@@ -1231,10 +1231,10 @@
   resolved "https://registry.yarnpkg.com/@musikisum/educandu-plugin-embedded-html/-/educandu-plugin-embedded-html-1.2.0.tgz#0713bcef5393f35db76b0dfbd6984b8fade0e4cd"
   integrity sha512-NuSkHXn2IZvF1X0qDnB1S1/t76Uvl1TnO2pztfa17vz2STW8Q1jmmaG76N9iltQcxRcEPdXjaJoLdIv12YfJxw==
 
-"@musikisum/educandu-plugin-gap-genius@~1.0.4":
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/@musikisum/educandu-plugin-gap-genius/-/educandu-plugin-gap-genius-1.0.4.tgz#94cf9b1156a5725ca8d8acca4c2fa3de44b5c73e"
-  integrity sha512-11Vb6M2DgEnoIGoi7DNsOdgvzpS2QLWgiXByUv+Iojzz179N39lbgic4vWquaBkYa3POVwZycrOweekDkveT4g==
+"@musikisum/educandu-plugin-gap-genius@~1.0.5":
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/@musikisum/educandu-plugin-gap-genius/-/educandu-plugin-gap-genius-1.0.5.tgz#498a7c4ecd2c86ea47cdd0ef2e85317fcdc4cc03"
+  integrity sha512-iXGK1vkf814mUeO9rtKrBQJ32GfUMvwaloPv9EmqMjE3F9abmkQa1P7DyC/GwAfFSVvTnhYo0lxBalS+PPDCJQ==
   dependencies:
     chart.js "^4.4.7"
     fuse.js "^7.1.0"
