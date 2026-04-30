@@ -1231,10 +1231,10 @@
   resolved "https://registry.yarnpkg.com/@musikisum/educandu-plugin-embedded-html/-/educandu-plugin-embedded-html-1.2.0.tgz#0713bcef5393f35db76b0dfbd6984b8fade0e4cd"
   integrity sha512-NuSkHXn2IZvF1X0qDnB1S1/t76Uvl1TnO2pztfa17vz2STW8Q1jmmaG76N9iltQcxRcEPdXjaJoLdIv12YfJxw==
 
-"@musikisum/educandu-plugin-gap-genius@~1.0.5":
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/@musikisum/educandu-plugin-gap-genius/-/educandu-plugin-gap-genius-1.0.5.tgz#498a7c4ecd2c86ea47cdd0ef2e85317fcdc4cc03"
-  integrity sha512-iXGK1vkf814mUeO9rtKrBQJ32GfUMvwaloPv9EmqMjE3F9abmkQa1P7DyC/GwAfFSVvTnhYo0lxBalS+PPDCJQ==
+"@musikisum/educandu-plugin-gap-genius@~1.0.6":
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/@musikisum/educandu-plugin-gap-genius/-/educandu-plugin-gap-genius-1.0.6.tgz#e32181974f687f0b3900f4c62575d69d0bb17773"
+  integrity sha512-pbXJPpjKJ8bcLDvFENDAth/ko94CtxQoiLdQ0k5M+DZF9uzlmZpkaYlhu+Wck79cUnLb1KWvMvCXPvCnKPQaRA==
   dependencies:
     chart.js "^4.4.7"
     fuse.js "^7.1.0"
