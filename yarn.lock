@@ -1231,6 +1231,13 @@
   resolved "https://registry.yarnpkg.com/@musikisum/educandu-plugin-embedded-html/-/educandu-plugin-embedded-html-1.2.0.tgz#0713bcef5393f35db76b0dfbd6984b8fade0e4cd"
   integrity sha512-NuSkHXn2IZvF1X0qDnB1S1/t76Uvl1TnO2pztfa17vz2STW8Q1jmmaG76N9iltQcxRcEPdXjaJoLdIv12YfJxw==
 
+"@musikisum/educandu-plugin-flipbook@~1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@musikisum/educandu-plugin-flipbook/-/educandu-plugin-flipbook-1.2.0.tgz#494e7c4663616d40bd2bd78f9b7b5e8b95a8a50d"
+  integrity sha512-jMHZrhDHkNG8oruVZnecBDzDHy9D5vOlgG8BvbPi8oCGnxviJgeGUQzhsgxlCP3/aEYV68X7m4L6TpgqNqdnfQ==
+  dependencies:
+    page-flip "^2.0.7"
+
 "@musikisum/educandu-plugin-gap-genius@~1.0.6":
   version "1.0.6"
   resolved "https://registry.yarnpkg.com/@musikisum/educandu-plugin-gap-genius/-/educandu-plugin-gap-genius-1.0.6.tgz#e32181974f687f0b3900f4c62575d69d0bb17773"
@@ -8505,6 +8512,11 @@ package-json-from-dist@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/package-json-from-dist/-/package-json-from-dist-1.0.1.tgz#4f1471a010827a86f94cfd9b0727e36d267de505"
   integrity sha512-UEZIS3/by4OC8vL3P2dTXRETpebLI2NiI5vIrjaD/5UtrkFX/tNbwjTSRAGC/+7CAo2pIcBaRgWmcBBHcsaCIw==
+
+page-flip@^2.0.7:
+  version "2.0.7"
+  resolved "https://registry.yarnpkg.com/page-flip/-/page-flip-2.0.7.tgz#b6eaf9dac78fd1dceeb7cb4d0e2eeb203591ea1e"
+  integrity sha512-96lQFUUz7r/LZzEUZJ3yBIMEKU9+m8HMFDzTvTdD6P7Ag/wXINjp9n0W7b4wanwnDbQETo4uNUoL3zMqpFxwGA==
 
 pako@~1.0.2:
   version "1.0.11"
