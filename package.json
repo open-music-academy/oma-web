@@ -26,7 +26,7 @@
     "@educandu/educandu": "~4.1.1",
     "@educandu/node-jsx-loader": "~4.0.0",
     "@musikisum/educandu-plugin-embedded-html": "~1.2.0",
-    "@musikisum/educandu-plugin-flipbook": "~1.3.0",
+    "@musikisum/educandu-plugin-flipbook": "~1.4.0",
     "@musikisum/educandu-plugin-gap-genius": "~1.0.6",
     "@musikisum/educandu-plugin-orchestration-assistant": "~1.0.6",
     "@musikisum/educandu-plugin-pitch-analyzer": "~1.1.83",
