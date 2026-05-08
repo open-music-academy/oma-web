@@ -1231,10 +1231,10 @@
   resolved "https://registry.yarnpkg.com/@musikisum/educandu-plugin-embedded-html/-/educandu-plugin-embedded-html-1.2.0.tgz#0713bcef5393f35db76b0dfbd6984b8fade0e4cd"
   integrity sha512-NuSkHXn2IZvF1X0qDnB1S1/t76Uvl1TnO2pztfa17vz2STW8Q1jmmaG76N9iltQcxRcEPdXjaJoLdIv12YfJxw==
 
-"@musikisum/educandu-plugin-flipbook@~1.4.0":
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/@musikisum/educandu-plugin-flipbook/-/educandu-plugin-flipbook-1.4.0.tgz#9b2af1ac759ba6956279ab71df59c05d5b1a657f"
-  integrity sha512-q0PX3OEamMHRbd/pnmWCbjCDJt9t4fhH1lZF7NQ612fJ03p8DsjiZ4XR2XKLspJL8DqwqVAqOaMXtWZ72glS8w==
+"@musikisum/educandu-plugin-flipbook@~1.5.0":
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/@musikisum/educandu-plugin-flipbook/-/educandu-plugin-flipbook-1.5.0.tgz#6d1ad205b10a78ed00c9d084d590912e9e8d7e3a"
+  integrity sha512-uRmAuIcBvmpxIjrFP1TNJOXL/hQWcOGVWgLjkyMFmnBojcLtr3yuTR/7emrB0BOer5sKpsL3sWmjxc1+m59F/w==
   dependencies:
     page-flip "^2.0.7"
 
