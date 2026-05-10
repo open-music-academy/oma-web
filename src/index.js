@@ -95,7 +95,8 @@ const enabledPlugins = [
   'musikisum/educandu-plugin-orchestration-assistant',
   'musikisum/educandu-plugin-pitch-analyzer',
   'musikisum/educandu-plugin-embedded-html',
-  'musikisum/educandu-plugin-flipbook'
+  'musikisum/educandu-plugin-flipbook',
+  'musikisum/educandu-plugin-charts'
 ].filter(plugin => !disabledPlugins.includes(plugin));
 
 const config = {
@@ -139,7 +140,8 @@ const config = {
     '../node_modules/@musikisum/educandu-plugin-orchestration-assistant/dist/translations.json',
     '../node_modules/@musikisum/educandu-plugin-pitch-analyzer/dist/translations.json',
     '../node_modules/@musikisum/educandu-plugin-embedded-html/dist/translations.json',
-    '../node_modules/@musikisum/educandu-plugin-flipbook/dist/translations.json'
+    '../node_modules/@musikisum/educandu-plugin-flipbook/dist/translations.json',
+    '../node_modules/@musikisum/educandu-plugin-charts/dist/translations.json'
   ].map(x => path.resolve(thisDir, x)),
   themeFile: path.resolve(thisDir, './theme.less'),
   allowedLicenses: getCsv(process.env.OMA_ALLOWED_LICENSES),

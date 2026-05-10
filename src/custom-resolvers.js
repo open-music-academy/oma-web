@@ -2,6 +2,7 @@ import SiteLogo from './custom-components/site-logo.js';
 import PageTemplate from './custom-components/page-template.js';
 import EducanduPluginList from '@benewagner/educandu-plugin-list';
 import EducanduPluginPiano from '@benewagner/educandu-plugin-piano';
+import EducanduPluginCharts from '@musikisum/educandu-plugin-charts';
 import HomepageTemplate from './custom-components/homepage-template.js';
 import EducanduPluginFlipbook from '@musikisum/educandu-plugin-flipbook';
 import EducanduPluginGapGenius from '@musikisum/educandu-plugin-gap-genius';
@@ -24,6 +25,7 @@ export default {
     EducanduPluginOrchestrationAssistant,
     EducanduPluginPitchAnalyzer,
     EducanduPluginEmbeddedHtml,
-    EducanduPluginFlipbook
+    EducanduPluginFlipbook,
+    EducanduPluginCharts
   ]
 };
