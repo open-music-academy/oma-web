@@ -1226,10 +1226,10 @@
     call-me-maybe "^1.0.1"
     glob-to-regexp "^0.3.0"
 
-"@musikisum/educandu-plugin-charts@~1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@musikisum/educandu-plugin-charts/-/educandu-plugin-charts-1.0.1.tgz#d8886875dea0b89e88562d4f3a83efe267e75ae0"
-  integrity sha512-Cd2g/QQnIoT6R/UEPE4p8C9WMEFH97rs1NQuPxJkr6zsuEaj7VcFr/73K/YzOoZ4wB9jfWGHZzA0GZoc3kY7NQ==
+"@musikisum/educandu-plugin-charts@~1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@musikisum/educandu-plugin-charts/-/educandu-plugin-charts-1.0.2.tgz#5da3eede87f6d9edcd6d59ab379ddf39a99dd6ab"
+  integrity sha512-aUr15EIB1xfDgM7G3LO4ojYFoeZYfnsqw+kParMawc1VYjyx/gIy34IuowUG9h3uL6EDR8JmXJj2kAo3ydJQYA==
   dependencies:
     chart.js "^4.5.1"
     react-chartjs-2 "^5.3.1"
