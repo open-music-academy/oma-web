@@ -1247,14 +1247,22 @@
   dependencies:
     page-flip "^2.0.7"
 
-"@musikisum/educandu-plugin-gap-genius@~1.0.6":
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/@musikisum/educandu-plugin-gap-genius/-/educandu-plugin-gap-genius-1.0.6.tgz#e32181974f687f0b3900f4c62575d69d0bb17773"
-  integrity sha512-pbXJPpjKJ8bcLDvFENDAth/ko94CtxQoiLdQ0k5M+DZF9uzlmZpkaYlhu+Wck79cUnLb1KWvMvCXPvCnKPQaRA==
+"@musikisum/educandu-plugin-gap-genius@~1.0.11":
+  version "1.0.11"
+  resolved "https://registry.yarnpkg.com/@musikisum/educandu-plugin-gap-genius/-/educandu-plugin-gap-genius-1.0.11.tgz#839f35821c9072927c393602bd8d4f9d9f8fe5c5"
+  integrity sha512-6GU2XVVw+SR7nO58H4RqUPsJGHmt7//4AZByE6cgG/OyazAvsnfegRn+LGNKDkHGX/L/cS7aFP3P70sgPB2YOQ==
   dependencies:
     chart.js "^4.4.7"
     fuse.js "^7.1.0"
     react-chartjs-2 "^5.3.0"
+
+"@musikisum/educandu-plugin-mei-studio@~1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@musikisum/educandu-plugin-mei-studio/-/educandu-plugin-mei-studio-1.0.1.tgz#669a6cc73aa566eacdda60c9b44fdb47d6a4d9a3"
+  integrity sha512-HzvNZC4a99oXwjvhi3L/QDlTDhb43NVsfrYVXzlDBuCVT9+Qum+DafRBk4O3nWAPapO023Vcy0ugzwFMMplmDg==
+  dependencies:
+    smplr "^1.0.0"
+    verovio "^6.2.0"
 
 "@musikisum/educandu-plugin-orchestration-assistant@~1.0.6":
   version "1.0.6"
@@ -10309,6 +10317,11 @@ smart-buffer@^4.2.0:
   resolved "https://registry.yarnpkg.com/smart-buffer/-/smart-buffer-4.2.0.tgz#6e1d71fa4f18c05f7d0ff216dd16a481d0e8d9ae"
   integrity sha512-94hK0Hh8rPqQl2xXc3HsaBoOXKV20MToPkcXvwbISWLEs+64sBq5kFgn2kJDHb1Pry9yrP0dxrCI9RRci7RXKg==
 
+smplr@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/smplr/-/smplr-1.0.0.tgz#bd836bded3a9bf15c0913d686f16983d8520a91a"
+  integrity sha512-mCggf1Ex9oNOMl3LJNq7qlc3/aotKsH4DRFz0WgB7g7H4P1qUxmENkoqZ8FKj5vFY6CeweGNk7Uz8vOU/exQ7w==
+
 snapdragon-node@^2.0.1:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/snapdragon-node/-/snapdragon-node-2.1.1.tgz#6c175f86ff14bdb0724563e8f3c1b021a286853b"
@@ -11474,6 +11487,11 @@ vary@^1, vary@~1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/vary/-/vary-1.1.2.tgz#2299f02c6ded30d4a5961b0b9f74524a18f634fc"
   integrity sha512-BNGbWLfd0eUPabhkXUVm0j8uuvREyTh5ovRa/dyow/BqAbZJyC+5fU+IzQOzmAKzYqYRAISoRhdQr3eIZ/PXqg==
+
+verovio@^6.2.0:
+  version "6.2.0"
+  resolved "https://registry.yarnpkg.com/verovio/-/verovio-6.2.0.tgz#79fd4e2ad1e5305dc74a0072a4c588f9367704b0"
+  integrity sha512-yYU4CAik+ln4tdDOSLJPypQ24fiRsJtNgmgobsPnrSQYxesjwLrrPvth4mumeBRh3S20VERw9+GPXpRyhT1R4A==
 
 verror@1.10.0:
   version "1.10.0"

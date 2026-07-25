@@ -5,6 +5,7 @@ import EducanduPluginPiano from '@benewagner/educandu-plugin-piano';
 import EducanduPluginCharts from '@musikisum/educandu-plugin-charts';
 import HomepageTemplate from './custom-components/homepage-template.js';
 import EducanduPluginFlipbook from '@musikisum/educandu-plugin-flipbook';
+import EducanduPluginMeiStudio from '@musikisum/educandu-plugin-mei-studio';
 import EducanduPluginGapGenius from '@musikisum/educandu-plugin-gap-genius';
 import EducanduPluginEmbeddedHtml from '@musikisum/educandu-plugin-embedded-html';
 import EducanduPluginMusicMapping from '@benewagner/educandu-plugin-music-mapping';
@@ -26,6 +27,7 @@ export default {
     EducanduPluginPitchAnalyzer,
     EducanduPluginEmbeddedHtml,
     EducanduPluginFlipbook,
-    EducanduPluginCharts
+    EducanduPluginCharts,
+    EducanduPluginMeiStudio
   ]
 };
