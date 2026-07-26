@@ -1256,11 +1256,12 @@
     fuse.js "^7.1.0"
     react-chartjs-2 "^5.3.0"
 
-"@musikisum/educandu-plugin-mei-studio@~1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@musikisum/educandu-plugin-mei-studio/-/educandu-plugin-mei-studio-1.0.1.tgz#669a6cc73aa566eacdda60c9b44fdb47d6a4d9a3"
-  integrity sha512-HzvNZC4a99oXwjvhi3L/QDlTDhb43NVsfrYVXzlDBuCVT9+Qum+DafRBk4O3nWAPapO023Vcy0ugzwFMMplmDg==
+"@musikisum/educandu-plugin-mei-studio@~1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@musikisum/educandu-plugin-mei-studio/-/educandu-plugin-mei-studio-1.1.0.tgz#9705bc44beaa3ab553dccf4164a6146a9bc7b7f5"
+  integrity sha512-J0DVxpAtC5+XfpGZKVant0V7XIZyT1xyoglFMSvuPANOj1rVL8gC8BLPAw+OdoqF7XIT8WuvcdYGG31C3xFaiw==
   dependencies:
+    dompurify "^3.4.12"
     smplr "^1.0.0"
     verovio "^6.2.0"
 
@@ -2383,6 +2384,11 @@
   integrity sha512-FvnCJljyxhPM3gkRgWmxmDZyAQSiBQQWLI0A0VFL0K7W1oRUrPJSqNO0NvTnLkBcotdlp3lKvaT0JrnyRDkzOg==
   dependencies:
     "@types/node" "*"
+
+"@types/trusted-types@^2.0.7":
+  version "2.0.7"
+  resolved "https://registry.yarnpkg.com/@types/trusted-types/-/trusted-types-2.0.7.tgz#baccb07a970b91707df3a3e8ba6896c57ead2d11"
+  integrity sha512-ScaPdn1dQczgbl0QFTeTOmVHFULt394XJgOQNoyVhZ6r2vLnMLJfBPd53SB52T/3G36VI1/g2MZaX0cwDuXsfw==
 
 "@types/vexflow@^1.2.38":
   version "1.2.38"
@@ -4447,6 +4453,13 @@ domhandler@^2.3.0:
   integrity sha512-JiK04h0Ht5u/80fdLMCEmV4zkNh2BcoMFBmZ/91WtYZ8qVXSKjiw7fXMgFPnHcSZgOo3XdinHvmnDUeMf5R4wA==
   dependencies:
     domelementtype "1"
+
+dompurify@^3.4.12:
+  version "3.4.12"
+  resolved "https://registry.yarnpkg.com/dompurify/-/dompurify-3.4.12.tgz#6fa2265e9bbdce882c4ace4107626051b448ffa8"
+  integrity sha512-zQvGet8Z2sWbQhCmfFz/T5QWH2oBmjnqK3qvOjaqaNLrLEF912WamU+ohnTp0TCep/MFVHpdJuCZEdFOdTnEFg==
+  optionalDependencies:
+    "@types/trusted-types" "^2.0.7"
 
 domutils@1.5.1:
   version "1.5.1"
