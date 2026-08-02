@@ -40,7 +40,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v7.0.1
       - name: Download workspace
-        uses: actions/download-artifact@v8.0.1
+        uses: actions/download-artifact@v7.0.0
       - name: Read release number file
         run: echo "RELEASE_NUMBER="$(cat ./dist/release.txt | tr -d '\n')"" >> $GITHUB_ENV
       - name: Login to DockerHub
