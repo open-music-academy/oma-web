@@ -1256,10 +1256,10 @@
     fuse.js "^7.1.0"
     react-chartjs-2 "^5.3.0"
 
-"@musikisum/educandu-plugin-mei-studio@~1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@musikisum/educandu-plugin-mei-studio/-/educandu-plugin-mei-studio-1.1.0.tgz#9705bc44beaa3ab553dccf4164a6146a9bc7b7f5"
-  integrity sha512-J0DVxpAtC5+XfpGZKVant0V7XIZyT1xyoglFMSvuPANOj1rVL8gC8BLPAw+OdoqF7XIT8WuvcdYGG31C3xFaiw==
+"@musikisum/educandu-plugin-mei-studio@~1.1.3":
+  version "1.1.3"
+  resolved "https://registry.yarnpkg.com/@musikisum/educandu-plugin-mei-studio/-/educandu-plugin-mei-studio-1.1.3.tgz#b2b220df9a77d1e3735afe03c4314669322bf6f3"
+  integrity sha512-Oczn0g8QEv64jyfv/C9Z3zuHjqc7p+jnBVI4PZjtycvetuYE/1gIpjBjrzJbGqyxbM3mse1+YO3Q4FsTlEESvg==
   dependencies:
     dompurify "^3.4.12"
     smplr "^1.0.0"
