@@ -1235,10 +1235,10 @@
     react-chartjs-2 "^5.3.1"
     xlsx "^0.18.5"
 
-"@musikisum/educandu-plugin-embedded-html@~1.2.0":
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/@musikisum/educandu-plugin-embedded-html/-/educandu-plugin-embedded-html-1.2.0.tgz#0713bcef5393f35db76b0dfbd6984b8fade0e4cd"
-  integrity sha512-NuSkHXn2IZvF1X0qDnB1S1/t76Uvl1TnO2pztfa17vz2STW8Q1jmmaG76N9iltQcxRcEPdXjaJoLdIv12YfJxw==
+"@musikisum/educandu-plugin-embedded-html@~1.2.1":
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/@musikisum/educandu-plugin-embedded-html/-/educandu-plugin-embedded-html-1.2.1.tgz#15e541073c676379793eefa1d3bdbeaa5f79d41b"
+  integrity sha512-4EJ5qYnyINWOgE8DUrnfqQCWIUR5zcEfpjj6oLClkHxrooY2ujJZM5/2UuL2jFZrqmU25R+ovcdtMpiyj9GfaA==
 
 "@musikisum/educandu-plugin-flipbook@~1.5.0":
   version "1.5.0"
